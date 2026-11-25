@@ -1,0 +1,639 @@
+<section class="chapter" id="hvac">
+<header class="ch-head">
+<p class="eyebrow">Division 23 · HVAC</p>
+<h2>HVAC &amp; Ventilation</h2>
+<p class="lede">How ESC sizes, selects, routes, tests and starts up heating, cooling and ventilation systems in new houses and gut-renovated rowhouses, with the system types we use and when each one fits. Project managers, mechanical subs, lead carpenters coordinating chases and owners choosing a system all use this chapter.</p>
+</header>
+
+<h3>7.1 Where HVAC sits in the job</h3>
+<p>HVAC design starts in preconstruction (Chapter 01), long before the sub shows up, because system choice decides chase sizes, soffit locations, roof loads and electrical service size. Field work starts after framing is substantially complete and the building is dried in (Chapters 04 and 05). It runs in two visits: rough-in, which ends at the mechanical rough inspection and duct leakage test, and trim-out and startup, which happens after drywall, paint and most finishes.</p>
+<p>In the rough-in, the order inside the open framing is fixed: <strong>drains first, ducts second, everything else after</strong>. Gravity drains (Chapter 06) can't move. Ducts are the biggest and least flexible thing in the ceiling. Supply piping, gas, line sets and wiring (Chapter 08) bend around both.</p>
+<p>On a new house the ducts usually live in a basement, between open-web floor trusses and in a few planned soffits. In a rowhouse there's no attic, no crawlspace and only a 16 to 20 ft wide floor plate between two masonry party walls. Every chase costs closet space and every horizontal run either fits the joist bays or becomes a soffit, so the rowhouse case drives most choices below.</p>
+<p>Code references are to the IRC 2021 as the model baseline, and to the NEC 2023 for equipment electrical. Local amendments, the adopted energy code edition and the authority having jurisdiction (AHJ) govern. Equipment installation instructions are part of the code (IRC M1401.1), so where the manufacturer asks for more, the manufacturer wins.</p>
+
+<h3>7.2 Before HVAC starts</h3>
+<p>The PM confirms these before the mechanical sub mobilizes for rough-in.</p>
+<ul class="checklist">
+<li>Manual J room-by-room load, Manual S equipment selection and Manual D duct design are complete, reviewed by ESC and the architect, and submitted with the permit where the AHJ requires it.</li>
+<li>Equipment submittals approved and ordered, with delivery dates confirmed (lead times in 7.11).</li>
+<li>Framing complete on the floors being roughed: walls, blocking, stair openings, beams and headers set (Chapter 04). No mechanical work in bays the engineer still has open for repair.</li>
+<li>Building dried in: roof, windows and temporary closures in place (Chapter 05).</li>
+<li>Roof curbs, pitch pockets or boots for line sets, flues and exhaust located and coordinated with the roofer before membrane goes on (Chapter 05).</li>
+<li>Structural review of roof dunnage or condenser platforms, and of any joist notching or boring beyond IRC R502.8 limits, by the engineer.</li>
+<li>Drains laid out or installed (Chapter 06) and the joint coordination walk held.</li>
+<li>Electrical service size confirmed for heat pump and air-handler loads, including electric backup heat strips if used (Chapter 08).</li>
+<li>Rowhouse: party-wall fire separations identified. Nothing penetrates a rated party wall without a listed firestop system and AHJ acceptance.</li>
+</ul>
+
+<h3>7.3 Loads and design: Manual J, S and D</h3>
+<p>The IRC requires heating and cooling equipment to be sized per ACCA Manual S from loads calculated per ACCA Manual J (M1401.3), and duct systems to be designed per Manual D (M1601.1). ESC treats these as the start of the design, not paperwork for the permit.</p>
+<h4>Manual J: what goes in</h4>
+<ul>
+<li><strong>Design temperatures</strong> from the ACCA tables for the location: 99% heating and 1% cooling dry-bulb. Indoor design is 70&deg;F heating and 75&deg;F cooling. Don't pad them.</li>
+<li><strong>Envelope as drawn</strong>: actual wall, roof and slab R-values, window U-factor and SHGC, and orientation (Chapter 05).</li>
+<li><strong>Infiltration</strong> from the project's blower door target. A gut-renovated rowhouse built to ESC's air-sealing details will test far tighter than the "average" default in most software. Use the target, then confirm it at the test.</li>
+<li><strong>Party walls.</strong> Where a heated neighbor is on the other side, model the party wall as a no-load surface. Where the neighbor is vacant, unheated or a different use, model it as exposed to an unconditioned space. Ask; don't assume.</li>
+<li><strong>Room by room</strong>, never a block load alone. A top floor under a low-slope roof can carry several times the load per square foot of a middle-floor bedroom.</li>
+</ul>
+<h4>Manual S: picking equipment</h4>
+<p>Select equipment from the manufacturer's expanded performance data at the design conditions, not the nameplate. Under Manual S, cooling equipment and heat pumps are normally sized at 95 to 115% of the total cooling load, with up to 125% allowed for heat pumps where heating governs. For heat pumps, check heating capacity at the 99% design temperature and decide in writing whether backup heat is needed.</p>
+<h4>Manual D: ducts that deliver</h4>
+<p>Manual D works from the room airflows in Manual J and the blower's available external static pressure. After subtracting coil, filter and grille losses, each run is sized so its equivalent length fits the pressure left. Typical design targets: supply trunk velocity under 900 fpm, branch velocity under 600 fpm, return grille face velocity under 500 fpm so the house is quiet.</p>
+
+<h3>7.4 Heating and cooling systems compared</h3>
+<p>Fuel, climate, structure and the owner's priorities all play in. On rowhouses the deciding factors are usually where the outdoor units can go, how much chase space the plan gives up, and whether the owner wants to keep the original radiators.</p>
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Ducted gas furnace + split AC</td><td>New houses with a basement and gas service; owners who want gas heat</td><td>Familiar to every sub; high heat output; low first cost; easy to service</td><td>Needs a flue or sealed-combustion vent; two fuels; ducts take the most space; poor fit for rowhouses with no basement mechanical room</td><td>$$</td><td>Fast</td></tr>
+<tr><td>Ducted cold-climate air-source heat pump</td><td>New houses and rowhouses with a cellar or closet for the air handler; all-electric projects</td><td>Heats and cools with one system; no combustion; variable-speed units hold humidity well; one outdoor unit per zone</td><td>Larger electrical service; needs backup plan below rated temperatures; condenser location on a tight lot can be hard</td><td>$$$</td><td>Fast</td></tr>
+<tr><td>Ductless mini-split (wall, floor or ceiling cassette heads)</td><td>Rowhouses with no chase space; additions; single rooms; top-floor retrofits</td><td>Smallest line sets and no ducts; room-by-room control; very efficient</td><td>Visible heads; many small heads cost more than one ducted unit; no fresh-air or filtration path; condensate at every head</td><td>$$</td><td>Fast</td></tr>
+<tr><td>Ducted mini-split (slim-duct or multi-position air handler)</td><td>Rowhouse floor-by-floor zoning; one AHU per one or two floors in a closet or soffit</td><td>Hidden equipment; short duct runs; small line sets; easy to zone each floor</td><td>Low external static, so duct design must be tight; units hold less filter area; serviceable access needed in soffits</td><td>$$$</td><td>Medium</td></tr>
+<tr><td>Hydronic boiler + radiators (new or original cast iron)</td><td>Rowhouses keeping original radiators; owners who want silent radiant-type heat</td><td>Quiet, even heat; pipes fit where ducts can't; condensing boilers run efficiently at low water temperatures; keeps period radiators</td><td>Heating only, so cooling needs a second system; boiler venting; pipe freeze risk in exterior walls; radiator removal and reinstall around finishes</td><td>$$$</td><td>Medium</td></tr>
+<tr><td>Hydronic radiant floor (boiler or air-to-water heat pump)</td><td>Cellar slabs, baths, kitchens, open first floors, additions</td><td>Most comfortable heat; frees walls of registers and radiators; low water temperatures suit heat pumps and condensing boilers</td><td>Heating only; slow response; raises floor height on wood framing; tile and wood flooring must be rated for it (Chapters 10, 11)</td><td>$$$</td><td>Slow</td></tr>
+<tr><td>Geothermal (ground-source) heat pump</td><td>New houses on lots where a drill rig can reach; owners with a long horizon</td><td>Highest efficiency; no outdoor unit on the roof or yard; stable capacity in any weather</td><td>Drilling cost and access; rowhouse rear yards often too small for the rig; loop design needs a specialist; permits for wells</td><td>$$$$</td><td>Slow</td></tr>
+</tbody>
+</table></div>
+<p class="pick"><strong>ESC default:</strong> a cold-climate ducted heat pump, zoned with one air handler per one or two floors, plus balanced ventilation. In rowhouses we go to ducted mini-split air handlers in closets and soffits because their line sets and short duct runs fit the plan. We switch to hydronic heat when the owner wants to keep the original radiators or wants radiant floors, pairing it with ducted or ductless cooling. Furnaces are for new houses where the owner asks for gas heat. Geothermal is a case-by-case design-build decision with a loop designer on the team from schematic design.</p>
+
+<h4>Rowhouse notes on system choice</h4>
+<ul>
+<li><strong>Condensers on the roof.</strong> Most rowhouse outdoor units go on the roof because the rear yard is small and the front is landmarked or visible. That means structural dunnage, a curbed roof penetration for line sets, a service path for the tech and a code-compliant roof access. See Fig. 7.1 and the location table below.</li>
+<li><strong>Preserving radiators.</strong> Original cast-iron radiators are worth keeping when they're sound. With a tighter envelope, the existing radiation is often oversized for the new load, which is exactly what lets a condensing boiler run at low water temperatures.</li>
+<li><strong>Steam systems.</strong> Many older rowhouses have one-pipe steam. A condensing boiler can't make steam. Converting to hot water only works with radiators piped (or re-pipeable) for water flow, and one-pipe steam radiators usually aren't. Most often we either replace the steam boiler in kind or remove the steam system and design a new one.</li>
+<li><strong>Chase space.</strong> Budget one stacked chase about 24 x 16 in. clear for line sets, condensate and a return or supply riser per zone, plus a vent stack chase for plumbing. If the plan can't give that up, ductless heads or hydronic piping win.</li>
+</ul>
+
+<h4>Where the outdoor units go</h4>
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Roof on steel dunnage or a manufactured roof stand</td><td>Rowhouses; urban infill with no usable yard</td><td>Out of sight; no yard space lost; good airflow; short vertical line set runs through a stacked chase</td><td>Structural review; crane or hoist day; roof penetrations; service access by roof hatch; snow and wind tie-down</td><td>$$$</td><td>Medium</td></tr>
+<tr><td>Rear yard on a pad or ground stand</td><td>New houses; rowhouses with a real yard</td><td>Easy service; no roof work; cheapest install</td><td>Noise near neighbors and patios; takes yard space; long horizontal line sets in rowhouses; snow drift clearance</td><td>$</td><td>Fast</td></tr>
+<tr><td>Rear balcony, terrace or setback roof</td><td>Rowhouses with a lower rear extension roof</td><td>Easier access than the main roof; shorter crane lift or none</td><td>Noise next to bedrooms above; competes with outdoor living space</td><td>$$</td><td>Medium</td></tr>
+</tbody>
+</table></div>
+<p class="pick"><strong>ESC default:</strong> main roof on engineer-approved steel dunnage for rowhouses, rear yard pad for new houses. We switch to a lower rear roof when the main roof has no code-compliant access. Wall brackets are for a single small mini-split condenser only.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 620" role="img" aria-labelledby="hvac-fig1-t"><title id="hvac-fig1-t">Longitudinal section through a four-level rowhouse showing roof condensers, a stacked line set chase, two zoned air handlers, soffit ducts, an ERV and a kitchen hood</title>
+<defs><marker id="hvac-fig1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<text class="tx-b" x="16" y="22">Rowhouse section: equipment locations and the stacked chase</text>
+<rect class="f-earth" x="90" y="440" width="40" height="57"/>
+<rect class="f-earth" x="580" y="465" width="45" height="32"/>
+<rect class="f-earth" x="90" y="497" width="535" height="23"/>
+<text class="tx-sm" x="92" y="434">grade</text>
+<rect class="f-concrete" x="130" y="90" width="20" height="407"/>
+<rect class="f-concrete" x="560" y="90" width="20" height="407"/>
+<rect class="f-concrete" x="150" y="485" width="410" height="12"/>
+<rect class="f-wood" x="150" y="400" width="410" height="12"/>
+<rect class="f-wood" x="150" y="300" width="410" height="12"/>
+<rect class="f-wood" x="150" y="200" width="410" height="12"/>
+<rect class="f-wood" x="150" y="110" width="410" height="12"/>
+<rect class="f-membrane" x="150" y="106" width="410" height="4"/>
+<line class="hid" x1="330" y1="140" x2="330" y2="485"/>
+<line class="hid" x1="356" y1="140" x2="356" y2="485"/>
+<rect class="f-wood" x="326" y="96" width="34" height="10"/>
+<rect class="f-steel" x="400" y="86" width="100" height="4"/>
+<rect class="f-steel" x="405" y="90" width="6" height="16"/>
+<rect class="f-steel" x="489" y="90" width="6" height="16"/>
+<rect class="f-steel" x="408" y="50" width="38" height="36"/>
+<rect class="f-steel" x="454" y="50" width="38" height="36"/>
+<circle class="ln-thin" cx="427" cy="68" r="11"/>
+<circle class="ln-thin" cx="473" cy="68" r="11"/>
+<path class="ln2" d="M427,50 L427,40 L348,40 L348,165 L360,165"/>
+<path class="ln2" d="M473,50 L473,32 L338,32 L338,450 L360,450"/>
+<rect class="f-steel" x="360" y="135" width="35" height="63"/>
+<text class="tx-sm" x="377" y="170" text-anchor="middle">AHU</text>
+<rect class="f-finish" x="160" y="122" width="200" height="18"/>
+<rect class="f-steel" x="165" y="126" width="195" height="10"/>
+<line class="ln" x1="200" y1="140" x2="200" y2="162" marker-end="url(#hvac-fig1-arrow)"/>
+<line class="ln" x1="290" y1="140" x2="290" y2="162" marker-end="url(#hvac-fig1-arrow)"/>
+<text class="tx-sm" x="165" y="185">3rd-fl. supply in soffit</text>
+<rect class="f-steel" x="380" y="198" width="10" height="18"/>
+<rect class="f-finish" x="375" y="212" width="185" height="18"/>
+<rect class="f-steel" x="380" y="216" width="175" height="10"/>
+<line class="ln" x1="450" y1="230" x2="450" y2="252" marker-end="url(#hvac-fig1-arrow)"/>
+<line class="ln" x1="520" y1="230" x2="520" y2="252" marker-end="url(#hvac-fig1-arrow)"/>
+<text class="tx-sm" x="165" y="262">Stacked chase: line sets +</text>
+<text class="tx-sm" x="165" y="275">condensate, 24 x 16 in.</text>
+<line class="dim" x1="312" y1="266" x2="329" y2="266"/>
+<path class="hid" d="M360,190 L352,190 L352,480"/>
+<rect class="f-accent" x="345" y="480" width="14" height="5"/>
+<rect class="f-steel" x="470" y="340" width="40" height="12"/>
+<rect class="f-steel" x="484" y="322" width="10" height="18"/>
+<rect class="f-steel" x="484" y="313" width="76" height="9"/>
+<rect class="f-steel" x="580" y="311" width="12" height="13"/>
+<text class="tx-sm" x="490" y="368" text-anchor="middle">hood</text>
+<rect class="f-steel" x="160" y="414" width="200" height="12"/>
+<line class="ln" x1="200" y1="413" x2="200" y2="386" marker-end="url(#hvac-fig1-arrow)"/>
+<line class="ln" x1="290" y1="413" x2="290" y2="386" marker-end="url(#hvac-fig1-arrow)"/>
+<rect class="f-steel" x="360" y="425" width="45" height="57"/>
+<text class="tx-sm" x="382" y="458" text-anchor="middle">AHU</text>
+<rect class="f-steel" x="450" y="418" width="50" height="30"/>
+<text class="tx-sm" x="475" y="437" text-anchor="middle">ERV</text>
+<line class="ln2" x1="500" y1="424" x2="560" y2="424"/>
+<line class="ln2" x1="500" y1="440" x2="560" y2="440"/>
+<rect class="f-steel" x="580" y="419" width="10" height="10"/>
+<rect class="f-steel" x="580" y="435" width="10" height="10"/>
+<rect class="f-steel" x="230" y="440" width="34" height="45"/>
+<text class="tx-sm" x="247" y="466" text-anchor="middle">WH</text>
+<line class="dim" x1="75" y1="110" x2="75" y2="485"/>
+<line class="dim" x1="69" y1="110" x2="81" y2="110"/>
+<line class="dim" x1="69" y1="200" x2="81" y2="200"/>
+<line class="dim" x1="69" y1="300" x2="81" y2="300"/>
+<line class="dim" x1="69" y1="400" x2="81" y2="400"/>
+<line class="dim" x1="69" y1="485" x2="81" y2="485"/>
+<text class="tx-dim" x="68" y="152" text-anchor="end">9'-0"</text>
+<text class="tx-sm" x="68" y="166" text-anchor="end">3rd</text>
+<text class="tx-dim" x="68" y="248" text-anchor="end">10'-0"</text>
+<text class="tx-sm" x="68" y="262" text-anchor="end">2nd</text>
+<text class="tx-dim" x="68" y="348" text-anchor="end">10'-0"</text>
+<text class="tx-sm" x="68" y="362" text-anchor="end">parlor</text>
+<text class="tx-dim" x="68" y="440" text-anchor="end">8'-6"</text>
+<text class="tx-sm" x="68" y="454" text-anchor="end">cellar</text>
+<text class="tx" x="160" y="80">Roof curb (Ch 05)</text>
+<line class="dim" x1="268" y1="77" x2="326" y2="98"/>
+<text class="tx" x="645" y="44">Condensers on steel dunnage,</text>
+<text class="tx" x="645" y="58">18 in. min. above roof</text>
+<line class="dim" x1="640" y1="48" x2="493" y2="62"/>
+<text class="tx" x="645" y="160">Upper air handler in closet:</text>
+<text class="tx" x="645" y="174">zone 2 (2nd and 3rd floors)</text>
+<line class="dim" x1="640" y1="165" x2="396" y2="165"/>
+<text class="tx" x="645" y="225">2nd-floor supply in soffit</text>
+<line class="dim" x1="640" y1="221" x2="556" y2="221"/>
+<text class="tx" x="645" y="300">Kitchen hood ducted out</text>
+<text class="tx" x="645" y="314">rear wall (7.6)</text>
+<line class="dim" x1="640" y1="304" x2="593" y2="317"/>
+<text class="tx" x="645" y="420">ERV intake and exhaust hoods:</text>
+<text class="tx" x="645" y="434">10 ft apart, 12 in. min.</text>
+<text class="tx" x="645" y="448">above grade</text>
+<line class="dim" x1="640" y1="428" x2="591" y2="428"/>
+<text class="tx-sm" x="160" y="440">cellar trunk</text>
+<text class="tx" x="400" y="545">Lower air handler: zone 1 (parlor + cellar)</text>
+<line class="dim" x1="398" y1="536" x2="384" y2="483"/>
+<text class="tx" x="340" y="545" text-anchor="end">Floor drain for condensate (Ch 06)</text>
+<line class="dim" x1="342" y1="534" x2="352" y2="486"/>
+<line class="dim" x1="130" y1="598" x2="580" y2="598"/>
+<line class="dim" x1="130" y1="592" x2="130" y2="604"/>
+<line class="dim" x1="580" y1="592" x2="580" y2="604"/>
+<text class="tx-dim" x="355" y="592" text-anchor="middle">43'-0" front to rear, typical</text>
+</svg>
+<figcaption><strong>Fig. 7.1</strong> Typical ESC rowhouse layout. Two ducted air handlers split the house into two zones, both fed from roof condensers through one stacked chase beside the stair. WH is the water heater (Chapter 06).</figcaption>
+</figure>
+
+<h3>7.5 Ductwork</h3>
+<h4>Layout: trunk and branch</h4>
+<p>Most ESC duct systems are trunk and branch. A rectangular or round trunk leaves the supply plenum and steps down in size as branches peel off. Each branch runs to one register, with a manual balancing damper at the takeoff where a tech can reach it. With good windows, registers can sit on inside walls to shorten runs; with large or old glass, supply near the exterior wall.</p>
+<p>Keep trunks out of exterior walls and out of the joist bays drains need. In rowhouses, trunks belong in a hall soffit or the cellar ceiling and branches run in the joist bays toward the front and rear of the house, parallel to the joists, which usually span party wall to party wall. Branches that must cross joists go in a soffit or through holes the engineer has approved.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 460" role="img" aria-labelledby="hvac-fig2-t"><title id="hvac-fig2-t">Floor plan of a rowhouse level showing a supply trunk in the hall soffit, round branches to registers, balancing dampers, transfer grilles and a central return</title>
+<defs><marker id="hvac-fig2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<text class="tx-b" x="16" y="22">Trunk-and-branch supply plan, typical rowhouse floor</text>
+<line class="dim" x1="68" y1="66" x2="722" y2="66"/>
+<line class="dim" x1="68" y1="60" x2="68" y2="72"/>
+<line class="dim" x1="722" y1="60" x2="722" y2="72"/>
+<text class="tx-dim" x="600" y="61" text-anchor="middle">43'-0" typical</text>
+<rect class="f-concrete" x="68" y="78" width="654" height="12"/>
+<rect class="f-concrete" x="68" y="370" width="654" height="12"/>
+<rect class="f-concrete" x="68" y="90" width="12" height="280"/>
+<rect class="f-concrete" x="710" y="90" width="12" height="280"/>
+<line class="ln" x1="280" y1="90" x2="280" y2="195"/>
+<line class="ln" x1="280" y1="235" x2="280" y2="370"/>
+<line class="ln" x1="480" y1="90" x2="480" y2="195"/>
+<line class="ln" x1="480" y1="235" x2="480" y2="370"/>
+<line class="ln" x1="280" y1="290" x2="440" y2="290"/>
+<line class="ln" x1="470" y1="290" x2="480" y2="290"/>
+<line class="ln" x1="395" y1="90" x2="395" y2="190"/>
+<line class="ln" x1="395" y1="190" x2="400" y2="190"/>
+<line class="ln" x1="420" y1="190" x2="480" y2="190"/>
+<line class="ln-thin" x1="290" y1="95" x2="290" y2="185"/>
+<line class="ln-thin" x1="290" y1="95" x2="385" y2="95"/>
+<line class="ln-thin" x1="290" y1="185" x2="385" y2="185"/>
+<line class="ln-thin" x1="385" y1="95" x2="385" y2="185"/>
+<line class="ln-thin" x1="302" y1="95" x2="302" y2="185"/>
+<line class="ln-thin" x1="314" y1="95" x2="314" y2="185"/>
+<line class="ln-thin" x1="326" y1="95" x2="326" y2="185"/>
+<line class="ln-thin" x1="338" y1="95" x2="338" y2="185"/>
+<line class="ln-thin" x1="350" y1="95" x2="350" y2="185"/>
+<line class="ln-thin" x1="362" y1="95" x2="362" y2="185"/>
+<line class="ln-thin" x1="374" y1="95" x2="374" y2="185"/>
+<rect class="f-steel" x="410" y="105" width="50" height="45"/>
+<text class="tx-sm" x="435" y="131" text-anchor="middle">AHU</text>
+<rect class="f-steel" x="425" y="150" width="20" height="66"/>
+<rect class="f-steel" x="280" y="216" width="220" height="20"/>
+<rect class="f-steel" x="240" y="219" width="40" height="14"/>
+<rect class="f-steel" x="500" y="219" width="40" height="14"/>
+<path class="ln2" d="M260,219 L260,130 L94,130"/>
+<path class="ln2" d="M260,233 L260,330 L94,330"/>
+<path class="ln2" d="M520,219 L520,130 L696,130"/>
+<path class="ln2" d="M520,233 L520,330 L696,330"/>
+<path class="ln2" d="M320,236 L320,320"/>
+<rect class="f-accent" x="82" y="118" width="12" height="24"/>
+<rect class="f-accent" x="82" y="318" width="12" height="24"/>
+<rect class="f-accent" x="696" y="118" width="12" height="24"/>
+<rect class="f-accent" x="696" y="318" width="12" height="24"/>
+<rect class="f-accent" x="310" y="320" width="20" height="10"/>
+<line class="ln" x1="254" y1="200" x2="266" y2="200"/>
+<line class="ln" x1="254" y1="250" x2="266" y2="250"/>
+<line class="ln" x1="514" y1="200" x2="526" y2="200"/>
+<line class="ln" x1="514" y1="250" x2="526" y2="250"/>
+<line class="ln" x1="314" y1="250" x2="326" y2="250"/>
+<text class="tx-sm" x="240" y="204" text-anchor="end">D</text>
+<text class="tx-sm" x="240" y="254" text-anchor="end">D</text>
+<text class="tx-sm" x="532" y="204">D</text>
+<text class="tx-sm" x="532" y="254">D</text>
+<text class="tx-sm" x="332" y="254">D</text>
+<rect class="f-accent" x="276" y="255" width="8" height="25"/>
+<rect class="f-accent" x="476" y="255" width="8" height="25"/>
+<text class="tx-sm" x="289" y="272">T</text>
+<text class="tx-sm" x="464" y="272">T</text>
+<rect class="f-paper" x="370" y="252" width="40" height="24"/>
+<line class="ln-thin" x1="370" y1="258" x2="410" y2="258"/>
+<line class="ln-thin" x1="370" y1="264" x2="410" y2="264"/>
+<line class="ln-thin" x1="370" y1="270" x2="410" y2="270"/>
+<text class="tx-sm" x="414" y="268">R</text>
+<path class="hid" d="M400,252 L400,128 L410,128"/>
+<circle class="ln" cx="410" cy="340" r="10"/>
+<text class="tx-sm" x="426" y="344">EF</text>
+<text class="tx-sm" x="335" y="207">Hall</text>
+<text class="tx-sm" x="350" y="360">Bath</text>
+<text class="tx-sm" x="120" y="230">Front room</text>
+<text class="tx-sm" x="590" y="230">Rear room</text>
+<text class="tx-sm" x="110" y="123">6 in. rigid round branch</text>
+<text class="tx" x="435" y="46" text-anchor="middle">Air handler in closet</text>
+<line class="dim" x1="435" y1="50" x2="435" y2="104"/>
+<text class="tx" x="735" y="404">party wall</text>
+<line class="dim" x1="740" y1="394" x2="716" y2="382"/>
+<line class="dim" x1="752" y1="78" x2="752" y2="382"/>
+<line class="dim" x1="746" y1="78" x2="758" y2="78"/>
+<line class="dim" x1="746" y1="382" x2="758" y2="382"/>
+<text class="tx-dim" x="762" y="226">20'-0"</text>
+<text class="tx-sm" x="762" y="240">between party walls</text>
+<text class="tx" x="20" y="410">Register at exterior wall</text>
+<line class="dim" x1="60" y1="400" x2="86" y2="343"/>
+<text class="tx" x="300" y="410">Trunk in hall soffit: 14 x 8 in. stepping to 10 x 8 in.</text>
+<line class="dim" x1="350" y1="398" x2="350" y2="237"/>
+<text class="tx-sm" x="20" y="440">D = balancing damper at takeoff; T = transfer grille or jump duct; R = central return (dashed, to AHU); EF = bath exhaust fan, ducted outdoors</text>
+</svg>
+<figcaption><strong>Fig. 7.2</strong> One air handler serving one rowhouse floor. The trunk stays in the hall soffit; 6 in. rigid branches run in joist bays toward the front and rear walls. Bath exhaust is always a separate duct to outdoors.</figcaption>
+</figure>
+
+<h4>Return paths</h4>
+<p>A bedroom with a supply and a closed door pressurizes, pushes air out through the envelope and starves the system. Every room with a door gets a return path: a ducted return, a jump duct through the ceiling to the hall, or a transfer grille pair through the wall with a lined, offset cavity for sound. Target 3 Pa (0.012 in. w.c.) or less between a closed room and the hall with the air handler on high. A 1 in. door undercut alone is not enough for most bedrooms.</p>
+<h4>Duct materials</h4>
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Galvanized rectangular sheet metal</td><td>Trunks, plenums, soffit runs with tight depth limits</td><td>Shaped to fit any soffit; low friction; durable; easy to seal with mastic</td><td>Shop fabrication from field measurements; lead time; noisy if undersized</td><td>$$$</td><td>Medium</td></tr>
+<tr><td>Rigid round and spiral pipe</td><td>Branches; exposed ducts in lofts; returns</td><td>Lowest friction per size; cheap stock fittings; seals well</td><td>Needs depth; many fittings on crooked runs</td><td>$$</td><td>Fast</td></tr>
+<tr><td>Flexible duct (insulated)</td><td>Short final connections to boots, 5 ft max at ESC</td><td>Absorbs misalignment; quick</td><td>High friction when compressed or sagging; easily crushed; hard to seal; fails Manual D in long runs</td><td>$</td><td>Fast</td></tr>
+<tr><td>Small-diameter high-velocity systems</td><td>Historic rowhouses with no room for soffits; plaster preservation</td><td>2 in. tubes snake through walls and floors; small outlets</td><td>Proprietary; noise at outlets if done poorly; higher fan energy</td><td>$$$$</td><td>Medium</td></tr>
+</tbody>
+</table></div>
+<p class="pick"><strong>ESC default:</strong> galvanized rectangular trunks and plenums, rigid round branches, and flex only as the last 5 ft or less into a boot, pulled tight and supported. We switch to small-diameter high-velocity only when the owner is preserving plaster ceilings and there's no soffit the design can accept.</p>
+
+<h4>Sealing and insulation</h4>
+<p>Every seam, joint, takeoff, boot-to-drywall connection and plenum-to-equipment connection gets sealed with UL 181-listed mastic, or UL 181 tape on metal where the mastic can't reach. Cloth duct tape is not a sealant. Ducts and air handlers belong inside the thermal and air barrier; ducts outside it need insulation per the energy code (IRC N1103.3), typically R-8 in attics for ducts 3 in. and larger (R-6 for smaller), and R-6 elsewhere for 3 in. and larger (R-4.2 for smaller), with a vapor-tight jacket on cooling ducts.</p>
+<aside class="callout esc"><p class="callout-label">ESC standard</p><p>All ducts and air handlers inside the conditioned space, on every project. In rowhouses that means no ducts in the space above the top-floor ceiling unless that space is inside the roof insulation (Chapter 05). If a design puts ductwork outside the envelope, the PM raises it at design review and it doesn't proceed without a written exception.</p></aside>
+
+<figure class="diagram">
+<svg viewBox="0 0 820 400" role="img" aria-labelledby="hvac-fig3-t"><title id="hvac-fig3-t">Section through a hall soffit under floor joists showing the supply trunk, refrigerant line set, condensate line, a drain pipe in a joist bay and a cable in a bored joist</title>
+<text class="tx-b" x="16" y="22">Soffit coordination section, typical rowhouse hall</text>
+<rect class="f-wood" x="40" y="80" width="500" height="8"/>
+<rect class="f-wood" x="60" y="88" width="15" height="92"/>
+<rect class="f-wood" x="220" y="88" width="15" height="92"/>
+<rect class="f-wood" x="380" y="88" width="15" height="92"/>
+<line class="hid" x1="540" y1="70" x2="540" y2="190"/>
+<rect class="f-finish" x="40" y="180" width="205" height="5"/>
+<rect class="f-finish" x="495" y="180" width="45" height="5"/>
+<rect class="f-wood" x="250" y="180" width="15" height="125"/>
+<rect class="f-wood" x="475" y="180" width="15" height="125"/>
+<rect class="f-wood" x="250" y="305" width="240" height="10"/>
+<rect class="f-finish" x="245" y="185" width="5" height="135"/>
+<rect class="f-finish" x="490" y="185" width="5" height="135"/>
+<rect class="f-finish" x="245" y="315" width="250" height="5"/>
+<rect class="f-steel" x="280" y="192" width="140" height="80"/>
+<text class="tx-sm" x="350" y="236" text-anchor="middle">supply trunk</text>
+<circle class="f-insul" cx="448" cy="210" r="10"/>
+<circle class="f-steel" cx="448" cy="210" r="4.5"/>
+<circle class="f-insul" cx="448" cy="240" r="7"/>
+<circle class="f-steel" cx="448" cy="240" r="2"/>
+<circle class="f-water" cx="448" cy="266" r="5"/>
+<circle class="f-water" cx="148" cy="140" r="18"/>
+<circle class="f-accent" cx="500" cy="110" r="4"/>
+<text class="tx" x="580" y="84">3/4 in. subfloor</text>
+<line class="dim" x1="575" y1="81" x2="541" y2="84"/>
+<text class="tx" x="580" y="110">Cable in bored joist (Ch 08)</text>
+<line class="dim" x1="575" y1="107" x2="505" y2="110"/>
+<text class="tx" x="580" y="140">2x10 joists at 16 in. o.c.</text>
+<line class="dim" x1="575" y1="137" x2="396" y2="150"/>
+<text class="tx" x="580" y="196">Supply trunk 14 x 8 in.,</text>
+<text class="tx-sm" x="580" y="209">sealed with mastic</text>
+<line class="dim" x1="575" y1="193" x2="421" y2="196"/>
+<text class="tx" x="580" y="232">Line set: 7/8 in. suction,</text>
+<text class="tx-sm" x="580" y="245">3/8 in. liquid, 1/2 in. min. insulation</text>
+<line class="dim" x1="575" y1="228" x2="459" y2="212"/>
+<text class="tx" x="580" y="272">3/4 in. condensate, 1/8 in./ft</text>
+<line class="dim" x1="575" y1="268" x2="454" y2="267"/>
+<text class="tx" x="580" y="314">2x3 ladder + drywall</text>
+<line class="dim" x1="575" y1="310" x2="480" y2="310"/>
+<line class="dim" x1="230" y1="180" x2="230" y2="320"/>
+<line class="dim" x1="224" y1="180" x2="236" y2="180"/>
+<line class="dim" x1="224" y1="320" x2="236" y2="320"/>
+<text class="tx-dim" x="224" y="254" text-anchor="end">14 in.</text>
+<line class="dim" x1="245" y1="336" x2="495" y2="336"/>
+<line class="dim" x1="245" y1="330" x2="245" y2="342"/>
+<line class="dim" x1="495" y1="330" x2="495" y2="342"/>
+<text class="tx-dim" x="370" y="352" text-anchor="middle">26 in.</text>
+<text class="tx" x="40" y="352">3 in. drain in joist bay (Ch 06)</text>
+<line class="dim" x1="100" y1="340" x2="142" y2="158"/>
+<text class="tx-sm" x="40" y="385">Lay out every pipe, duct and cable in the soffit before the carpenter frames it. Frame to the services, not the other way around.</text>
+</svg>
+<figcaption><strong>Fig. 7.3</strong> A shared hall soffit. The trunk takes most of the box, the line set and condensate ride beside it, and the gravity drain stays up in a joist bay where it was laid out first. Final size comes from the coordination drawing.</figcaption>
+</figure>
+
+<h3>7.6 Ventilation</h3>
+<p>A tight house needs mechanical ventilation. The IRC requires whole-house mechanical ventilation where the house tests at 5 ACH50 or tighter (R303.4), and sets minimum continuous rates in M1505.4.3 by floor area and bedroom count. ESC houses always fall into that category.</p>
+<h4>Whole-house strategies</h4>
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Exhaust-only (continuous bath fan)</td><td>Small additions; budget jobs in mild climates</td><td>Cheapest; uses fans already required</td><td>Pulls unfiltered air through cracks; depressurizes the house; no heat recovery; poor in a tight rowhouse</td><td>$</td><td>Fast</td></tr>
+<tr><td>Balanced HRV</td><td>Cold, dry climates; houses with high winter humidity</td><td>Recovers heat; balanced pressures; filtered</td><td>Needs a condensate drain; dries the house in winter</td><td>$$$</td><td>Medium</td></tr>
+<tr><td>Balanced ERV, fully ducted</td><td>Mixed and humid climates; most ESC rowhouses and new houses</td><td>Recovers heat and some moisture; balanced; dedicated supplies to bedrooms and exhaust from baths</td><td>Own duct system to run; two wall penetrations; filter maintenance</td><td>$$$</td><td>Medium</td></tr>
+<tr><td>Balanced ERV tied to the AHU</td><td>Ducted houses with limited space for a second duct system</td><td>Uses the main ducts for distribution; fewer runs</td><td>Needs interlock or a variable-speed AHU on low; can short-circuit if connections are wrong</td><td>$$</td><td>Medium</td></tr>
+</tbody>
+</table></div>
+<p class="pick"><strong>ESC default:</strong> a fully ducted ERV with MERV 13 filtration, exhaust pickups in baths and laundry, and supplies to bedrooms and the main living space. We switch to an HRV in very cold, dry climates or where the owner has humidity complaints in winter, and to an AHU-tied ERV when the ducted design simply won't fit.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 880 420" role="img" aria-labelledby="hvac-fig4-t"><title id="hvac-fig4-t">Schematic of a balanced energy recovery ventilator with outdoor intake and exhaust, core, filters, fans, dampers and room connections</title>
+<defs><marker id="hvac-fig4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<text class="tx-b" x="16" y="22">Balanced ERV schematic</text>
+<text class="tx-b" x="20" y="62">Outdoors</text>
+<text class="tx-b" x="160" y="62">Conditioned space</text>
+<rect class="f-concrete" x="120" y="45" width="20" height="300"/>
+<rect class="f-steel" x="100" y="155" width="20" height="40"/>
+<rect class="f-steel" x="100" y="245" width="20" height="40"/>
+<rect class="f-insul" x="140" y="160" width="190" height="30"/>
+<rect class="f-insul" x="140" y="250" width="190" height="30"/>
+<rect class="f-steel" x="550" y="160" width="150" height="30"/>
+<rect class="f-steel" x="550" y="250" width="150" height="30"/>
+<rect class="f-steel" x="330" y="150" width="220" height="140"/>
+<polygon class="f-paper" points="440,165 520,220 440,275 360,220"/>
+<text class="tx-sm" x="440" y="224" text-anchor="middle">core</text>
+<rect class="f-accent" x="338" y="160" width="6" height="30"/>
+<rect class="f-accent" x="536" y="250" width="6" height="30"/>
+<circle class="f-paper" cx="520" cy="175" r="10"/>
+<circle class="f-paper" cx="362" cy="265" r="10"/>
+<text class="tx-sm" x="520" y="161" text-anchor="middle">fan</text>
+<text class="tx-sm" x="362" y="286" text-anchor="middle">fan</text>
+<line class="ln" x1="40" y1="175" x2="98" y2="175" marker-end="url(#hvac-fig4-arrow)"/>
+<line class="ln" x1="160" y1="175" x2="318" y2="175" marker-end="url(#hvac-fig4-arrow)"/>
+<line class="ln" x1="565" y1="175" x2="690" y2="175" marker-end="url(#hvac-fig4-arrow)"/>
+<line class="ln" x1="690" y1="265" x2="565" y2="265" marker-end="url(#hvac-fig4-arrow)"/>
+<line class="ln" x1="318" y1="265" x2="160" y2="265" marker-end="url(#hvac-fig4-arrow)"/>
+<line class="ln" x1="98" y1="265" x2="40" y2="265" marker-end="url(#hvac-fig4-arrow)"/>
+<line class="ln2" x1="620" y1="154" x2="620" y2="196"/>
+<line class="ln2" x1="620" y1="244" x2="620" y2="286"/>
+<rect class="f-paper" x="710" y="140" width="150" height="70"/>
+<text class="tx" x="785" y="170" text-anchor="middle">Bedrooms,</text>
+<text class="tx" x="785" y="186" text-anchor="middle">living room</text>
+<rect class="f-paper" x="710" y="230" width="150" height="70"/>
+<text class="tx" x="785" y="258" text-anchor="middle">Baths, laundry,</text>
+<text class="tx" x="785" y="274" text-anchor="middle">kitchen area</text>
+<text class="tx-sm" x="20" y="150">Intake hood</text>
+<text class="tx-sm" x="20" y="305">Exhaust hood</text>
+<text class="tx-sm" x="20" y="222">10 ft min.</text>
+<text class="tx-sm" x="20" y="234">apart in field</text>
+<text class="tx-sm" x="235" y="152" text-anchor="middle">outdoor air in</text>
+<text class="tx-sm" x="235" y="300" text-anchor="middle">exhaust out</text>
+<text class="tx-sm" x="585" y="152" text-anchor="middle">fresh supply</text>
+<text class="tx-sm" x="585" y="300" text-anchor="middle">stale return</text>
+<text class="tx" x="341" y="118" text-anchor="middle">MERV 13 filter, each stream</text>
+<line class="dim" x1="341" y1="123" x2="341" y2="159"/>
+<text class="tx" x="160" y="336">Insulated, vapor-jacketed ducts on the cold side</text>
+<line class="dim" x1="180" y1="324" x2="180" y2="281"/>
+<text class="tx" x="560" y="336">Balancing dampers: flows within 10%</text>
+<line class="dim" x1="620" y1="324" x2="620" y2="287"/>
+<text class="tx-sm" x="160" y="372">The two streams pass through alternate channels of the core and do not mix. An ERV transfers heat and some moisture;</text>
+<text class="tx-sm" x="160" y="386">an HRV transfers heat only and needs a condensate drain. Run continuously on low with boost switches in the baths.</text>
+</svg>
+<figcaption><strong>Fig. 7.4</strong> Balanced ERV. Outdoor air and exhaust air cross in the core so the outgoing air preheats (or precools) the incoming air. Keep the two outdoor ducts short, insulated and sealed, and keep the intake at least 10 ft from the exhaust hood, kitchen hood, dryer and flues unless the ERV listing and the AHJ allow less (IRC R303.5.1).</figcaption>
+</figure>
+
+<h4>Bath fans and kitchen hoods</h4>
+<ul>
+<li><strong>Bath exhaust</strong>: 50 cfm intermittent or 20 cfm continuous minimum per bath (IRC M1505.4.4). ESC uses quiet fans, 1.0 sone or less, on a humidity sensor or timer, with smooth rigid duct to a dampered wall or roof cap. If the ERV is the bath exhaust, add a boost switch.</li>
+<li><strong>Kitchen hood</strong>: 100 cfm intermittent or 25 cfm continuous minimum. Hood ducts must be smooth metal (galvanized, stainless or copper), airtight, with a backdraft damper, and must discharge outdoors (M1503). Never into a joist bay, soffit or attic.</li>
+<li><strong>Makeup air</strong>: a hood exhausting more than 400 cfm needs makeup air at roughly the exhaust rate, through a motorized damper interlocked with the hood (M1503.6). Without it, a big hood in a tight rowhouse backdrafts appliances and whistles at every door.</li>
+<li><strong>Dryer exhaust</strong>: 4 in. smooth metal, 35 ft maximum developed length less fitting allowances (M1502.4), or the manufacturer's longer listing. Heat pump dryers need no duct at all.</li>
+</ul>
+<aside class="callout esc"><p class="callout-label">ESC standard</p><p>We steer owners toward hoods at or under 400 cfm with good capture (a deep hood, sized wider than the cooktop). When the owner chooses a larger hood, the makeup air system is priced and designed with it.</p></aside>
+
+<h3>7.7 Line sets, condensate and chases</h3>
+<h4>Refrigerant line sets</h4>
+<ul>
+<li>Size per the manufacturer for the actual length and lift. Roof condensers feeding a cellar air handler can exceed some models' vertical lift limit; check before submittal.</li>
+<li>Insulate the suction line (and both lines on heat pumps) with closed-cell insulation, 1/2 in. minimum, 3/4 in. where it's outside or in unconditioned space. UV-protect exterior insulation with a jacket or line-set cover.</li>
+<li>Braze with a nitrogen purge flowing so the inside of the pipe doesn't scale. Torque mini-split flares to the manufacturer's value.</li>
+<li>Since the 2025 refrigerant transition, new split equipment ships with A2L (mildly flammable) refrigerants such as R-454B or R-32. Follow the manufacturer's room-size, leak-detection and ventilation requirements for the charge, and make sure the tech is trained for A2L.</li>
+<li>Pressure test with dry nitrogen to the manufacturer's test pressure and hold it, then evacuate to 500 microns or less and confirm a decay test before releasing the charge. Do this before the chase is closed.</li>
+</ul>
+<h4>Condensate</h4>
+<p>Every cooling coil and every ductless head makes water. Primary condensate lines are 3/4 in. minimum and slope at 1/8 in. per foot (1%) minimum to an approved receptor (IRC M1411.3). Where an overflow would damage the building, which in a closet or soffit is always, add a secondary drain pan with its own line or a float switch that shuts the unit off (M1411.3.1). Trap the line per the manufacturer. Condensate pumps are a last resort and need a safety switch wired to shut the unit down.</p>
+<h4>Chases and soffits</h4>
+<p>Fig. 7.1 shows the rowhouse pattern: one stacked chase beside the stair carries line sets and condensate from the roof to the cellar, with soffits on each floor in the hall where ceiling height matters least. Plumbing vents share the far side of the stair (Chapter 06). The coordination process:</p>
+<ol class="steps">
+<li><strong>Draw it.</strong> The mechanical sub produces a coordination drawing showing every duct, pipe and line set in each soffit and chase with sizes and elevations. ESC overlays plumbing and electrical and resolves clashes on paper.</li>
+<li><strong>Mark it.</strong> Chalk chase and soffit outlines on floors and ceilings at full size. Walk it with the architect for any soffit visible in finished rooms.</li>
+<li><strong>Install by priority.</strong> Drains, then ducts, then line sets and condensate, then supply piping and gas, then electrical.</li>
+<li><strong>Frame around it.</strong> The carpenter frames soffits and chase walls after the services are hung, leaving 1 in. clear for sealing and service (Fig. 7.3).</li>
+<li><strong>Fireblock it.</strong> Fireblock chases at each floor line and seal penetrations with listed materials (IRC R302.11). Rated assemblies get a listed firestop system, and fire dampers wherever a duct passes through one where the design requires them.</li>
+<li><strong>Leave access.</strong> Access panels for dampers, air handler filters, condensate traps and float switches, located before drywall.</li>
+</ol>
+
+<h3>7.8 Hydronic and radiant heat</h3>
+<p>Hydronic systems work well where ducts don't fit. A condensing (mod-con) boiler or an air-to-water heat pump makes hot water; circulators move it through zones to radiators, baseboard, fan coils or floor tubing. Outdoor reset control lowers the supply temperature as outdoor temperature rises, so a mod-con boiler spends most of the season with return water below about 130&deg;F, where it condenses and earns its efficiency.</p>
+<ol class="steps">
+<li><strong>Survey existing radiators.</strong> Rate each (EDR) against the new room load; mark which stay, go or move.</li>
+<li><strong>Pull and protect.</strong> Remove and tag radiators before demolition (Chapter 02); pressure test before reset.</li>
+<li><strong>Pipe new mains and branches.</strong> PEX-AL-PEX, oxygen-barrier PEX or copper, insulated where it runs through unconditioned space, kept out of exterior walls.</li>
+<li><strong>Set the boiler or heat pump.</strong> Sealed combustion only for boilers, vented per its listing.</li>
+<li><strong>Pressure test the system</strong> before cover, then fill, purge air and start up after finishes.</li>
+<li><strong>Reset radiators</strong> after flooring is finished and coated (Chapter 11), with new valves and bleeders.</li>
+</ol>
+
+<h4>Radiant floor methods</h4>
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Tubing in a new slab</td><td>Cellar slabs, slab-on-grade additions</td><td>Cheapest per square foot; big thermal mass; tubing protected</td><td>Slowest to respond; needs full under-slab insulation; no fixing a damaged loop later</td><td>$</td><td>Medium</td></tr>
+<tr><td>Thin pour (gypsum or lightweight concrete) over subfloor</td><td>Baths and kitchens on wood framing; tile floors</td><td>Good heat spread; works with tile and stone</td><td>Adds 1-1/2 in. or more and about 13 to 15 psf; long dry time before tile; engineer review</td><td>$$</td><td>Slow</td></tr>
+<tr><td>Grooved structural or overlay panels with aluminum facing</td><td>Wood floors; renovations that can't take wet work or the weight</td><td>Dry install; fast response; low added height</td><td>Panel cost; layout must be exact; hardwood must be rated for radiant</td><td>$$$</td><td>Fast</td></tr>
+<tr><td>Electric mat under tile</td><td>Single bath floors for comfort, not as the heat source</td><td>Thin; cheap for small areas; simple controls</td><td>Costly to run as primary heat; one break kills the zone; needs a dedicated GFCI circuit (Chapter 08)</td><td>$</td><td>Fast</td></tr>
+</tbody>
+</table></div>
+<p class="pick"><strong>ESC default:</strong> tubing in the slab for cellars and slab additions, aluminum-faced panels for wood-floored levels, and electric mats under tile for bath floor comfort where the main heat is something else. We switch to a thin pour when the floor is tile or stone over a large area and the engineer confirms the framing can take the weight.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 320" role="img" aria-labelledby="hvac-fig5-t"><title id="hvac-fig5-t">Two radiant floor cross-sections: tubing in an insulated slab, and tubing in a gypsum thin pour over a wood subfloor</title>
+<text class="tx-b" x="16" y="22">Radiant floor cross-sections (not to scale; tube size exaggerated)</text>
+<text class="tx-b" x="20" y="60">A. Tubing in cellar slab</text>
+<rect class="f-concrete" x="20" y="90" width="24" height="170"/>
+<rect class="f-insul" x="44" y="126" width="10" height="60"/>
+<rect class="f-finish" x="54" y="120" width="196" height="6"/>
+<rect class="f-concrete" x="54" y="126" width="196" height="40"/>
+<line class="hid" x1="54" y1="147" x2="250" y2="147"/>
+<circle class="f-water" cx="80" cy="141" r="5"/>
+<circle class="f-water" cx="160" cy="141" r="5"/>
+<circle class="f-water" cx="240" cy="141" r="5"/>
+<rect class="f-insul" x="44" y="166" width="206" height="20"/>
+<rect class="f-membrane" x="44" y="186" width="206" height="3"/>
+<rect class="f-earth" x="44" y="189" width="206" height="40"/>
+<rect class="f-earth" x="44" y="229" width="206" height="31"/>
+<text class="tx-sm" x="268" y="112">Finish floor (Ch 10, 11)</text>
+<line class="dim" x1="264" y1="109" x2="240" y2="122"/>
+<text class="tx-sm" x="268" y="128">4 in. slab</text>
+<line class="dim" x1="264" y1="125" x2="230" y2="132"/>
+<text class="tx-sm" x="268" y="144">1/2 in. PEX at 9 in. o.c.</text>
+<line class="dim" x1="264" y1="141" x2="246" y2="141"/>
+<text class="tx-sm" x="268" y="160">Tied to mesh or rails</text>
+<line class="dim" x1="264" y1="157" x2="220" y2="148"/>
+<text class="tx-sm" x="268" y="180">2 in. XPS, R-10, continuous</text>
+<line class="dim" x1="264" y1="177" x2="240" y2="176"/>
+<text class="tx-sm" x="268" y="198">10 mil vapor retarder</text>
+<line class="dim" x1="264" y1="195" x2="240" y2="188"/>
+<text class="tx-sm" x="268" y="216">4 in. compacted stone</text>
+<line class="dim" x1="264" y1="213" x2="240" y2="210"/>
+<text class="tx-sm" x="20" y="285">1 in. perimeter edge insulation</text>
+<line class="dim" x1="60" y1="276" x2="49" y2="187"/>
+<text class="tx-b" x="470" y="60">B. Thin pour over wood framing</text>
+<rect class="f-finish" x="470" y="120" width="220" height="6"/>
+<rect class="f-membrane" x="470" y="126" width="220" height="3"/>
+<rect class="f-concrete" x="470" y="129" width="220" height="15"/>
+<circle class="f-water" cx="500" cy="136" r="5"/>
+<circle class="f-water" cx="580" cy="136" r="5"/>
+<circle class="f-water" cx="660" cy="136" r="5"/>
+<rect class="f-wood" x="470" y="144" width="220" height="8"/>
+<rect class="f-wood" x="480" y="152" width="15" height="92"/>
+<rect class="f-wood" x="640" y="152" width="15" height="92"/>
+<rect class="f-insul" x="495" y="190" width="145" height="54"/>
+<rect class="f-finish" x="470" y="244" width="220" height="5"/>
+<text class="tx-sm" x="712" y="112">Tile on uncoupling mat</text>
+<line class="dim" x1="708" y1="109" x2="680" y2="122"/>
+<text class="tx-sm" x="712" y="128">1-1/2 in. gypsum thin pour</text>
+<line class="dim" x1="708" y1="125" x2="686" y2="131"/>
+<text class="tx-sm" x="712" y="146">1/2 in. PEX at 8 in. o.c.</text>
+<line class="dim" x1="708" y1="143" x2="666" y2="137"/>
+<text class="tx-sm" x="712" y="164">3/4 in. subfloor, glued</text>
+<line class="dim" x1="708" y1="161" x2="680" y2="149"/>
+<text class="tx-sm" x="712" y="182">2x10 joists, 16 in. o.c.</text>
+<line class="dim" x1="708" y1="179" x2="652" y2="195"/>
+<text class="tx-sm" x="567" y="222" text-anchor="middle">R-19 batt</text>
+<text class="tx-sm" x="712" y="200">Ceiling below</text>
+<line class="dim" x1="708" y1="197" x2="680" y2="245"/>
+<text class="tx-sm" x="470" y="285">Adds about 1-3/4 in. and 13 to 15 psf: engineer confirms (Ch 04)</text>
+<text class="tx-sm" x="470" y="300">Tile setting over gypsum per Ch 10</text>
+</svg>
+<figcaption><strong>Fig. 7.5</strong> Two common radiant floor build-ups. Design supply water is typically 90 to 120&deg;F, set by the radiant designer from the room loads and floor covering.</figcaption>
+</figure>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p><strong>Damaged radiant tubing.</strong> Loops get cut by saw kerfs in slabs, screws through panels and tack strip on carpet floors. Keep loops under pressure (typically 60 to 100 psi air or water, per the tubing maker) through the pour or the panel install, photograph the layout with a tape in the shot, and mark no-fastener zones on the floor before the next trade comes in.</p></aside>
+
+<h3>7.9 The installation process</h3>
+<ol class="steps">
+<li><strong>Design review.</strong> ESC, the architect and the mechanical sub review Manual J, S and D, the coordination drawing and the equipment submittals. Confirm roof loads, electrical loads and lift limits.</li>
+<li><strong>Layout walk.</strong> Mark equipment, chases, soffits, registers, grilles and terminations. Keep registers clear of furniture walls and hardwood borders.</li>
+<li><strong>Penetrations.</strong> Core or cut wall and roof openings. Roofer installs curbs and flashing (Chapter 05). Masonry openings at party walls are not allowed; rear and front wall openings get sleeved and sealed.</li>
+<li><strong>Set equipment.</strong> Air handlers on vibration pads or hung on listed hangers with secondary pans; rooftop units on dunnage, leveled and anchored per the engineer; ERV hung with isolators.</li>
+<li><strong>Trunks and plenums.</strong> Hung on strap or rod hangers at 8 to 10 ft max, sealed with mastic as they go.</li>
+<li><strong>Branches, returns and exhaust.</strong> Rigid branches with dampers at the takeoff and boots fastened to framing; return paths framed; bath, hood, dryer and ERV ducts run to dampered terminations.</li>
+<li><strong>Line sets and condensate.</strong> Run, support, braze or flare, nitrogen pressure test. Condensate lines sloped and trapped, secondary protection installed.</li>
+<li><strong>Rough-in duct leakage test.</strong> Seal boots, pressurize the system to 25 Pa and measure (7.10). Fix and retest until it passes.</li>
+<li><strong>Mechanical rough inspection.</strong> Inspection hold below. Then insulation (Chapter 05) and drywall (Chapter 09).</li>
+<li><strong>Protect.</strong> Cap every boot and grille opening. No equipment runs during drywall sanding without filters and the owner's permission; ESC prefers temporary heat instead.</li>
+<li><strong>Trim-out.</strong> After paint: registers, grilles, thermostats, condensers charged, ductless heads hung, radiators reset.</li>
+<li><strong>Startup and commissioning.</strong> Per 7.10.</li>
+</ol>
+
+<aside class="callout hold"><p class="callout-label">Inspection hold</p><p><strong>Mechanical rough-in.</strong> No insulation or drywall over ducts, line sets, condensate, gas piping or exhaust ducts until the AHJ's mechanical rough inspection is signed and the rough-in duct leakage test report is in the project file. Photograph every soffit and chase before it's closed.</p></aside>
+<aside class="callout hold"><p class="callout-label">Inspection hold</p><p><strong>Line set pressure and vacuum.</strong> The line set chase isn't closed until the tech has held a nitrogen pressure test and recorded the vacuum decay result on the startup sheet. Opening a finished chase to find a leaking braze joint costs far more than waiting a day.</p></aside>
+<aside class="callout hold"><p class="callout-label">Inspection hold</p><p><strong>Firestopping.</strong> Penetrations through fire-rated assemblies and fireblocking at chase floor lines are inspected before cover where the AHJ requires it. Keep the listed system data sheets on site.</p></aside>
+
+<h3>7.10 Testing, commissioning and startup</h3>
+<p>ESC doesn't call a system done when it turns on. It's done when it's measured.</p>
+<ol class="steps">
+<li><strong>Duct leakage, rough-in.</strong> Duct pressurization test at 25 Pa with registers taped. The energy code limit is typically 4.0 cfm25 per 100 sq ft of conditioned floor area for total leakage with the air handler installed, or 3.0 cfm25 per 100 sq ft if tested before the air handler is set (IRC N1103.3.5). Depending on the edition the AHJ has adopted, ducts entirely inside the envelope may be exempt or held to a looser limit; ESC tests them anyway.</li>
+<li><strong>Duct leakage, final.</strong> Retest after trim-out if the rough-in test was done without the air handler, or if the AHJ requires a post-construction test.</li>
+<li><strong>Blower door.</strong> Coordinated with the envelope test (Chapter 05). Confirms the infiltration value used in Manual J.</li>
+<li><strong>Equipment startup.</strong> Per the manufacturer's startup sheet: refrigerant charge verified by subcooling (TXV/EEV) or superheat (fixed orifice); combustion analysis on gas appliances; boiler pressure, purge and reset curve.</li>
+<li><strong>Airflow.</strong> Total external static pressure measured and compared to the blower table; total airflow typically 350 to 400 cfm per ton in cooling unless the designer set otherwise. Room airflows measured with a flow hood and balanced to within 10% of Manual D, or 20% on small branches.</li>
+<li><strong>Ventilation.</strong> ERV supply and exhaust measured and balanced within 10% of each other and of the design rate. Bath fans and the hood measured at the grille or cap.</li>
+<li><strong>Controls.</strong> Thermostats, zoning, dampers, makeup air interlock, condensate safety switches and outdoor reset all function-tested.</li>
+<li><strong>Owner turnover.</strong> Manuals, test reports, filter schedule, warranties and a controls walk-through.</li>
+</ol>
+
+<h3>7.11 Key specs and tolerances</h3>
+<div class="table-wrap"><table class="specs">
+<thead><tr><th>Item</th><th>Requirement or target</th><th>Source or note</th></tr></thead>
+<tbody>
+<tr><td>Load and design</td><td>Manual J loads, Manual S selection, Manual D ducts</td><td>IRC M1401.3, M1601.1</td></tr>
+<tr><td>Cooling and heat pump capacity</td><td>95 to 115% of total cooling load; up to 125% for heat pumps where heating governs</td><td>ACCA Manual S</td></tr>
+<tr><td>Duct leakage, total</td><td>4.0 cfm25 per 100 sq ft CFA or less (3.0 if tested at rough-in without the air handler)</td><td>IRC N1103.3; check adopted edition</td></tr>
+<tr><td>Duct insulation outside envelope</td><td>Attics: R-8 for 3 in. and larger, R-6 smaller. Elsewhere: R-6 for 3 in. and larger, R-4.2 smaller</td><td>IRC N1103.3; ESC keeps ducts inside</td></tr>
+<tr><td>Duct sealing</td><td>UL 181 mastic or tape at all joints and seams</td><td>IRC M1601.4.1</td></tr>
+<tr><td>Flex duct</td><td>Fully extended; supported at 4 to 5 ft max; sag under 1/2 in. per ft; ESC limit 5 ft long</td><td>Manufacturer and ADC guidance</td></tr>
+<tr><td>Room airflow balance</td><td>Within 10% of design (20% on branches under 50 cfm)</td><td>ESC commissioning target</td></tr>
+<tr><td>Whole-house ventilation</td><td>Continuous rate per floor area and bedrooms</td><td>IRC M1505.4.3</td></tr>
+<tr><td>Bath exhaust</td><td>50 cfm intermittent or 20 cfm continuous</td><td>IRC M1505.4.4</td></tr>
+<tr><td>Kitchen exhaust</td><td>100 cfm intermittent or 25 cfm continuous; makeup air over 400 cfm</td><td>IRC M1505.4.4, M1503.6</td></tr>
+<tr><td>Intake separation</td><td>10 ft from exhaust outlets, vents and other contaminant sources (or as the code allows)</td><td>IRC R303.5.1</td></tr>
+<tr><td>Dryer exhaust</td><td>4 in. smooth metal, 35 ft max developed length less fittings</td><td>IRC M1502.4</td></tr>
+<tr><td>Condensate</td><td>3/4 in. min.; 1/8 in. per ft min. slope; secondary pan or float switch where damage could occur</td><td>IRC M1411.3, M1411.3.1</td></tr>
+<tr><td>Refrigerant evacuation</td><td>500 microns or less, passing decay test</td><td>Manufacturer startup sheet</td></tr>
+<tr><td>Condenser clearance</td><td>Per manufacturer; ESC sets roof units 18 in. min. above roof for snow and reroofing</td><td>Manufacturer and Chapter 05</td></tr>
+<tr><td>Equipment disconnect and service receptacle</td><td>Disconnect within sight; receptacle within 25 ft of equipment</td><td>NEC 440.14, 210.63</td></tr>
+<tr><td>Radiant supply water</td><td>Typically 90 to 120&deg;F at design</td><td>Radiant designer</td></tr>
+<tr><td>Typical lead times</td><td>Heat pumps and mini-splits 1 to 6 weeks; ERVs 2 to 6 weeks; boilers 1 to 4 weeks; custom sheet metal 1 to 2 weeks after field measure; steel dunnage 3 to 6 weeks</td><td>Confirm at submittal; varies by market</td></tr>
+</tbody>
+</table></div>
+
+<h3>7.12 Common failures and how to avoid them</h3>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p><strong>Oversized equipment.</strong> Rule-of-thumb sizing (a ton per 500 sq ft) on a tight house gives units two to three times too big. They short-cycle and leave the house clammy. Use a real Manual J with the blower door target, and pick variable-speed equipment that can turn down.</p></aside>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p><strong>Crushed or snaking flex.</strong> Long flex runs pulled around joists and pinched by soffit framing deliver half their design airflow. Rigid branches, flex only at the boot, and no framing until the ducts are inspected.</p></aside>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p><strong>No return path.</strong> Jump ducts or transfer grilles in every closable room, verified with a manometer.</p></aside>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p><strong>Condensate leaks in finished ceilings.</strong> Flat or back-pitched lines, missing traps and no secondary pan over a finished room. Slope checked with a level, traps per the manufacturer, a float switch on every air handler above finish, and a water test with a bucket before the ceiling closes.</p></aside>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p><strong>Roof penetrations that leak.</strong> Line sets run through a membrane with caulk and a hope. Use a curb with a hooded cap or a manufactured line-set boot, flashed by the roofer, with drip loops so water runs off before it reaches the opening.</p></aside>
+
+<h3>7.13 QC checklist</h3>
+<ul class="checklist">
+<li>Manual J, S and D on file, matching the equipment actually installed.</li>
+<li>Equipment set level, accessible for service, with filters reachable without tools.</li>
+<li>All ducts inside the conditioned space, or a written exception on file.</li>
+<li>Every joint sealed with mastic; no cloth tape; boots fastened to framing.</li>
+<li>Return path in every closable room.</li>
+<li>Bath, hood, dryer and ERV ducts terminate outdoors with dampers; none end in a joist bay or soffit.</li>
+<li>Makeup air installed and interlocked for any hood over 400 cfm.</li>
+<li>Line sets insulated, supported, protected at penetrations; pressure and vacuum results recorded.</li>
+<li>Condensate sloped, trapped, with secondary protection and a water test done.</li>
+<li>Roof and wall penetrations flashed and inspected by ESC (Chapter 05).</li>
+<li>Fireblocking at chase floor lines; listed firestop at rated penetrations.</li>
+<li>Rough-in duct leakage test passed and report filed; rough inspection signed.</li>
+<li>Startup sheets, airflow balance report, ERV balance and controls test complete.</li>
+<li>Owner turnover packet and walk-through done.</li>
+</ul>
+
+<h3>7.14 Handoff to the next trade</h3>
+<p>At the end of rough-in, the space handed to insulation (Chapter 05) and drywall (Chapter 09) looks like this:</p>
+<ul>
+<li>All ducts, line sets, condensate, exhaust and gas piping hung, sealed, tested and inspected, with photos of every soffit and chase in the project file.</li>
+<li>Boots and grille openings flush with the planned drywall face and fastened so the drywall crew can cut and seal to them. Every opening capped.</li>
+<li>Soffits and chases framed around the services with 1 in. clearance and access panels located and blocked.</li>
+<li>No HVAC component in an exterior wall cavity that would block insulation, unless designed and insulated behind.</li>
+<li>Thermostat, sensor and control wire locations marked for the electrician (Chapter 08).</li>
+<li>Radiant loops under pressure with gauges visible and no-fastener zones marked for tile and flooring (Chapters 10 and 11).</li>
+</ul>
+<p>At trim-out, the HVAC sub leaves a house that's commissioned and quiet: grilles tight to finished surfaces, no marks on paint, radiators reset level, the roof clean and undamaged, and startup and balance reports with the PM for closeout (Chapter 01).</p>
+</section>

@@ -1,0 +1,591 @@
+<section class="chapter" id="electrical">
+<header class="ch-head">
+<p class="eyebrow">Divisions 26 &amp; 27 · Electrical and Communications</p>
+<h2>Electrical &amp; Low Voltage</h2>
+<p class="lede">How ESC sizes services, lays out circuits, roughs, inspects and trims power, lighting, life-safety and low-voltage systems in new houses and gutted masonry rowhouses, with the different wiring and control methods and when we use each. Written for lead carpenters, licensed electrical and low-voltage subs, PMs and owners reviewing a lighting or device plan.</p>
+</header>
+
+<h3>8.1 Where electrical sits in the job</h3>
+<p>Electrical work happens in four passes. Each one has an inspection or a utility sign-off attached to it.</p>
+<ol>
+<li><strong>Temporary power and service planning.</strong> During preconstruction (Chapter 01) we file the utility service request, because utility work orders and meter sets often take 6 to 12 weeks. On a rowhouse gut, the existing service usually feeds GFCI-protected temporary power during demolition (Chapter 02).</li>
+<li><strong>Rough-in.</strong> Boxes, cable or conduit, recessed housings, low-voltage cabling and the panel can. Follows plumbing (Chapter 06) and HVAC (Chapter 07) rough, because cable can bend around pipe and duct and they can't bend around cable.</li>
+<li><strong>Service.</strong> Meter socket, service conductors, grounding electrode system and main panel. Often inspected separately so the utility can set the meter early.</li>
+<li><strong>Trim (finish).</strong> Devices, fixtures, breakers, labeling and testing, after paint (Chapter 09), tile (Chapter 10) and cabinets and counters (Chapter 11).</li>
+</ol>
+<p>Code references are to NEC 2023 (NFPA 70) and IRC 2021 as model baselines. Many jurisdictions are still on NEC 2017 or 2020, and several large cities write their own electrical codes. Local amendments and the authority having jurisdiction (AHJ) govern every requirement in this chapter. Confirm the adopted edition on the permit before layout starts.</p>
+
+<h3>8.2 Before electrical starts</h3>
+<p>The electrician should not walk into a rough-in that's still moving. These items come from earlier trades and must be complete or answered.</p>
+<ul class="checklist">
+<li>Permit drawings show the panel location, service size and a load calculation; the utility service application is filed and the meter location is approved by the utility.</li>
+<li>Framing (Chapter 04) is complete and punched: blocking for heavy fixtures, fans, TV mounts and grab bars installed; soffits and chases framed; beams and engineered joists marked with their no-bore zones.</li>
+<li>Plumbing drains and vents (Chapter 06) and ductwork and line sets (Chapter 07) are roughed, so we route around fixed pipe rather than the reverse.</li>
+<li>Kitchen and bath cabinet shop drawings approved (Chapter 11): appliance specs, hood, under-cabinet lighting, island depth and countertop height fixed.</li>
+<li>Lighting plan, switching plan and low-voltage plan signed by the owner and architect, with fixture cut sheets for every recessed or specialty fixture.</li>
+<li>Rowhouse only: existing wiring traced and labeled; live circuits identified; knob-and-tube located (Section 8.13); party-wall routing agreed (no chasing a shared wall without the structural and party-wall review in Chapter 02).</li>
+<li>Nameplate data for the heat pump, EV charger, range, water heater and dryer in hand for the load calculation.</li>
+</ul>
+
+<h3>8.3 Step-by-step process</h3>
+<ol class="steps">
+<li><strong>Load calculation and service decision.</strong> Run NEC Article 220 (the optional dwelling method in 220.82 is typical) with real nameplate loads, including future EV and heat pump circuits. Choose 100, 200 or 400 A, or a smaller service with load management (Section 8.4).</li>
+<li><strong>Layout walk.</strong> Electrician, PM and lead carpenter walk the framed house with the lighting plan. Mark every box, recessed light and low-voltage drop on the framing with paint or a lumber crayon. Owner attends or signs the marked plan.</li>
+<li><strong>Panel can and service equipment.</strong> Set the panel enclosure, meter socket and service raceway. Drive ground rods or tie into the concrete-encased electrode left by the foundation crew (Chapter 03).</li>
+<li><strong>Boxes and housings.</strong> Nail or screw boxes set to finished wall thickness (1/2 in drywall, 5/8 in drywall, plaster, or tile on backer). Install recessed housings, fan boxes and remodel-rated boxes where framing is existing.</li>
+<li><strong>Bore and pull.</strong> Bore studs and joists within code limits (Fig. 8.3), install nail plates, and pull home runs to the panel. Label every home run at the panel with circuit number and room.</li>
+<li><strong>Make up.</strong> Splice grounds, fold conductors into boxes, leave 6 in of free conductor and at least 3 in outside the box (NEC 300.14). Check box fill.</li>
+<li><strong>Low-voltage rough.</strong> Data, coax, speaker, security and intercom cable pulled to the structured media enclosure, with separation from power (Section 8.12).</li>
+<li><strong>Rough inspection.</strong> Inspection hold. Nothing gets insulated or closed until it passes.</li>
+<li><strong>Trim.</strong> Devices, plates, fixtures, breakers and appliances connected after paint and tile. Torque lugs and breaker terminals to the listed values with a torque screwdriver.</li>
+<li><strong>Test and label.</strong> Test every GFCI and AFCI, check polarity and ground with a plug-in tester, test smoke and CO interconnection, and type the panel directory.</li>
+<li><strong>Final inspection and utility release.</strong> Inspection hold. Final electrical sign-off is a prerequisite for the certificate of occupancy or final building sign-off.</li>
+</ol>
+
+<h3>8.4 Service sizing, load and future loads</h3>
+<p>The load calculation sets service size, adjusted for what the owner is likely to add. Electrification is the big variable: heat pump, induction range, heat-pump water heater and EV charger can all land on one house.</p>
+
+<div class="table-wrap"><table class="specs">
+<thead><tr><th>Service</th><th>Typical use</th><th>Service conductors (typ., 75&deg;C, per NEC 310.12)</th><th>GEC (Table 250.66)</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>100 A</td><td>Small rowhouse unit, condo, gas heat and cooking</td><td>#4 Cu or #2 Al</td><td>#8 Cu (Table 250.66)</td><td>Rarely enough for an all-electric house.</td></tr>
+<tr><td>200 A</td><td>Most single-family and full rowhouse guts, including heat pump and one EV charger</td><td>2/0 Cu or 4/0 Al</td><td>#4 Cu (#6 Cu is enough to rods alone)</td><td>ESC baseline. 40-space panel minimum.</td></tr>
+<tr><td>400 A (320 A continuous)</td><td>Large houses, two EVs, electric resistance backup heat, pools, multiple heat pumps</td><td>Per utility; usually two parallel sets feeding two 200 A panels</td><td>Per Table 250.66</td><td>Class 320 meter socket; utility may require a new transformer. Longest lead time.</td></tr>
+</tbody></table></div>
+
+<h4>Load calculation</h4>
+<p>The electrician owns the calc; the PM checks the inputs against nameplates: heat pump minimum circuit ampacity (MCA), strip heat size, range kW and the EV charger setting. A 48 A charger needs a 60 A circuit, because EV charging is a continuous load sized at 125% (NEC 625.41). A 40 A charger takes a 50 A circuit.</p>
+
+<h4>EV and heat pump readiness</h4>
+<p>Even when the owner has no EV, we leave the house ready. Where the owner declines a charger, we install a 1 in empty conduit or a #6 Cu circuit from the panel to the parking location, plus two reserved breaker spaces labeled. Some jurisdictions now require EV-ready parking in new construction. For heat pumps, reserve two-pole spaces for the outdoor unit and the air handler or strip heat even on a gas-heat job.</p>
+
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Upgrade service (100 to 200 A, or 200 to 400 A)</td><td>Full guts, all-electric conversions, new houses</td><td>Simple, no limits on simultaneous loads, best resale</td><td>Utility work order and outage; may need new service lateral, vault work or transformer; long lead</td><td>$$$</td><td>Slow (6 to 16 weeks utility)</td></tr>
+<tr><td>Load management (EVEMS, load-shed relay, NEC 220.70 and 750.30)</td><td>Rowhouses where the street service or vault can't be upsized; EV added to existing 100 or 200 A</td><td>Avoids utility upgrade; calc may count managed load at its controlled setpoint</td><td>Some loads wait; AHJ acceptance varies; listed equipment required</td><td>$$</td><td>Fast</td></tr>
+</tbody></table></div>
+<p class="pick"><strong>ESC default:</strong> 200 A service with a 40-space panel on every full gut and new house. We switch to 400 A when the calc exceeds about 160 A with EV and heat pump loads included, and to load management when the utility or the vault in a rowhouse front areaway can't support an upgrade on schedule.</p>
+
+<h4>Panel location</h4>
+<p>The main panel goes where the service enters, usually the cellar front wall in a rowhouse and the garage or utility room in a new house. NEC 110.26 sets the working space: 30 in wide (or the width of the equipment if wider), 36 in deep in front, and 6 ft 6 in of headroom, kept clear of pipes and ducts above the panel. The panel can't go in a bathroom (240.24(E)), a clothes closet (240.24(D)) or over the steps of a stair (240.24(F)). The top breaker handle can't be more than 6 ft 7 in above the floor (240.24(A)).</p>
+<p>Rowhouse cellars are often damp. Mount the panel on a 3/4 in plywood or PVC backer spaced off the masonry, keep it well above any past water line, and never land it under a waste stack or cleanout.</p>
+
+<h4>Subpanels</h4>
+<p>A 3- or 4-story rowhouse loses a lot of copper and voltage running every circuit to the cellar. A subpanel on an upper floor (often a hall closet wall, which is allowed as long as it's outside the clothes closet itself) shortens home runs. Feeders to a subpanel are four-wire: two ungrounded conductors, an insulated neutral and an equipment grounding conductor. The neutral bar in the subpanel is isolated from the enclosure; the bonding screw or strap is removed. Neutral-to-ground bonding happens only at the service disconnect.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 880 480" role="img" aria-labelledby="electrical-fig1-t">
+<title id="electrical-fig1-t">One-line diagram of a 200 amp residential service with subpanel, grounding electrodes and water and gas bonding</title>
+<rect class="f-earth" x="20" y="340" width="840" height="100"/>
+<line class="ln" x1="20" y1="340" x2="860" y2="340"/>
+<text class="tx-sm" x="30" y="333">Grade</text>
+<rect class="f-steel" x="30" y="60" width="90" height="60"/>
+<text class="tx" x="75" y="95" text-anchor="middle">XFMR</text>
+<text class="tx-sm" x="75" y="145" text-anchor="middle">Utility transformer</text>
+<line class="ln2" x1="120" y1="90" x2="202" y2="90"/>
+<text class="tx-sm" x="160" y="50" text-anchor="middle">Service drop/lateral</text>
+<circle class="f-paper" cx="230" cy="90" r="28"/>
+<text class="tx" x="230" y="95" text-anchor="middle">kWh</text>
+<text class="tx-sm" x="230" y="145" text-anchor="middle">Meter (utility)</text>
+<line class="ln2" x1="258" y1="90" x2="330" y2="90"/>
+<rect class="f-accent" x="330" y="60" width="90" height="60"/>
+<text class="tx" x="375" y="95" text-anchor="middle">200 A main</text>
+<text class="tx-sm" x="375" y="145" text-anchor="middle">Service disconnect</text>
+<line class="ln2" x1="420" y1="90" x2="500" y2="90"/>
+<rect class="f-paper" x="500" y="40" width="130" height="140"/>
+<text class="tx-b" x="565" y="65" text-anchor="middle">Main panel</text>
+<text class="tx-sm" x="565" y="95" text-anchor="middle">Branch circuits</text>
+<text class="tx-sm" x="565" y="140" text-anchor="middle">Neutral-ground</text>
+<text class="tx-sm" x="565" y="153" text-anchor="middle">bond here only</text>
+<line class="ln2" x1="630" y1="110" x2="740" y2="110"/>
+<text class="tx-sm" x="685" y="100" text-anchor="middle">4-wire feeder</text>
+<rect class="f-paper" x="740" y="70" width="120" height="90"/>
+<text class="tx-b" x="800" y="95" text-anchor="middle">Subpanel</text>
+<text class="tx-sm" x="800" y="118" text-anchor="middle">Neutral isolated</text>
+<text class="tx-sm" x="800" y="132" text-anchor="middle">Ground bar bonded</text>
+<text class="tx-sm" x="800" y="178" text-anchor="middle">Upper floor</text>
+<polyline class="ln" points="520,180 520,300 300,300 300,340"/>
+<line class="ln" x1="450" y1="300" x2="450" y2="340"/>
+<text class="tx-sm" x="410" y="292" text-anchor="middle">Grounding electrode conductor</text>
+<rect class="f-steel" x="297" y="340" width="6" height="95"/>
+<rect class="f-steel" x="447" y="340" width="6" height="95"/>
+<line class="ln-thin" x1="280" y1="388" x2="296" y2="388"/>
+<text class="tx-sm" x="276" y="384" text-anchor="end">8 ft ground rods</text>
+<text class="tx-sm" x="276" y="397" text-anchor="end">(or concrete-encased)</text>
+<line class="dim" x1="300" y1="455" x2="450" y2="455"/>
+<line class="ln-thin" x1="300" y1="448" x2="300" y2="462"/>
+<line class="ln-thin" x1="450" y1="448" x2="450" y2="462"/>
+<text class="tx-dim" x="375" y="472" text-anchor="middle">6 ft min.</text>
+<polyline class="ln" points="620,180 620,210 760,210"/>
+<rect class="f-steel" x="760" y="202" width="100" height="10"/>
+<text class="tx-sm" x="810" y="228" text-anchor="middle">Gas piping bond</text>
+<polyline class="ln" points="600,180 600,250 676,250"/>
+<rect class="f-accent" x="674" y="245" width="18" height="10"/>
+<rect class="f-water" x="680" y="262" width="10" height="112"/>
+<rect class="f-water" x="680" y="364" width="180" height="10"/>
+<text class="tx" x="700" y="252">Water pipe bond</text>
+<text class="tx-sm" x="700" y="266">within 5 ft of entry</text>
+<text class="tx-sm" x="775" y="395" text-anchor="middle">Metal water service</text>
+</svg>
+<figcaption><strong>Fig. 8.1</strong> One-line service diagram, 200 A. The neutral is bonded to ground only at the service disconnect; the subpanel feeder carries a separate equipment ground. Grounding electrodes and bonding jumpers per NEC 250; conductor sizes per Table 250.66 and the utility.</figcaption>
+</figure>
+
+<figure class="diagram">
+<svg viewBox="0 0 820 560" role="img" aria-labelledby="electrical-fig2-t">
+<title id="electrical-fig2-t">Panel layout schematic showing main breaker, bus, branch breakers by type, neutral and ground bars</title>
+<rect class="f-paper" x="220" y="30" width="300" height="500"/>
+<rect class="ln2" x="220" y="30" width="300" height="500"/>
+<rect class="f-accent" x="320" y="45" width="100" height="50"/>
+<text class="tx" x="370" y="75" text-anchor="middle">200 A main</text>
+<rect class="f-steel" x="362" y="105" width="16" height="320"/>
+<text class="tx-sm" x="535" y="45">DF = dual-function AFCI/GFCI</text>
+<text class="tx-sm" x="535" y="60">AFCI = arc-fault only</text>
+<text class="tx-sm" x="535" y="75">GFCI = ground-fault only</text>
+<text class="tx-sm" x="535" y="90">2P = two-pole, 240 V</text>
+<rect class="f-finish" x="250" y="110" width="100" height="26"/>
+<text class="tx-sm" x="300" y="127" text-anchor="middle">1</text>
+<text class="tx-sm" x="210" y="127" text-anchor="end">Kitchen SA 1, DF 20 A</text>
+<rect class="f-finish" x="250" y="140" width="100" height="26"/>
+<text class="tx-sm" x="300" y="157" text-anchor="middle">3</text>
+<text class="tx-sm" x="210" y="157" text-anchor="end">Kitchen SA 2, DF 20 A</text>
+<rect class="f-finish" x="250" y="170" width="100" height="26"/>
+<text class="tx-sm" x="300" y="187" text-anchor="middle">5</text>
+<text class="tx-sm" x="210" y="187" text-anchor="end">Dishwasher, DF 20 A</text>
+<rect class="f-finish" x="250" y="200" width="100" height="26"/>
+<text class="tx-sm" x="300" y="217" text-anchor="middle">7</text>
+<text class="tx-sm" x="210" y="217" text-anchor="end">Bedrooms, AFCI 15 A</text>
+<rect class="f-finish" x="250" y="230" width="100" height="26"/>
+<text class="tx-sm" x="300" y="247" text-anchor="middle">9</text>
+<text class="tx-sm" x="210" y="247" text-anchor="end">Living/dining, AFCI 15 A</text>
+<rect class="f-finish" x="250" y="260" width="100" height="26"/>
+<text class="tx-sm" x="300" y="277" text-anchor="middle">11</text>
+<text class="tx-sm" x="210" y="277" text-anchor="end">Bath recept., GFCI 20 A</text>
+<rect class="f-finish" x="250" y="290" width="100" height="26"/>
+<text class="tx-sm" x="300" y="307" text-anchor="middle">13</text>
+<text class="tx-sm" x="210" y="307" text-anchor="end">Laundry, DF 20 A</text>
+<rect class="f-accent" x="250" y="320" width="100" height="56"/>
+<text class="tx-sm" x="300" y="352" text-anchor="middle">15/17</text>
+<text class="tx-sm" x="210" y="352" text-anchor="end">Range, 2P 50 A</text>
+<rect class="f-finish" x="250" y="380" width="100" height="26"/>
+<text class="tx-sm" x="300" y="397" text-anchor="middle">19</text>
+<text class="tx-sm" x="210" y="397" text-anchor="end">Spare</text>
+<rect class="f-accent" x="390" y="110" width="100" height="56"/>
+<text class="tx-sm" x="440" y="142" text-anchor="middle">2/4</text>
+<text class="tx-sm" x="530" y="142">Heat pump ODU, 2P 30 A</text>
+<rect class="f-accent" x="390" y="170" width="100" height="56"/>
+<text class="tx-sm" x="440" y="202" text-anchor="middle">6/8</text>
+<text class="tx-sm" x="530" y="202">EV charger, 2P 60 A</text>
+<rect class="f-accent" x="390" y="230" width="100" height="56"/>
+<text class="tx-sm" x="440" y="262" text-anchor="middle">10/12</text>
+<text class="tx-sm" x="530" y="262">Subpanel feeder, 2P 100 A</text>
+<rect class="f-finish" x="390" y="290" width="100" height="26"/>
+<text class="tx-sm" x="440" y="307" text-anchor="middle">14</text>
+<text class="tx-sm" x="530" y="307">Lighting, AFCI 15 A</text>
+<rect class="f-finish" x="390" y="320" width="100" height="26"/>
+<text class="tx-sm" x="440" y="337" text-anchor="middle">16</text>
+<text class="tx-sm" x="530" y="337">Refrigerator, DF 20 A</text>
+<rect class="f-finish" x="390" y="350" width="100" height="26"/>
+<text class="tx-sm" x="440" y="367" text-anchor="middle">18</text>
+<text class="tx-sm" x="530" y="367">Smoke/CO, AFCI 15 A</text>
+<rect class="f-finish" x="390" y="380" width="100" height="26"/>
+<text class="tx-sm" x="440" y="397" text-anchor="middle">20</text>
+<text class="tx-sm" x="530" y="397">Spare</text>
+<rect class="f-steel" x="240" y="455" width="115" height="12"/>
+<rect class="f-steel" x="385" y="455" width="115" height="12"/>
+<rect class="f-accent" x="362" y="453" width="16" height="16"/>
+<text class="tx-sm" x="297" y="488" text-anchor="middle">Neutral bar</text>
+<text class="tx-sm" x="442" y="488" text-anchor="middle">Ground bar</text>
+<line class="ln-thin" x1="370" y1="469" x2="370" y2="540"/>
+<text class="tx-sm" x="380" y="550">Main bonding jumper (service panel only)</text>
+<text class="tx-sm" x="20" y="455">Odd spaces left,</text>
+<text class="tx-sm" x="20" y="468">even right. Two-pole</text>
+<text class="tx-sm" x="20" y="481">breakers span two</text>
+<text class="tx-sm" x="20" y="494">stacked spaces.</text>
+<text class="tx-sm" x="535" y="455">Keep 20% of spaces</text>
+<text class="tx-sm" x="535" y="468">spare. Type the</text>
+<text class="tx-sm" x="535" y="481">directory; no pencil.</text>
+</svg>
+<figcaption><strong>Fig. 8.2</strong> Panel layout schematic for a typical 200 A all-electric gut renovation. Breaker sizes are examples; the conductor, appliance nameplate and load calculation set the real values.</figcaption>
+</figure>
+
+<h3>8.5 Wiring methods</h3>
+<p>The wiring method is set first by the AHJ and building type, second by the framing, and third by cost. Chicago requires conduit or other metal raceway in essentially all buildings, and New York City restricts NM cable by building type and height. Other cities, especially in the Northeast and Midwest, limit NM in attached or multi-family buildings. Verify with the AHJ before pricing: a rowhouse converted to two units may lose NM eligibility.</p>
+
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>NM cable (Romex), NEC 334</td><td>Wood-framed single-family and two-family where the AHJ allows it</td><td>Cheapest, fastest, easy to fish in existing walls</td><td>No physical protection; must be stapled within 12 in of boxes and every 4-1/2 ft; not allowed in many cities or in damp or exposed locations</td><td>$</td><td>Fast</td></tr>
+<tr><td>MC cable (metal-clad), NEC 330</td><td>Rowhouses where NM is restricted, exposed cellar runs, steel studs, commercial-style AHJs</td><td>Armor protects against nails and rodents; flexible; accepted by most AHJs that ban NM</td><td>More labor to strip and terminate; needs anti-short bushings on cut ends (AC type) and listed connectors; heavier</td><td>$$</td><td>Medium</td></tr>
+<tr><td>AC cable (BX), NEC 320</td><td>Rewire of existing plaster walls in older cities where it's customary</td><td>Armor counts as the ground path with the bonding strip; fishes well</td><td>Armor-as-ground is less forgiving than an insulated ground; easy to nick conductors when cutting</td><td>$$</td><td>Medium</td></tr>
+<tr><td>EMT conduit, NEC 358</td><td>Chicago-type jurisdictions, unfinished cellars, exposed industrial looks, future pulls</td><td>Best physical protection; wires can be replaced or added later</td><td>Slowest; bending skill; hard in existing walls; supports within 3 ft of boxes and every 10 ft</td><td>$$$</td><td>Slow</td></tr>
+<tr><td>Surface raceway (metal or nonmetallic)</td><td>Brick or brownstone party walls we can't chase; historic plaster we're saving</td><td>No chasing masonry; reversible</td><td>Visible; limited fill; owners often dislike the look</td><td>$$</td><td>Fast</td></tr>
+</tbody></table></div>
+<p class="pick"><strong>ESC default:</strong> NM cable in wood-framed walls and ceilings wherever the AHJ allows it, MC cable for exposed cellar runs and anywhere NM is restricted, and EMT only where required or for unfinished mechanical rooms. On masonry party walls we fur out with 2x2 or 1-5/8 in steel channel and run inside the furring rather than chasing the brick.</p>
+
+<h4>Routing in rowhouses</h4>
+<p>Rowhouse joists usually span party wall to party wall, pocketed into the brick, so home runs to a front cellar panel cross every joist from back to front. Bore through the middle third of the joist depth within the limits in Fig. 8.3, and stack vertical runs in one chase per floor, usually beside the stair or plumbing stack. Never notch the bottom of a joist that's sagging or has rot at the pocket: flag it to the framing lead (Chapter 04).</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 880 280" role="img" aria-labelledby="electrical-fig3-t">
+<title id="electrical-fig3-t">Stud and joist boring limits for cable: edge distance in studs, nail plate, and joist hole limits</title>
+<text class="tx-b" x="155" y="30" text-anchor="middle">A. Stud bore, correct</text>
+<text class="tx-sm" x="40" y="62">Drywall</text>
+<rect class="f-finish" x="40" y="70" width="230" height="12"/>
+<rect class="f-finish" x="40" y="187" width="230" height="12"/>
+<rect class="f-wood" x="132" y="82" width="45" height="105"/>
+<line class="hid" x1="132" y1="120" x2="177" y2="120"/>
+<line class="hid" x1="132" y1="150" x2="177" y2="150"/>
+<line class="ln2" x1="40" y1="135" x2="270" y2="135"/>
+<text class="tx-sm" x="45" y="160">NM cable</text>
+<line class="dim" x1="195" y1="82" x2="195" y2="120"/>
+<line class="ln-thin" x1="189" y1="82" x2="201" y2="82"/>
+<line class="ln-thin" x1="189" y1="120" x2="201" y2="120"/>
+<text class="tx-dim" x="204" y="99">1-1/4 in</text>
+<text class="tx-dim" x="204" y="111">min. to face</text>
+<text class="tx-sm" x="155" y="222" text-anchor="middle">2x4 stud in plan; bore near center</text>
+<text class="tx-b" x="435" y="30" text-anchor="middle">B. Hole too close to face</text>
+<text class="tx-sm" x="435" y="56" text-anchor="middle">1/16 in steel nail plate</text>
+<line class="ln-thin" x1="435" y1="60" x2="435" y2="82"/>
+<rect class="f-finish" x="320" y="70" width="230" height="12"/>
+<rect class="f-finish" x="320" y="187" width="230" height="12"/>
+<rect class="f-wood" x="412" y="82" width="45" height="105"/>
+<rect class="f-accent" x="404" y="82" width="61" height="5"/>
+<line class="hid" x1="412" y1="92" x2="457" y2="92"/>
+<line class="hid" x1="412" y1="122" x2="457" y2="122"/>
+<line class="ln2" x1="320" y1="107" x2="550" y2="107"/>
+<text class="tx-sm" x="435" y="222" text-anchor="middle">Edge closer than 1-1/4 in: plate required</text>
+<text class="tx-sm" x="435" y="236" text-anchor="middle">(NEC 300.4(A)); same at notches</text>
+<text class="tx-b" x="700" y="30" text-anchor="middle">C. Joist bore (IRC R502.8)</text>
+<rect class="f-wood" x="600" y="70" width="200" height="148"/>
+<line class="hid" x1="600" y1="102" x2="800" y2="102"/>
+<line class="hid" x1="600" y1="186" x2="800" y2="186"/>
+<circle class="f-paper" cx="700" cy="144" r="20"/>
+<circle class="ln2" cx="700" cy="144" r="4"/>
+<line class="dim" x1="815" y1="70" x2="815" y2="102"/>
+<line class="ln-thin" x1="809" y1="70" x2="821" y2="70"/>
+<line class="ln-thin" x1="809" y1="102" x2="821" y2="102"/>
+<text class="tx-dim" x="825" y="90">2 in</text>
+<line class="dim" x1="815" y1="186" x2="815" y2="218"/>
+<line class="ln-thin" x1="809" y1="186" x2="821" y2="186"/>
+<line class="ln-thin" x1="809" y1="218" x2="821" y2="218"/>
+<text class="tx-dim" x="825" y="206">2 in</text>
+<text class="tx-sm" x="700" y="240" text-anchor="middle">2x10 joist; hole dia. max 1/3 depth</text>
+<text class="tx-sm" x="700" y="254" text-anchor="middle">No bores within 2 in of top or bottom</text>
+<text class="tx-sm" x="700" y="268" text-anchor="middle">I-joists and LVL: mfr hole chart only</text>
+</svg>
+<figcaption><strong>Fig. 8.3</strong> Boring limits. Sawn-lumber joist holes per IRC R502.8.1; stud edge distance and nail plates per NEC 300.4(A). Engineered lumber follows the manufacturer's published hole chart, which overrides these rules.</figcaption>
+</figure>
+
+<h3>8.6 Circuit protection: AFCI, GFCI and tamper-resistant receptacles</h3>
+<p>NEC 2023 requires arc-fault protection on 120 V, 15 and 20 A branch circuits supplying outlets in nearly every habitable room (210.12(A)) and ground-fault protection for receptacles in wet and service areas (210.8(A)). Because kitchens and laundry areas need both, we use dual-function (DF) breakers that provide AFCI and GFCI in one device. On renovations, a modified, replaced or extended branch circuit needs AFCI protection (210.12(D)), except short extensions of 6 ft or less with no new outlets.</p>
+
+<div class="table-wrap"><table class="specs">
+<thead><tr><th>Location</th><th>AFCI (210.12)</th><th>GFCI (210.8)</th><th>Typical ESC device</th></tr></thead>
+<tbody>
+<tr><td>Kitchen (every receptacle, countertop or not)</td><td>Yes</td><td>Yes</td><td>DF breaker</td></tr>
+<tr><td>Bedrooms, living, dining, family rooms, dens, hallways, closets</td><td>Yes</td><td>No (unless within 6 ft of a sink)</td><td>AFCI breaker</td></tr>
+<tr><td>Laundry area</td><td>Yes</td><td>Yes</td><td>DF breaker</td></tr>
+<tr><td>Bathrooms</td><td>No</td><td>Yes</td><td>GFCI breaker or first-device GFCI receptacle</td></tr>
+<tr><td>Basements (finished or not), garages, crawl spaces, outdoors</td><td>Finished basement rooms: yes</td><td>Yes</td><td>GFCI or DF breaker</td></tr>
+<tr><td>Dishwasher; NEC 2023 also lists ranges, ovens, cooktops, dryers and microwaves at 250 V or less (210.8(D))</td><td>Per room</td><td>Yes (verify adopted edition)</td><td>GFCI 2-pole breaker for 240 V appliances</td></tr>
+<tr><td>Outdoor outlets including HVAC equipment (210.8(F))</td><td>No</td><td>Yes, with AHJ-specific allowances</td><td>Check heat pump inverter compatibility</td></tr>
+</tbody></table></div>
+<p>All 15 and 20 A, 125 V receptacles in a dwelling must be tamper-resistant (406.12), with limited exceptions such as receptacles more than 5-1/2 ft above the floor or dedicated to an appliance that isn't easily moved. ESC installs TR receptacles everywhere so nobody has to remember the exceptions.</p>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p>Some inverter-driven heat pumps and older appliances nuisance-trip GFCI and AFCI devices. Before ordering, check the outdoor unit manufacturer's guidance on GFCI compatibility and the AHJ's current position on 210.8(F). A nuisance trip in January means no heat.</p></aside>
+
+<h3>8.7 Receptacle layout</h3>
+<h4>General wall receptacles</h4>
+<p>In habitable rooms, NEC 210.52(A) requires receptacles so that no point along the floor line of any wall is more than 6 ft from a receptacle. In practice that means receptacles no more than 12 ft apart along a wall, and one within 6 ft of each door opening or wall end. Any wall space 2 ft or wider counts, including the wall beside a door. Fixed glass panels count as wall; sliding door panels don't.</p>
+
+<h4>Kitchen countertops</h4>
+<ul>
+<li>At least two 20 A small-appliance branch circuits serve the countertop and dining-area receptacles (210.11(C)(1)). We alternate them along the counter so two high-wattage appliances side by side don't share a circuit.</li>
+<li>Every countertop space 12 in or wider gets a receptacle, and no point along the wall line of the counter may be more than 24 in from a receptacle (210.52(C)(1)). That works out to 48 in maximum between receptacles and 24 in maximum from each end.</li>
+<li>Range tops, sinks and refrigerators split the counter into separate spaces, each measured on its own.</li>
+<li>Receptacles mount on or above the counter, not more than 20 in above it (NEC 2023 210.52(C)(3)), and may not face up in the countertop surface unless listed for it.</li>
+<li>Islands and peninsulas: NEC 2023 no longer requires a receptacle, but if one is provided it must follow the location rules. Many jurisdictions on NEC 2017 or 2020 still require at least one. Verify with the AHJ during design so the island can be detailed for a side-mounted or pop-up listed assembly.</li>
+<li>Dedicated circuits: refrigerator, dishwasher, disposal, microwave, hood, range or cooktop and wall oven.</li>
+</ul>
+
+<figure class="diagram">
+<svg viewBox="0 0 880 600" role="img" aria-labelledby="electrical-fig4-t">
+<title id="electrical-fig4-t">Kitchen electrical plan showing countertop receptacle spacing, wall receptacle spacing, appliance circuits and island</title>
+<rect class="f-concrete" x="50" y="50" width="580" height="440"/>
+<rect class="f-paper" x="60" y="60" width="560" height="420"/>
+<rect class="f-paper" x="300" y="478" width="90" height="14"/>
+<path class="ln-thin" d="M300,390 A90,90 0 0,1 390,480"/>
+<line class="ln-thin" x1="300" y1="480" x2="300" y2="390"/>
+<rect class="f-finish" x="60" y="60" width="240" height="56"/>
+<rect class="f-finish" x="384" y="60" width="152" height="56"/>
+<rect class="f-finish" x="60" y="116" width="56" height="224"/>
+<rect class="f-steel" x="300" y="60" width="84" height="56"/>
+<text class="tx" x="342" y="88" text-anchor="middle">RANGE</text>
+<text class="tx-sm" x="342" y="104" text-anchor="middle">240 V, 50 A</text>
+<rect class="f-steel" x="536" y="60" width="84" height="62"/>
+<text class="tx" x="578" y="88" text-anchor="middle">REF</text>
+<text class="tx-sm" x="578" y="104" text-anchor="middle">20 A ded.</text>
+<rect class="f-water" x="66" y="200" width="44" height="60"/>
+<text class="tx-sm" x="88" y="234" text-anchor="middle">SINK</text>
+<rect class="hid" x="62" y="262" width="52" height="56"/>
+<text class="tx-sm" x="88" y="294" text-anchor="middle">DW</text>
+<rect class="f-finish" x="260" y="240" width="200" height="90"/>
+<text class="tx" x="360" y="282" text-anchor="middle">ISLAND</text>
+<text class="tx-sm" x="360" y="298" text-anchor="middle">receptacle optional (NEC 2023)</text>
+<circle class="f-accent" cx="100" cy="67" r="6"/>
+<circle class="f-accent" cx="190" cy="67" r="6"/>
+<circle class="f-accent" cx="280" cy="67" r="6"/>
+<circle class="f-accent" cx="420" cy="67" r="6"/>
+<circle class="f-accent" cx="500" cy="67" r="6"/>
+<circle class="f-accent" cx="67" cy="150" r="6"/>
+<circle class="f-accent" cx="67" cy="320" r="6"/>
+<text class="tx-sm" x="100" y="96" text-anchor="middle">A</text>
+<text class="tx-sm" x="190" y="96" text-anchor="middle">B</text>
+<text class="tx-sm" x="280" y="96" text-anchor="middle">A</text>
+<text class="tx-sm" x="420" y="96" text-anchor="middle">B</text>
+<text class="tx-sm" x="500" y="96" text-anchor="middle">A</text>
+<text class="tx-sm" x="90" y="154" text-anchor="middle">B</text>
+<text class="tx-sm" x="90" y="324" text-anchor="middle">A</text>
+<circle class="f-accent" cx="360" cy="330" r="6"/>
+<circle class="f-accent" cx="613" cy="180" r="6"/>
+<circle class="f-accent" cx="613" cy="420" r="6"/>
+<circle class="f-accent" cx="150" cy="473" r="6"/>
+<circle class="f-accent" cx="500" cy="473" r="6"/>
+<line class="dim" x1="60" y1="36" x2="300" y2="36"/>
+<line class="ln-thin" x1="60" y1="30" x2="60" y2="42"/>
+<line class="ln-thin" x1="100" y1="30" x2="100" y2="42"/>
+<line class="ln-thin" x1="190" y1="30" x2="190" y2="42"/>
+<line class="ln-thin" x1="280" y1="30" x2="280" y2="42"/>
+<line class="ln-thin" x1="300" y1="30" x2="300" y2="42"/>
+<text class="tx-dim" x="80" y="25" text-anchor="middle">24 max</text>
+<text class="tx-dim" x="145" y="25" text-anchor="middle">48 in max</text>
+<text class="tx-dim" x="235" y="25" text-anchor="middle">48 in max</text>
+<line class="dim" x1="650" y1="180" x2="650" y2="420"/>
+<line class="ln-thin" x1="644" y1="180" x2="656" y2="180"/>
+<line class="ln-thin" x1="644" y1="420" x2="656" y2="420"/>
+<text class="tx-dim" x="662" y="296">12 ft max</text>
+<text class="tx-dim" x="662" y="310">between</text>
+<line class="dim" x1="650" y1="122" x2="650" y2="180"/>
+<line class="ln-thin" x1="644" y1="122" x2="656" y2="122"/>
+<text class="tx-dim" x="662" y="155">6 ft max</text>
+<text class="tx-dim" x="662" y="169">from end</text>
+<text class="tx-sm" x="740" y="80" text-anchor="middle">Party wall</text>
+<text class="tx-sm" x="740" y="93" text-anchor="middle">(masonry), furred</text>
+<line class="ln-thin" x1="690" y1="88" x2="632" y2="88"/>
+<text class="tx-sm" x="400" y="445">Door: wall space ends</text>
+<text class="tx-sm" x="400" y="458">at each side of opening</text>
+<circle class="f-accent" cx="70" cy="530" r="6"/>
+<text class="tx-sm" x="84" y="534">Duplex receptacle, tamper-resistant, GFCI-protected in kitchen</text>
+<text class="tx" x="64" y="560">A / B</text>
+<text class="tx-sm" x="104" y="560">Two 20 A small-appliance circuits, alternated along counter</text>
+<text class="tx-sm" x="60" y="585">Counter: no point on wall line more than 24 in from a receptacle. Walls: no point more than 6 ft from a receptacle.</text>
+</svg>
+<figcaption><strong>Fig. 8.4</strong> Kitchen electrical plan, L-shaped counter in a rowhouse with a masonry party wall. Range, sink and refrigerator divide the counter into separate spaces, each measured on its own (NEC 210.52(C)). Plan not to scale; dimensions are code maximums.</figcaption>
+</figure>
+
+<h4>Bathrooms, laundry and outdoors</h4>
+<p>Each bathroom needs at least one receptacle within 3 ft of the outside edge of each basin, on a wall or partition adjacent to the basin or on the countertop side of the vanity (210.52(D)). It can't be more than 12 in below the countertop. Bathroom receptacles need a 20 A circuit (210.11(C)(3)). ESC runs a dedicated 20 A circuit per primary bath because of hair tools and heated towel bars. Exhaust fans and lights go on a separate circuit so a tripped GFCI doesn't leave the room dark.</p>
+<p>Laundry gets its own 20 A circuit (210.11(C)(2)) plus a 30 A, 240 V circuit for an electric dryer. Outdoors, a one-family house needs a GFCI receptacle at the front and back, accessible from grade and not more than 6 ft 6 in above grade (210.52(E)), plus one at each balcony, deck or porch accessible from inside. In a rowhouse, the "front" receptacle often lands at the stoop or areaway.</p>
+
+<h3>8.8 Box heights and placement</h3>
+<p>Most box heights are convention, not code. What code sets is a ceiling for counted receptacles (5-1/2 ft above the floor), the 20 in limit above a counter, the 12 in limit below a bath counter, and accessible reach where the project requires it. Mark heights to center of box from finished floor, and tell the electrician the finished floor thickness. Leveling an old rowhouse floor can move a box 2 in.</p>
+
+<div class="table-wrap"><table class="specs">
+<thead><tr><th>Item</th><th>ESC standard height (to center, above finished floor unless noted)</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Wall receptacle</td><td>16 in</td><td>Above baseboard; 18 in where baseboard is 8 in or taller</td></tr>
+<tr><td>Switch</td><td>48 in</td><td>Latch side, 4 in to 6 in from casing edge (Chapter 11)</td></tr>
+<tr><td>Kitchen counter receptacle</td><td>42 in (6 in above a 36 in counter)</td><td>Raise to clear a 4 in or 6 in stone splash; horizontal in a tiled full-height splash if owner prefers</td></tr>
+<tr><td>Under-cabinet light feed</td><td>Cable stubbed at underside of upper (54 in)</td><td>Coordinate with cabinet shop for wire chase</td></tr>
+<tr><td>Bath vanity receptacle</td><td>40 in to 44 in (vanity at 34 in to 36 in)</td><td>Within 3 ft of each basin</td></tr>
+<tr><td>Vanity light (above mirror)</td><td>78 in to 80 in</td><td>Centered on basin; side sconces 60 in to 66 in</td></tr>
+<tr><td>Thermostat</td><td>54 in to 60 in</td><td>Interior wall, away from registers and sun</td></tr>
+<tr><td>Exterior receptacle</td><td>18 in above grade or deck</td><td>In-use (bubble) cover, weather-resistant TR device</td></tr>
+<tr><td>Smoke / CO alarm</td><td>Ceiling, at least 4 in from wall</td><td>At least 3 ft from bath doors and supply registers (NFPA 72)</td></tr>
+</tbody></table></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 880 470" role="img" aria-labelledby="electrical-fig5-t">
+<title id="electrical-fig5-t">Box height elevation showing receptacle, switch, kitchen counter receptacle, vanity light, bath receptacle, thermostat and smoke alarm heights</title>
+<line class="ln2" x1="20" y1="430" x2="860" y2="430"/>
+<line class="ln" x1="20" y1="46" x2="860" y2="46"/>
+<text class="tx-sm" x="25" y="425">Finished floor</text>
+<text class="tx-sm" x="25" y="40">Ceiling, 8 ft</text>
+<rect class="f-accent" x="140" y="46" width="28" height="7"/>
+<text class="tx-sm" x="154" y="70" text-anchor="middle">Smoke/CO alarm</text>
+<rect class="f-accent" x="84" y="357" width="12" height="18"/>
+<text class="tx-sm" x="90" y="349" text-anchor="middle">Recept.</text>
+<line class="dim" x1="112" y1="366" x2="112" y2="430"/>
+<line class="ln-thin" x1="106" y1="366" x2="118" y2="366"/>
+<text class="tx-dim" x="118" y="402">16 in</text>
+<line class="ln" x1="250" y1="120" x2="250" y2="430"/>
+<text class="tx-sm" x="246" y="132" text-anchor="end">Door casing</text>
+<rect class="f-accent" x="216" y="229" width="12" height="18"/>
+<text class="tx-sm" x="222" y="221" text-anchor="middle">Switch</text>
+<line class="dim" x1="200" y1="238" x2="200" y2="430"/>
+<line class="ln-thin" x1="194" y1="238" x2="206" y2="238"/>
+<text class="tx-dim" x="194" y="334" text-anchor="end">48 in</text>
+<rect class="f-wood" x="300" y="94" width="180" height="120"/>
+<text class="tx-sm" x="390" y="150" text-anchor="middle">Upper cabinet</text>
+<text class="tx-sm" x="390" y="164" text-anchor="middle">bottom at 54 in</text>
+<rect class="f-finish" x="290" y="286" width="200" height="6"/>
+<rect class="f-wood" x="300" y="292" width="180" height="138"/>
+<text class="tx-sm" x="390" y="355" text-anchor="middle">Base cabinet</text>
+<text class="tx-sm" x="390" y="369" text-anchor="middle">counter at 36 in</text>
+<rect class="f-accent" x="384" y="253" width="12" height="18"/>
+<text class="tx-sm" x="402" y="266">42 in AFF</text>
+<rect class="f-accent" x="330" y="214" width="120" height="4"/>
+<text class="tx-sm" x="390" y="232" text-anchor="middle">Under-cab light</text>
+<line class="ln" x1="530" y1="46" x2="530" y2="430"/>
+<rect class="f-finish" x="590" y="150" width="80" height="120"/>
+<text class="tx-sm" x="630" y="214" text-anchor="middle">Mirror</text>
+<rect class="f-accent" x="600" y="112" width="60" height="12"/>
+<text class="tx-sm" x="630" y="100" text-anchor="middle">Vanity light 78 in</text>
+<rect class="f-wood" x="560" y="294" width="140" height="136"/>
+<text class="tx-sm" x="630" y="360" text-anchor="middle">Vanity</text>
+<text class="tx-sm" x="630" y="374" text-anchor="middle">top at 34 in</text>
+<rect class="f-accent" x="684" y="261" width="12" height="18"/>
+<text class="tx-sm" x="710" y="274">Bath recept. 40 in</text>
+<line class="ln" x1="740" y1="46" x2="740" y2="250"/>
+<rect class="f-accent" x="794" y="205" width="20" height="18"/>
+<text class="tx-sm" x="804" y="196" text-anchor="middle">Thermostat</text>
+<line class="dim" x1="830" y1="214" x2="830" y2="430"/>
+<line class="ln-thin" x1="824" y1="214" x2="836" y2="214"/>
+<text class="tx-dim" x="826" y="330" text-anchor="end">54 in</text>
+<text class="tx-b" x="135" y="455" text-anchor="middle">Living / hall</text>
+<text class="tx-b" x="390" y="455" text-anchor="middle">Kitchen</text>
+<text class="tx-b" x="630" y="455" text-anchor="middle">Bath</text>
+<text class="tx-b" x="800" y="455" text-anchor="middle">Hall</text>
+</svg>
+<figcaption><strong>Fig. 8.5</strong> Box height elevation, ESC standard heights to center of box above finished floor. Drawn at roughly 1/2 in = 1 ft. Confirm counter, vanity and casing dimensions from cabinet and trim shop drawings before marking boxes.</figcaption>
+</figure>
+
+<h3>8.9 Lighting</h3>
+<p>Recessed lighting goes in at rough, so the fixture type has to be chosen before the layout walk. In rowhouses, the ceiling below a roof or a top-floor attic is part of the air barrier and thermal envelope (Chapter 05), and every hole in it leaks. IRC N1102.4.5 (IECC R402.4.5) requires recessed fixtures in the building envelope to be IC-rated, sealed to the drywall with a gasket or caulk, and labeled for no more than 2.0 cfm air leakage when tested to ASTM E283.</p>
+
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>IC-rated airtight housing with LED module and trim</td><td>Insulated ceilings, top floors, designer trims, adjustable gimbals, wall-wash</td><td>Wide choice of optics and trims; module replaceable; housing positions are fixed at rough</td><td>Needs 6 in or more of joist depth for most housings; housing cost; more holes to seal</td><td>$$</td><td>Medium</td></tr>
+<tr><td>Canless wafer LED (junction box with remote driver)</td><td>Shallow ceilings, rowhouse joists with ducts and plumbing below, budget work</td><td>Under 1 in deep; cheap; easy to add later; inherently IC and airtight when listed</td><td>Integral LED: whole fixture replaced when it fails; flatter light; limited trim options</td><td>$</td><td>Fast</td></tr>
+<tr><td>Trimless / plaster-in housing</td><td>High-end finishes, minimal ceilings</td><td>Clean look, small apertures</td><td>Requires plaster or mud flange set at rough; tight drywall coordination (Chapter 09)</td><td>$$$$</td><td>Slow</td></tr>
+</tbody></table></div>
+<p class="pick"><strong>ESC default:</strong> canless wafer LEDs in standard rooms and anywhere the joist bay is crowded, IC-rated airtight housings with replaceable modules in kitchens and living spaces where the owner wants adjustable or wall-wash optics, and trimless only when the architect specifies it and the drywall finisher is booked for Level 5 (Chapter 09). Color temperature 2700 K to 3000 K, CRI 90 or higher, unless the lighting designer says otherwise.</p>
+
+<h4>Lighting control</h4>
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Standard switches and dimmers</td><td>Most rooms, budget-sensitive work, rentals</td><td>Simple, reliable, any electrician services it</td><td>No scenes or remote control; many 3-way and 4-way runs</td><td>$</td><td>Fast</td></tr>
+<tr><td>Smart switches and dimmers (wireless, replacement-style)</td><td>Owners who want scenes and app control without a central system; renovations</td><td>Installs in standard boxes; wireless 3-way via remotes reduces travelers</td><td>Most need a neutral in the box; Wi-Fi and hub dependence; product churn</td><td>$$</td><td>Fast</td></tr>
+<tr><td>Centralized or low-voltage system (keypads, panel-mounted dimming)</td><td>Large houses, many loads, owners wanting keypads with engraved scenes</td><td>Clean walls with few keypads; whole-house scenes; programming changes without rewiring</td><td>Every load home-runs to a panel; programmer needed; highest cost and coordination</td><td>$$$$</td><td>Slow</td></tr>
+</tbody></table></div>
+<p class="pick"><strong>ESC default:</strong> standard switches with a neutral pulled to every switch box (code requires it in most locations under NEC 404.2(C)), so the owner can swap in smart devices later. A centralized system only when a dedicated low-voltage sub designs and programs it under contract from the start.</p>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p>LED flicker and dead-travel on dimmers. Check every dimmer against the fixture manufacturer's compatibility list, and match phase type (forward or reverse phase, or 0-10 V) before ordering.</p></aside>
+
+
+<h3>8.10 Smoke and CO alarms</h3>
+<p>IRC R314 requires smoke alarms in each sleeping room, outside each separate sleeping area in the immediate vicinity of the bedrooms, and on every story including basements. In new construction and in alterations that require a permit, alarms are hardwired with battery backup and interconnected so that one sounds all (R314.4, R314.6). Where finishes aren't removed, listed wireless interconnected alarms are allowed. CO alarms are required outside each sleeping area where the house has a fuel-burning appliance or an attached garage (R315). An all-electric house with no attached garage may not require them; ESC installs combination smoke/CO units anyway.</p>
+<ul>
+<li>Ceiling mount at least 4 in from the wall; wall mount with the top 4 in to 12 in below the ceiling.</li>
+<li>At least 3 ft horizontally from a bathroom door with a tub or shower and from supply registers (NFPA 72 spacing referenced by the IRC).</li>
+<li>Keep every alarm at least 10 ft from a cooking appliance, and use photoelectric alarms within 20 ft of one (NFPA 72).</li>
+</ul>
+
+<h3>8.11 Grounding and bonding</h3>
+<p>Grounding connects the system to earth; bonding ties metal parts together so a fault trips the breaker fast. The grounding electrode system (NEC 250.50) must use every electrode present at the building:</p>
+<ul>
+<li><strong>Concrete-encased electrode (Ufer).</strong> At least 20 ft of 1/2 in or larger rebar, or 20 ft of #4 bare copper, in a footing in direct contact with earth (250.52(A)(3)). On new houses we coordinate with the foundation crew (Chapter 03) to leave a rebar stub or copper tail accessible above the slab. It's the best electrode available and costs nothing if planned.</li>
+<li><strong>Ground rods.</strong> 8 ft long, driven full length. A single rod must test at 25 ohms or less or be supplemented by a second rod at least 6 ft away (250.53(A)(2) and (A)(3)). We drive two rather than test. In a rowhouse cellar, drive through the slab or in the rear yard and run the GEC exposed and protected.</li>
+<li><strong>Metal water pipe.</strong> If 10 ft or more of metal water pipe is in contact with earth, it's an electrode and must be supplemented (250.53(D)). The connection is within the first 5 ft of where the pipe enters the building. Install a jumper around the water meter.</li>
+</ul>
+<p>Bond interior metal water piping (250.104(A)) and metal gas piping (250.104(B)). CSST gas piping follows the manufacturer's bonding instructions, typically a #6 Cu jumper from the gas service near the meter to the grounding electrode system. When a rowhouse replaces a copper or lead water service with plastic, the old water-pipe ground is gone; add rods or another electrode during the same job.</p>
+<aside class="callout esc"><p class="callout-label">ESC standard</p><p>Two ground rods on every service, plus the concrete-encased electrode on every new foundation. Water and gas bonds are photographed with the clamp label visible before any finish covers them, and the photos go in the project file.</p></aside>
+
+<h3>8.12 Low voltage and communications (Division 27)</h3>
+<p>Low-voltage cable is pulled with or after the power rough, before insulation. Some jurisdictions require a separate low-voltage permit.</p>
+<h4>Structured wiring</h4>
+<ul>
+<li><strong>Head end.</strong> A structured media enclosure in a ventilated, accessible spot with a dedicated 20 A receptacle. In rowhouses the cellar works if it stays dry; otherwise use a second-floor closet.</li>
+<li><strong>Data.</strong> Cat6 home runs to every TV location, office, Wi-Fi access point and fixed device; two drops at offices and TV walls. Keep each run under 90 m (295 ft) of permanent link. Terminate to T568B at both ends.</li>
+<li><strong>Coax.</strong> RG6 quad-shield to TV locations and the service entry, if the owner wants cable or an antenna.</li>
+<li><strong>Separation.</strong> Keep low-voltage cable at least 12 in from parallel power runs where practical and cross at 90 degrees. Never share a box with power unless it has a listed barrier (NEC 800.133).</li>
+<li><strong>Conduit.</strong> A 1-1/4 in or larger smurf tube or EMT from the head end to the attic or roof, and from each TV wall down to the equipment location, so future cable can be pulled.</li>
+</ul>
+
+<h4>Wi-Fi, AV, security and entry</h4>
+<p>Masonry party walls and metal lath block Wi-Fi, so plan one ceiling-mounted, PoE-powered access point per floor in a rowhouse. TV and speaker locations get pre-wire and blocking, with speaker cable home-run to the AV location. Security pre-wire covers door and window contacts, keypads and camera locations (Cat6 to each camera). For rowhouses, the front door entry is often a multi-story stoop: plan a video intercom or doorbell at the vestibule with Cat6 back to the head end, an electric strike or smart lock with a low-voltage power supply, and a release station on each main floor.</p>
+
+
+<h3>8.13 Knob-and-tube and old wiring in rowhouses</h3>
+<p>Pre-1940 rowhouses often still have knob-and-tube (K&amp;T) in the walls and floors, sometimes still energized and spliced into later circuits. It has no ground, its insulation is brittle, and NEC 394.12 prohibits it in hollow spaces where insulation surrounds the conductors. Many insurers won't cover a house until it's removed.</p>
+<p>Before demolition, the electrician traces every live circuit and kills K&amp;T at the panel.</p>
+
+<div class="table-wrap"><table class="methods">
+<thead><tr><th>Method</th><th>Best for</th><th>Advantages</th><th>Drawbacks</th><th>Relative cost</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>Full removal during gut</td><td>Full gut renovations</td><td>Clean slate; insurance-friendly; walls open for new work</td><td>Only possible where plaster comes down</td><td>$$</td><td>Fast</td></tr>
+<tr><td>Fish new cable, abandon K&amp;T in place (disconnected)</td><td>Partial renovations saving historic plaster and trim</td><td>Saves plaster and moldings; less patching</td><td>Slow; access holes need plaster repair (Chapter 09); dead wire left in walls must be clearly disconnected</td><td>$$$</td><td>Slow</td></tr>
+<tr><td>Leave in service, uninsulated</td><td>Out-of-scope floors, short term</td><td>Cheapest</td><td>Not a fix; blocks insulation; insurers object</td><td>$</td><td>Fast</td></tr>
+</tbody></table></div>
+<p class="pick"><strong>ESC default:</strong> remove all K&amp;T on every floor in our scope. If a floor is out of scope, we disconnect K&amp;T from any circuit we touch, document it in writing to the owner, and do not insulate any cavity it occupies.</p>
+<aside class="callout warn"><p class="callout-label">Common failure</p><p>A "dead" K&amp;T run that's still live because it was tapped from a later circuit or fed from the neighbor's side of a shared wall. Test every conductor with a non-contact tester and a meter before cutting. In attached houses, never assume a cable in the party wall belongs to our building.</p></aside>
+
+<h3>8.14 Key specs and tolerances</h3>
+<div class="table-wrap"><table class="specs">
+<thead><tr><th>Item</th><th>Requirement</th><th>Reference</th></tr></thead>
+<tbody>
+<tr><td>Copper conductor by breaker (typ., NM 60&deg;C column)</td><td>15 A: #14; 20 A: #12; 30 A: #10; 40 A: #8; 50 A: #6</td><td>NEC 240.4(D), 310.16, 334.80</td></tr>
+<tr><td>NM cable support</td><td>Within 12 in of box, every 4-1/2 ft</td><td>NEC 334.30</td></tr>
+<tr><td>MC cable support</td><td>Within 12 in of box, every 6 ft</td><td>NEC 330.30</td></tr>
+<tr><td>EMT support</td><td>Within 3 ft of box, every 10 ft</td><td>NEC 358.30</td></tr>
+<tr><td>Free conductor at box</td><td>6 in free; 3 in outside box face</td><td>NEC 300.14</td></tr>
+<tr><td>Box face setback</td><td>Noncombustible wall: max 1/4 in back; combustible wall: flush or projecting</td><td>NEC 314.20</td></tr>
+<tr><td>Gaps around box in finished wall</td><td>Max 1/8 in at plaster or drywall edge</td><td>NEC 314.21</td></tr>
+<tr><td>Recessed lights in envelope</td><td>IC-rated, sealed, max 2.0 cfm per ASTM E283</td><td>IRC N1102.4.5 / IECC R402.4.5</td></tr>
+<tr><td>Recessed light clearance (non-IC)</td><td>1/2 in to combustibles, 3 in to insulation</td><td>NEC 410.116</td></tr>
+<tr><td>Lug and breaker torque</td><td>Per listing label, with a calibrated tool</td><td>NEC 110.14(D)</td></tr>
+</tbody></table></div>
+
+<h3>8.15 Inspection holds</h3>
+<aside class="callout hold"><p class="callout-label">Inspection hold</p><p><strong>Rough electrical.</strong> All boxes, cable or raceway, recessed housings, grounds spliced and made up, nail plates in place, panel can set with home runs labeled. No insulation, drywall or plaster until passed. Low-voltage rough is usually inspected or photographed at the same time.</p></aside>
+<aside class="callout hold"><p class="callout-label">Inspection hold</p><p><strong>Service.</strong> Meter socket, service conductors, main disconnect, grounding electrode conductor, rods or Ufer connection, water and gas bonds. Passing this releases the job to the utility for the meter set. The utility queue starts only after release.</p></aside>
+<aside class="callout hold"><p class="callout-label">Inspection hold</p><p><strong>Final electrical.</strong> Devices and fixtures installed, covers on, panel directory typed, AFCI and GFCI tested, smoke/CO interconnection working, equipment disconnects labeled. Required before final building sign-off.</p></aside>
+<p>Some AHJs add an underground or slab inspection for conduit below a slab, and a separate inspection of the concrete-encased electrode before the footing pour (Chapter 03). Ask at permit issuance.</p>
+
+<h3>8.16 Common failures and how to avoid them</h3>
+<ul>
+<li><strong>Boxes set for the wrong wall thickness.</strong> Tile on backer, plaster, or two layers of drywall leaves boxes buried. Write the finish on the framing at each box during the layout walk; use adjustable boxes in tiled areas.</li>
+<li><strong>Counter receptacles that collide with backsplashes or tile layout.</strong> Get the backsplash height and tile layout (Chapter 10) before setting kitchen boxes; center boxes on a grout line or a full tile where the owner cares.</li>
+<li><strong>Recessed lights that hit joists, ducts or sprinkler pipe.</strong> Lay out cans on the actual framing, not only from the reflected ceiling plan.</li>
+<li><strong>Drywall screws through cable.</strong> Missing nail plates at shallow bores, and cable run on the face of studs at corners. The QC walk before insulation catches this.</li>
+<li><strong>Lost water-pipe ground after plumbing replaces the service with plastic.</strong> Coordinate with Chapter 06 and add electrodes.</li>
+<li><strong>Utility delays.</strong> File the service request during preconstruction. Rowhouse vault and sidewalk work can need a street opening permit on top of the utility order.</li>
+</ul>
+
+<h3>8.17 QC checklist</h3>
+<h4>Before rough inspection</h4>
+<ul class="checklist">
+<li>Every box matches the signed layout, at the correct height and set to finished wall thickness.</li>
+<li>Receptacle spacing checked with a tape against the 6/12 ft and 24/48 in rules.</li>
+<li>Bores within limits; nail plates at every bore within 1-1/4 in of a face; no notches in joists' middle third.</li>
+<li>Cable supported and stapled; no staples crushing cable; grommets or bushings at metal studs.</li>
+<li>Home runs labeled at the panel; low-voltage cables labeled at both ends.</li>
+<li>Recessed housings are IC and airtight where in the envelope; gaskets present.</li>
+<li>Fire-blocking at cable penetrations through top plates and floors restored with listed sealant (Chapter 04).</li>
+<li>Photos of every wall and ceiling before insulation, uploaded to the project file.</li>
+</ul>
+<h4>Before final inspection</h4>
+<ul class="checklist">
+<li>All devices tamper-resistant; plates straight and level; no gaps over 1/8 in at box edges.</li>
+<li>Every GFCI and AFCI tested with its test button; plug-in tester shows correct wiring at every receptacle.</li>
+<li>Smoke/CO alarms all sound when one is tested.</li>
+<li>Panel directory typed and specific (room and use, not "lights"); spare breakers off and labeled.</li>
+<li>Disconnects labeled; heat pump and EV circuits tested under load.</li>
+<li>Low-voltage terminated, tested with a cable certifier or at minimum a continuity tester, and documented with a port map.</li>
+</ul>
+
+<h3>8.18 Handoff to the next trade</h3>
+<p>At rough, we hand off to insulation (Chapter 05) and drywall or plaster (Chapter 09). The space must have: a passed rough inspection posted on site; every box flush with the planned finish and stuffed or covered so mud and paint stay out; recessed housings capped; no loose cable in the cavities; nail plates installed; low-voltage cable coiled and labeled at each location, not hanging out of the wall; and a photo record of every wall.</p>
+<p>At trim, we come back after paint (Chapter 09), tile (Chapter 10) and cabinets, counters and flooring (Chapter 11). We leave with a passed final, all covers and plates on, the panel directory and low-voltage port map in the closeout binder, alarms tested, and no paint or debris in any device.</p>
+</section>
