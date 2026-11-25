@@ -1,0 +1,197 @@
+<title>ESC Construction Manual</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a bound field manual. Sticky chapter index on the left (collapses to a drop-down on phones), one reading column on the right; tables and drawings run the full column width like sheets in a drawing set. */
+:root {
+  --paper: #f2f4f3;      /* page ground: cool drafting paper */
+  --sheet: #ffffff;      /* raised surfaces: tables, drawings */
+  --ink: #1c2430;        /* text and linework */
+  --muted: #5b6673;      /* secondary text, dimension strings */
+  --rule: #cfd5d9;       /* hairlines */
+  --accent: #2b5d8c;     /* layout-chalk blue */
+  --hold: #b0661a;       /* inspection holds: lumber-crayon amber */
+  --warn: #a33a2c;       /* failures */
+  --ok: #2f6b45;         /* ESC standard */
+  --d-earth: #d9cbb3; --d-concrete: #c9cdd0; --d-wood: #e6cf9f; --d-steel: #9fb0c0;
+  --d-insul: #f2d3dc; --d-membrane: #6f8fae; --d-finish: #eef0f1; --d-water: #b9d6ee;
+  --d-accent: #f0b25a; --d-paper: #f7f8f8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #12171d; --sheet: #1a2129; --ink: #e3e8ec; --muted: #9aa6b2; --rule: #2e3843;
+  --accent: #7fb0de; --hold: #e3a160; --warn: #e88676; --ok: #7cc196;
+  --d-earth: #4a4234; --d-concrete: #3d444b; --d-wood: #5c4c2e; --d-steel: #43566a;
+  --d-insul: #5d3d48; --d-membrane: #5f86ad; --d-finish: #2a323b; --d-water: #2f506c;
+  --d-accent: #b07a2e; --d-paper: #1f272f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #12171d; --sheet: #1a2129; --ink: #e3e8ec; --muted: #9aa6b2; --rule: #2e3843;
+  --accent: #7fb0de; --hold: #e3a160; --warn: #e88676; --ok: #7cc196;
+  --d-earth: #4a4234; --d-concrete: #3d444b; --d-wood: #5c4c2e; --d-steel: #43566a;
+  --d-insul: #5d3d48; --d-membrane: #5f86ad; --d-finish: #2a323b; --d-water: #2f506c;
+  --d-accent: #b07a2e; --d-paper: #1f272f; color-scheme: dark }
+
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 1rem }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+body { background: var(--paper); color: var(--ink); font: 400 1rem/1.6 var(--f-body); }
+a { color: var(--accent) }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+
+.cover { border-bottom: 1px solid var(--rule); background: var(--sheet) }
+.cover-inner { max-width: 84rem; margin: 0 auto; padding-block: 3rem 2.5rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end }
+.cover .doc-no { font: 500 .75rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem }
+.cover h1 { font: 800 clamp(2.4rem, 6vw, 4.6rem)/.95 var(--f-display); font-stretch: 78%; letter-spacing: -.01em; margin: 0; text-wrap: balance; text-transform: uppercase }
+.cover h1 span { display: block; color: var(--accent) }
+.cover p.sub { max-width: 40rem; margin: 1.2rem 0 0; color: var(--muted); font-size: 1.05rem }
+.titleblock { border: 1.5px solid var(--ink); font: 400 .72rem/1.3 var(--f-mono); min-width: 15rem }
+.titleblock div { display: grid; grid-template-columns: 6.5rem 1fr; border-top: 1px solid var(--rule) }
+.titleblock div:first-child { border-top: 0 }
+.titleblock dt, .titleblock dd { margin: 0; padding: .4rem .55rem }
+.titleblock dt { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; border-right: 1px solid var(--rule) }
+@media (max-width: 760px) { .cover-inner { grid-template-columns: minmax(0, 1fr) } .titleblock { min-width: 0 } }
+
+.wrap { max-width: 84rem; margin: 0 auto; display: grid; grid-template-columns: 16rem minmax(0, 1fr); gap: 3rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 2rem 4rem }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1rem); align-self: start; max-height: calc(100vh - 2rem); overflow-y: auto; font-size: .88rem }
+nav.toc summary { font: 700 .78rem/1 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); cursor: pointer; padding: .4rem 0; list-style: none }
+nav.toc summary::-webkit-details-marker { display: none }
+nav.toc ol { list-style: none; margin: .5rem 0 0; padding: 0; display: grid; gap: .1rem }
+nav.toc a { display: grid; grid-template-columns: 2.2rem 1fr; gap: .2rem; padding: .35rem .4rem; text-decoration: none; color: var(--ink); border-left: 2px solid transparent }
+nav.toc a:hover { background: var(--sheet); border-left-color: var(--accent) }
+nav.toc .n { font: 500 .78rem/1.5 var(--f-mono); color: var(--muted) }
+@media (max-width: 960px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 1rem }
+  nav.toc { position: static; max-height: none; border: 1px solid var(--rule); background: var(--sheet); padding: .4rem .8rem }
+}
+
+main { min-width: 0 }
+.howto { background: var(--sheet); border: 1px solid var(--rule); padding: 1.2rem 1.4rem; margin-bottom: 2rem; display: grid; gap: .6rem }
+.howto h2 { font: 700 1rem/1.2 var(--f-display); margin: 0; text-transform: uppercase; letter-spacing: .04em }
+.howto p { margin: 0; max-width: 68ch }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font: 400 .78rem/1.4 var(--f-mono); color: var(--muted) }
+.legend span { display: inline-flex; align-items: center; gap: .4rem }
+.legend i { width: .9rem; height: .9rem; border: 1px solid var(--ink); display: inline-block }
+
+section.chapter { padding-top: 2.5rem; margin-top: 2.5rem; border-top: 3px solid var(--ink) }
+section.chapter:first-of-type { margin-top: 0 }
+.ch-head { margin-bottom: 1.5rem }
+.ch-head .eyebrow { font: 500 .75rem/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 .5rem }
+.ch-head h2 { font: 800 clamp(1.9rem, 4vw, 2.9rem)/1 var(--f-display); font-stretch: 80%; margin: 0; text-wrap: balance; text-transform: uppercase }
+.ch-head .lede { font-size: 1.12rem; color: var(--muted); max-width: 62ch; margin: .8rem 0 0 }
+main h3 { font: 700 1.35rem/1.2 var(--f-display); font-stretch: 90%; margin: 2.4rem 0 .6rem; text-wrap: balance }
+main h4 { font: 600 1rem/1.3 var(--f-body); margin: 1.6rem 0 .4rem }
+main p, main ul, main ol { max-width: 70ch }
+main li { margin: .25rem 0 }
+main code { font: .88em var(--f-mono); background: var(--sheet); padding: .05em .3em; border: 1px solid var(--rule) }
+
+ol.steps { list-style: none; counter-reset: s; padding: 0; display: grid; gap: .55rem }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .6rem; margin: 0 }
+ol.steps > li::before { content: counter(s, decimal-leading-zero); font: 500 .85rem/1.6 var(--f-mono); color: var(--accent); border-top: 2px solid var(--accent); padding-top: .1rem }
+ul.checklist { list-style: none; padding: 0; display: grid; gap: .35rem }
+ul.checklist li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: .4rem; margin: 0 }
+ul.checklist li::before { content: ""; width: .85rem; height: .85rem; border: 1.5px solid var(--ink); margin-top: .35rem }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0 .5rem; border: 1px solid var(--rule); background: var(--sheet) }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; line-height: 1.45; font-variant-numeric: tabular-nums }
+th, td { text-align: left; vertical-align: top; padding: .55rem .7rem; border-bottom: 1px solid var(--rule) }
+thead th { font: 600 .72rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: var(--d-paper); border-bottom: 1.5px solid var(--ink); white-space: nowrap }
+tbody tr:last-child td { border-bottom: 0 }
+table.methods td:first-child { font-weight: 600; min-width: 9rem }
+table.methods td { min-width: 10rem }
+table.specs td:first-child { font-weight: 600 }
+p.pick { font-size: .92rem; border-left: 3px solid var(--accent); padding: .2rem 0 .2rem .8rem; margin: .4rem 0 1.4rem }
+
+aside.callout { margin: 1.2rem 0; padding: .8rem 1rem; background: var(--sheet); border: 1px solid var(--rule); border-left: 4px solid var(--muted); max-width: 70ch }
+aside.callout p { margin: .2rem 0 }
+aside.callout .callout-label { font: 600 .72rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .08em }
+aside.callout.hold { border-left-color: var(--hold) } aside.callout.hold .callout-label { color: var(--hold) }
+aside.callout.warn { border-left-color: var(--warn) } aside.callout.warn .callout-label { color: var(--warn) }
+aside.callout.esc { border-left-color: var(--ok) } aside.callout.esc .callout-label { color: var(--ok) }
+
+figure.diagram { margin: 1.6rem 0; background: var(--sheet); border: 1px solid var(--rule); padding: 1rem; overflow-x: auto }
+figure.diagram svg { display: block; width: 100%; height: auto; min-width: 560px; max-width: 960px; margin: 0 auto; font-family: var(--f-mono) }
+figure.diagram figcaption { font-size: .85rem; color: var(--muted); margin-top: .7rem; border-top: 1px solid var(--rule); padding-top: .5rem }
+figure.diagram figcaption strong { color: var(--ink); font-family: var(--f-mono); font-weight: 500; margin-right: .4rem }
+
+/* drawing classes used by every chapter's SVG */
+svg .ln { fill: none; stroke: var(--ink); stroke-width: 1.5 }
+svg .ln2 { fill: none; stroke: var(--ink); stroke-width: 2.6 }
+svg .ln-thin { fill: none; stroke: var(--ink); stroke-width: .8; opacity: .75 }
+svg .dim { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 3 }
+svg .hid { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 6 4; opacity: .7 }
+svg .f-earth { fill: var(--d-earth); stroke: var(--ink); stroke-width: 1 }
+svg .f-concrete { fill: var(--d-concrete); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-wood { fill: var(--d-wood); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-steel { fill: var(--d-steel); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-insul { fill: var(--d-insul); stroke: var(--ink); stroke-width: 1 }
+svg .f-membrane { fill: var(--d-membrane); stroke: var(--ink); stroke-width: 1 }
+svg .f-finish { fill: var(--d-finish); stroke: var(--ink); stroke-width: 1 }
+svg .f-water { fill: var(--d-water); stroke: var(--ink); stroke-width: 1 }
+svg .f-accent { fill: var(--d-accent); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-paper { fill: var(--d-paper); stroke: var(--rule); stroke-width: 1 }
+svg .arrowhead { fill: var(--ink); stroke: none }
+svg text { fill: var(--ink) }
+svg .tx { fill: var(--ink); font-size: 12px }
+svg .tx-sm { fill: var(--muted); font-size: 10px }
+svg .tx-b { fill: var(--ink); font-size: 13px; font-weight: 600 }
+svg .tx-dim { fill: var(--muted); font-size: 11px }
+
+footer.colophon { border-top: 1px solid var(--rule); margin-top: 4rem; padding-top: 1rem; font: .8rem/1.5 var(--f-mono); color: var(--muted) }
+</style>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div>
+      <p class="doc-no">ESC-MAN-01 · House reference</p>
+      <h1>Emory Street Construction <span>Building Manual</span></h1>
+      <p class="sub">How we build a house, trade by trade, from demolition and footings through framing, mechanicals, tile and millwork. Each chapter shows the different ways the work can be done, which one we pick, and what has to be true before the next trade walks in.</p>
+    </div>
+    <dl class="titleblock">
+      <div><dt>Document</dt><dd>ESC-MAN-01</dd></div>
+      <div><dt>Scope</dt><dd>New houses &amp; rowhouse gut renovations</dd></div>
+      <div><dt>Chapters</dt><dd>{{CHAPTER_COUNT}} trades · {{FIG_COUNT}} drawings</dd></div>
+      <div><dt>Issue</dt><dd>{{ISSUE}}</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Chapters">
+    <details open id="toc-details">
+      <summary>Chapters</summary>
+      <ol>
+{{TOC}}
+      </ol>
+    </details>
+  </nav>
+  <main>
+    <section class="howto" aria-label="How to use this manual">
+      <h2>How to use this manual</h2>
+      <p>Chapters run in build order. Each one opens with what must be finished before the trade starts and ends with the condition the space has to be in when the trade hands off. Methods tables compare the ways to do the work; the <strong>ESC default</strong> line under each says which we normally choose. Amber callouts are inspection holds: no covering work until they pass. Codes cited are model codes (IRC 2021, NEC 2023, TCNA). Local amendments and the building department govern.</p>
+      <div class="legend" aria-label="Drawing legend">
+        <span><i style="background:var(--d-earth)"></i>Soil / gravel</span>
+        <span><i style="background:var(--d-concrete)"></i>Concrete / masonry</span>
+        <span><i style="background:var(--d-wood)"></i>Wood</span>
+        <span><i style="background:var(--d-steel)"></i>Steel</span>
+        <span><i style="background:var(--d-insul)"></i>Insulation</span>
+        <span><i style="background:var(--d-membrane)"></i>Membrane / flashing</span>
+        <span><i style="background:var(--d-finish)"></i>Finish surface</span>
+        <span><i style="background:var(--d-water)"></i>Water / air</span>
+        <span><i style="background:var(--d-accent)"></i>Key element</span>
+      </div>
+    </section>
+{{CHAPTERS}}
+    <footer class="colophon">ESC-MAN-01 · Emory Street Construction · Issue {{ISSUE}}. Field reference only; stamped drawings, manufacturer instructions and the authority having jurisdiction take precedence.</footer>
+  </main>
+</div>
+<script>
+  // collapse the chapter list on phones; keep it open on wide screens
+  (function () { try { var d = document.getElementById('toc-details'); if (window.matchMedia('(max-width: 960px)').matches) d.open = false;
+    d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { if (window.matchMedia('(max-width: 960px)').matches) d.open = false; }); }); } catch (e) {} })();
+</script>
