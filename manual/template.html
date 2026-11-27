@@ -1,125 +1,163 @@
-<title>ESC Construction Manual</title>
+<title>ESC Building Manual</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a bound field manual. Sticky chapter index on the left (collapses to a drop-down on phones), one reading column on the right; tables and drawings run the full column width like sheets in a drawing set. */
+/* Layout: ESC house style (welcome book + pitch book). Green-banded cover with the full logo, a sticky chapter index grouped by part on the left, one reading column on the right; part dividers in deep green; appendices pull every inspection hold and ESC default into one place. */
 :root {
-  --paper: #f2f4f3;      /* page ground: cool drafting paper */
-  --sheet: #ffffff;      /* raised surfaces: tables, drawings */
-  --ink: #1c2430;        /* text and linework */
-  --muted: #5b6673;      /* secondary text, dimension strings */
-  --rule: #cfd5d9;       /* hairlines */
-  --accent: #2b5d8c;     /* layout-chalk blue */
-  --hold: #b0661a;       /* inspection holds: lumber-crayon amber */
-  --warn: #a33a2c;       /* failures */
-  --ok: #2f6b45;         /* ESC standard */
-  --d-earth: #d9cbb3; --d-concrete: #c9cdd0; --d-wood: #e6cf9f; --d-steel: #9fb0c0;
-  --d-insul: #f2d3dc; --d-membrane: #6f8fae; --d-finish: #eef0f1; --d-water: #b9d6ee;
-  --d-accent: #f0b25a; --d-paper: #f7f8f8;
-  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-  --f-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --paper: #F8F7F3;       /* ESC paper */
+  --sheet: #FFFFFF;
+  --ink: #111111;
+  --muted: #474747;
+  --rule: #D9D7CF;
+  --green: #206200;       /* ESC green: text, rules, numerals */
+  --green-band: #206200;  /* filled bands */
+  --green-deep: #1F4A17;  /* part dividers */
+  --green-tint: #EEF3EA;
+  --on-green: #F2EFE6;
+  --gold: #8A6A12;        /* ESC gold, darkened for text on paper */
+  --gold-line: #C9A23F;
+  --warn: #A33A2C;
+  --d-earth: #D9CBB3; --d-concrete: #C9CBC6; --d-wood: #E6CF9F; --d-steel: #A3AFB8;
+  --d-insul: #F1D6DA; --d-membrane: #6F8F62; --d-finish: #EFEEE9; --d-water: #BCD6E8;
+  --d-accent: #E6C66A; --d-paper: #F4F3EE;
+  --f-head: Georgia, "Times New Roman", serif;
+  --f-body: Arial, Helvetica, sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --paper: #12171d; --sheet: #1a2129; --ink: #e3e8ec; --muted: #9aa6b2; --rule: #2e3843;
-  --accent: #7fb0de; --hold: #e3a160; --warn: #e88676; --ok: #7cc196;
-  --d-earth: #4a4234; --d-concrete: #3d444b; --d-wood: #5c4c2e; --d-steel: #43566a;
-  --d-insul: #5d3d48; --d-membrane: #5f86ad; --d-finish: #2a323b; --d-water: #2f506c;
-  --d-accent: #b07a2e; --d-paper: #1f272f; color-scheme: dark } }
+  --paper: #121410; --sheet: #1A1D18; --ink: #F2EFE6; --muted: #B4B1A6; --rule: #33382F;
+  --green: #A9C79A; --green-band: #1F4A17; --green-deep: #183A12; --green-tint: #1C2818; --on-green: #F2EFE6;
+  --gold: #D9B65A; --gold-line: #C9A23F; --warn: #EA8A7A;
+  --d-earth: #4A4234; --d-concrete: #40433D; --d-wood: #5C4C2E; --d-steel: #45525C;
+  --d-insul: #5A3E45; --d-membrane: #4F6B45; --d-finish: #2A2E27; --d-water: #2F4D63;
+  --d-accent: #8F7024; --d-paper: #20241E; color-scheme: dark } }
 :root[data-theme="dark"] {
-  --paper: #12171d; --sheet: #1a2129; --ink: #e3e8ec; --muted: #9aa6b2; --rule: #2e3843;
-  --accent: #7fb0de; --hold: #e3a160; --warn: #e88676; --ok: #7cc196;
-  --d-earth: #4a4234; --d-concrete: #3d444b; --d-wood: #5c4c2e; --d-steel: #43566a;
-  --d-insul: #5d3d48; --d-membrane: #5f86ad; --d-finish: #2a323b; --d-water: #2f506c;
-  --d-accent: #b07a2e; --d-paper: #1f272f; color-scheme: dark }
+  --paper: #121410; --sheet: #1A1D18; --ink: #F2EFE6; --muted: #B4B1A6; --rule: #33382F;
+  --green: #A9C79A; --green-band: #1F4A17; --green-deep: #183A12; --green-tint: #1C2818; --on-green: #F2EFE6;
+  --gold: #D9B65A; --gold-line: #C9A23F; --warn: #EA8A7A;
+  --d-earth: #4A4234; --d-concrete: #40433D; --d-wood: #5C4C2E; --d-steel: #45525C;
+  --d-insul: #5A3E45; --d-membrane: #4F6B45; --d-finish: #2A2E27; --d-water: #2F4D63;
+  --d-accent: #8F7024; --d-paper: #20241E; color-scheme: dark }
+
+/* logo swaps with the theme */
+.logo-rev { display: none }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-std { display: none } :root:not([data-theme="light"]) .logo-rev { display: block } }
+:root[data-theme="dark"] .logo-std { display: none }
+:root[data-theme="dark"] .logo-rev { display: block }
 
 * { box-sizing: border-box }
 html { scroll-behavior: smooth; scroll-padding-top: 1rem }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
-body { background: var(--paper); color: var(--ink); font: 400 1rem/1.6 var(--f-body); }
-a { color: var(--accent) }
-a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+body { background: var(--paper); color: var(--ink); font: 400 1rem/1.6 var(--f-body) }
+a { color: var(--green) }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px }
+.label { font: 700 .72rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--green) }
 
-.cover { border-bottom: 1px solid var(--rule); background: var(--sheet) }
-.cover-inner { max-width: 84rem; margin: 0 auto; padding-block: 3rem 2.5rem;
+/* cover */
+.cover { background: var(--sheet); border-bottom: 8px solid var(--green-band) }
+.cover-inner { max-width: 84rem; margin: 0 auto; padding-block: 2.5rem 2.5rem;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end }
-.cover .doc-no { font: 500 .75rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem }
-.cover h1 { font: 800 clamp(2.4rem, 6vw, 4.6rem)/.95 var(--f-display); font-stretch: 78%; letter-spacing: -.01em; margin: 0; text-wrap: balance; text-transform: uppercase }
-.cover h1 span { display: block; color: var(--accent) }
-.cover p.sub { max-width: 40rem; margin: 1.2rem 0 0; color: var(--muted); font-size: 1.05rem }
-.titleblock { border: 1.5px solid var(--ink); font: 400 .72rem/1.3 var(--f-mono); min-width: 15rem }
-.titleblock div { display: grid; grid-template-columns: 6.5rem 1fr; border-top: 1px solid var(--rule) }
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 20rem); gap: 2.5rem; align-items: end }
+.cover .brand img { width: min(340px, 70vw); height: auto }
+.cover .label { margin: 2.2rem 0 .6rem }
+.cover h1 { font: 400 clamp(2.6rem, 6vw, 4.4rem)/1.02 var(--f-head); margin: 0; text-wrap: balance }
+.cover .rule { width: 64px; height: 3px; background: var(--green-band); margin: 1.4rem 0 }
+.cover p.sub { max-width: 40rem; margin: 0; color: var(--muted); font-size: 1.05rem }
+.cover .tag { font: italic 400 1.3rem/1.3 var(--f-head); color: var(--green); margin: 1.2rem 0 0 }
+.titleblock { margin: 0; border: 1.5px solid var(--ink); font-size: .78rem; line-height: 1.35; background: var(--sheet) }
+.titleblock div { display: grid; grid-template-columns: 6.2rem minmax(0, 1fr); border-top: 1px solid var(--rule) }
 .titleblock div:first-child { border-top: 0 }
-.titleblock dt, .titleblock dd { margin: 0; padding: .4rem .55rem }
-.titleblock dt { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; border-right: 1px solid var(--rule) }
-@media (max-width: 760px) { .cover-inner { grid-template-columns: minmax(0, 1fr) } .titleblock { min-width: 0 } }
+.titleblock dt, .titleblock dd { margin: 0; padding: .45rem .6rem }
+.titleblock dt { font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .66rem; color: var(--muted); border-right: 1px solid var(--rule) }
+.titleblock .tb-head { display: block; background: var(--green-band); color: var(--on-green); padding: .5rem .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .68rem }
+@media (max-width: 780px) { .cover-inner { grid-template-columns: minmax(0, 1fr) } }
 
-.wrap { max-width: 84rem; margin: 0 auto; display: grid; grid-template-columns: 16rem minmax(0, 1fr); gap: 3rem;
+/* frame */
+.wrap { max-width: 84rem; margin: 0 auto; display: grid; grid-template-columns: 16.5rem minmax(0, 1fr); gap: 3rem;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 2rem 4rem }
-nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1rem); align-self: start; max-height: calc(100vh - 2rem); overflow-y: auto; font-size: .88rem }
-nav.toc summary { font: 700 .78rem/1 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); cursor: pointer; padding: .4rem 0; list-style: none }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1rem); align-self: start; max-height: calc(100vh - 2rem); overflow-y: auto; font-size: .86rem }
+nav.toc .toc-mark img { height: 30px; width: auto }
+nav.toc summary { cursor: pointer; list-style: none; padding: .3rem 0; display: flex; flex-direction: column; align-items: flex-start; gap: .5rem }
 nav.toc summary::-webkit-details-marker { display: none }
-nav.toc ol { list-style: none; margin: .5rem 0 0; padding: 0; display: grid; gap: .1rem }
-nav.toc a { display: grid; grid-template-columns: 2.2rem 1fr; gap: .2rem; padding: .35rem .4rem; text-decoration: none; color: var(--ink); border-left: 2px solid transparent }
-nav.toc a:hover { background: var(--sheet); border-left-color: var(--accent) }
-nav.toc .n { font: 500 .78rem/1.5 var(--f-mono); color: var(--muted) }
+nav.toc .part { margin: 1rem 0 .3rem; font: 700 .66rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted) }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: .05rem }
+nav.toc a { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: .2rem; padding: .3rem .45rem; text-decoration: none; color: var(--ink); border-left: 3px solid transparent }
+nav.toc a:hover { background: var(--green-tint); border-left-color: var(--green-band) }
+nav.toc .n { font: 400 .95rem/1.35 var(--f-head); color: var(--green) }
 @media (max-width: 960px) {
   .wrap { grid-template-columns: minmax(0, 1fr); gap: 1rem }
-  nav.toc { position: static; max-height: none; border: 1px solid var(--rule); background: var(--sheet); padding: .4rem .8rem }
+  nav.toc { position: static; max-height: none; border: 1px solid var(--rule); background: var(--sheet); padding: .5rem .9rem }
 }
-
 main { min-width: 0 }
-.howto { background: var(--sheet); border: 1px solid var(--rule); padding: 1.2rem 1.4rem; margin-bottom: 2rem; display: grid; gap: .6rem }
-.howto h2 { font: 700 1rem/1.2 var(--f-display); margin: 0; text-transform: uppercase; letter-spacing: .04em }
-.howto p { margin: 0; max-width: 68ch }
-.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font: 400 .78rem/1.4 var(--f-mono); color: var(--muted) }
+
+.howto { background: var(--sheet); border: 1px solid var(--rule); border-top: 4px solid var(--green-band); padding: 1.2rem 1.4rem; margin-bottom: 2.5rem; display: grid; gap: .7rem }
+.howto h2 { font: 400 1.4rem/1.2 var(--f-head); margin: 0 }
+.howto p { margin: 0; max-width: 70ch }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-size: .78rem; color: var(--muted) }
 .legend span { display: inline-flex; align-items: center; gap: .4rem }
 .legend i { width: .9rem; height: .9rem; border: 1px solid var(--ink); display: inline-block }
+.lg-earth { background: var(--d-earth) } .lg-concrete { background: var(--d-concrete) } .lg-wood { background: var(--d-wood) }
+.lg-steel { background: var(--d-steel) } .lg-insul { background: var(--d-insul) } .lg-membrane { background: var(--d-membrane) }
+.lg-finish { background: var(--d-finish) } .lg-water { background: var(--d-water) } .lg-accent { background: var(--d-accent) }
 
-section.chapter { padding-top: 2.5rem; margin-top: 2.5rem; border-top: 3px solid var(--ink) }
-section.chapter:first-of-type { margin-top: 0 }
-.ch-head { margin-bottom: 1.5rem }
-.ch-head .eyebrow { font: 500 .75rem/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 .5rem }
-.ch-head h2 { font: 800 clamp(1.9rem, 4vw, 2.9rem)/1 var(--f-display); font-stretch: 80%; margin: 0; text-wrap: balance; text-transform: uppercase }
-.ch-head .lede { font-size: 1.12rem; color: var(--muted); max-width: 62ch; margin: .8rem 0 0 }
-main h3 { font: 700 1.35rem/1.2 var(--f-display); font-stretch: 90%; margin: 2.4rem 0 .6rem; text-wrap: balance }
-main h4 { font: 600 1rem/1.3 var(--f-body); margin: 1.6rem 0 .4rem }
+/* part dividers */
+.part-divider { background: var(--green-deep); color: var(--on-green); margin: 3.5rem 0 0; padding: 1.8rem 1.6rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.4rem; align-items: end }
+.part-divider:first-of-type { margin-top: 0 }
+.part-divider .pn { font: 400 4rem/.8 var(--f-head); color: var(--gold-line) }
+.part-divider .label { color: #CFE0C4 }
+.part-divider h2 { font: 400 clamp(1.6rem, 3.4vw, 2.2rem)/1.1 var(--f-head); margin: .3rem 0 0; color: var(--on-green) }
+.part-divider p { margin: .5rem 0 0; color: #DCD8CC; max-width: 60ch; font-size: .95rem }
+
+/* chapters */
+section.chapter { padding-top: 2.4rem; margin-top: 2.4rem; border-top: 1.5px solid var(--ink) }
+.part-divider + section.chapter { border-top: 0; margin-top: 0 }
+.ch-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 1.3rem; align-items: end; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.2rem }
+.ch-head .ch-num { grid-row: span 2; font: 400 clamp(3.6rem, 8vw, 5.4rem)/.78 var(--f-head); color: var(--green) }
+.ch-head .eyebrow { font: 700 .72rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin: 0 0 .4rem }
+.ch-head h2 { font: 400 clamp(1.8rem, 4vw, 2.6rem)/1.08 var(--f-head); margin: 0; text-wrap: balance }
+.ch-head .lede { grid-column: 1 / -1; font: 400 1.12rem/1.5 var(--f-head); color: var(--muted); max-width: 64ch; margin: 1rem 0 0 }
+.in-chapter { background: var(--green-tint); padding: .9rem 1.1rem; margin: 0 0 1.6rem }
+.in-chapter .label { margin: 0 0 .4rem }
+.in-chapter ol { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 1.6rem; font-size: .88rem }
+.in-chapter li { break-inside: avoid; margin: 0 0 .2rem }
+.in-chapter a { color: var(--ink); text-decoration: none }
+.in-chapter a:hover { color: var(--green); text-decoration: underline }
+
+main h3 { font: 400 1.5rem/1.2 var(--f-head); margin: 2.6rem 0 .7rem; padding-top: .8rem; border-top: 3px solid var(--green-band); display: inline-block; text-wrap: balance }
+main h4 { font: 700 1rem/1.3 var(--f-body); margin: 1.6rem 0 .4rem }
 main p, main ul, main ol { max-width: 70ch }
 main li { margin: .25rem 0 }
-main code { font: .88em var(--f-mono); background: var(--sheet); padding: .05em .3em; border: 1px solid var(--rule) }
+main code { font: .88em ui-monospace, Menlo, monospace; background: var(--sheet); padding: .05em .3em; border: 1px solid var(--rule) }
 
-ol.steps { list-style: none; counter-reset: s; padding: 0; display: grid; gap: .55rem }
-ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .6rem; margin: 0 }
-ol.steps > li::before { content: counter(s, decimal-leading-zero); font: 500 .85rem/1.6 var(--f-mono); color: var(--accent); border-top: 2px solid var(--accent); padding-top: .1rem }
-ul.checklist { list-style: none; padding: 0; display: grid; gap: .35rem }
-ul.checklist li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: .4rem; margin: 0 }
-ul.checklist li::before { content: ""; width: .85rem; height: .85rem; border: 1.5px solid var(--ink); margin-top: .35rem }
+ol.steps { list-style: none; counter-reset: s; padding: 0; display: grid; gap: .6rem }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .7rem; margin: 0 }
+ol.steps > li::before { content: counter(s); display: grid; place-items: center; width: 1.8rem; height: 1.8rem; background: var(--green-band); color: var(--on-green); font: 700 .82rem/1 var(--f-body) }
+ul.checklist { list-style: none; padding: 0; display: grid; gap: .4rem }
+ul.checklist li { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: .4rem; margin: 0 }
+ul.checklist li::before { content: ""; width: .9rem; height: .9rem; border: 2px solid var(--green); margin-top: .3rem }
 
-.table-wrap { overflow-x: auto; margin: 1rem 0 .5rem; border: 1px solid var(--rule); background: var(--sheet) }
+.table-wrap { overflow-x: auto; margin: 1rem 0 .5rem; background: var(--sheet); border: 1px solid var(--rule) }
 table { border-collapse: collapse; width: 100%; font-size: .88rem; line-height: 1.45; font-variant-numeric: tabular-nums }
-th, td { text-align: left; vertical-align: top; padding: .55rem .7rem; border-bottom: 1px solid var(--rule) }
-thead th { font: 600 .72rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: var(--d-paper); border-bottom: 1.5px solid var(--ink); white-space: nowrap }
+caption { text-align: left; font: 400 1rem/1.3 var(--f-head); padding: .6rem .7rem; color: var(--ink) }
+th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--rule) }
+thead th { font: 700 .68rem/1.3 var(--f-body); text-transform: uppercase; letter-spacing: .12em; color: var(--green); background: var(--sheet); border-bottom: 2px solid var(--ink); white-space: nowrap }
 tbody tr:last-child td { border-bottom: 0 }
-table.methods td:first-child { font-weight: 600; min-width: 9rem }
+table.methods td:first-child { font-weight: 700; min-width: 9rem }
 table.methods td { min-width: 10rem }
-table.specs td:first-child { font-weight: 600 }
-p.pick { font-size: .92rem; border-left: 3px solid var(--accent); padding: .2rem 0 .2rem .8rem; margin: .4rem 0 1.4rem }
+table.specs td:first-child { font-weight: 700 }
+p.pick { font-size: .93rem; background: var(--green-tint); border-left: 4px solid var(--green-band); padding: .6rem .9rem; margin: .4rem 0 1.5rem }
+p.pick strong:first-child { color: var(--green); text-transform: uppercase; letter-spacing: .08em; font-size: .78rem }
 
-aside.callout { margin: 1.2rem 0; padding: .8rem 1rem; background: var(--sheet); border: 1px solid var(--rule); border-left: 4px solid var(--muted); max-width: 70ch }
+aside.callout { margin: 1.2rem 0; padding: .85rem 1.1rem; background: var(--sheet); border: 1px solid var(--rule); border-top: 4px solid var(--muted); max-width: 70ch }
 aside.callout p { margin: .2rem 0 }
-aside.callout .callout-label { font: 600 .72rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .08em }
-aside.callout.hold { border-left-color: var(--hold) } aside.callout.hold .callout-label { color: var(--hold) }
-aside.callout.warn { border-left-color: var(--warn) } aside.callout.warn .callout-label { color: var(--warn) }
-aside.callout.esc { border-left-color: var(--ok) } aside.callout.esc .callout-label { color: var(--ok) }
+aside.callout .callout-label { font: 700 .7rem/1.3 var(--f-body); text-transform: uppercase; letter-spacing: .14em }
+aside.callout.hold { border-top-color: var(--gold-line) } aside.callout.hold .callout-label { color: var(--gold) }
+aside.callout.warn { border-top-color: var(--warn) } aside.callout.warn .callout-label { color: var(--warn) }
+aside.callout.esc { border-top-color: var(--green-band) } aside.callout.esc .callout-label { color: var(--green) }
 
-figure.diagram { margin: 1.6rem 0; background: var(--sheet); border: 1px solid var(--rule); padding: 1rem; overflow-x: auto }
-figure.diagram svg { display: block; width: 100%; height: auto; min-width: 560px; max-width: 960px; margin: 0 auto; font-family: var(--f-mono) }
-figure.diagram figcaption { font-size: .85rem; color: var(--muted); margin-top: .7rem; border-top: 1px solid var(--rule); padding-top: .5rem }
-figure.diagram figcaption strong { color: var(--ink); font-family: var(--f-mono); font-weight: 500; margin-right: .4rem }
+figure.diagram { margin: 1.8rem 0; background: var(--sheet); border: 1px solid var(--rule); padding: 1rem; overflow-x: auto }
+figure.diagram svg { display: block; width: 100%; height: auto; min-width: 560px; max-width: 960px; margin: 0 auto; font-family: var(--f-body) }
+figure.diagram figcaption { font-size: .86rem; color: var(--muted); margin-top: .8rem; border-top: 1px solid var(--rule); padding-top: .55rem }
+figure.diagram figcaption strong { color: var(--green); font-weight: 700; margin-right: .4rem }
 
-/* drawing classes used by every chapter's SVG */
 svg .ln { fill: none; stroke: var(--ink); stroke-width: 1.5 }
 svg .ln2 { fill: none; stroke: var(--ink); stroke-width: 2.6 }
 svg .ln-thin { fill: none; stroke: var(--ink); stroke-width: .8; opacity: .75 }
@@ -139,59 +177,75 @@ svg .arrowhead { fill: var(--ink); stroke: none }
 svg text { fill: var(--ink) }
 svg .tx { fill: var(--ink); font-size: 12px }
 svg .tx-sm { fill: var(--muted); font-size: 10px }
-svg .tx-b { fill: var(--ink); font-size: 13px; font-weight: 600 }
+svg .tx-b { fill: var(--ink); font-size: 13px; font-weight: 700 }
 svg .tx-dim { fill: var(--muted); font-size: 11px }
 
-footer.colophon { border-top: 1px solid var(--rule); margin-top: 4rem; padding-top: 1rem; font: .8rem/1.5 var(--f-mono); color: var(--muted) }
+/* appendices */
+section.appendix { padding-top: 2.4rem; margin-top: 2.4rem; border-top: 1.5px solid var(--ink) }
+.appendix table td:first-child { white-space: nowrap; font-weight: 700 }
+.appendix table td:first-child a { color: var(--green); text-decoration: none }
+
+footer.colophon { margin-top: 4rem; border-top: 1px solid var(--rule); padding-top: 1rem; display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; justify-content: space-between; align-items: center; font-size: .8rem; color: var(--muted) }
+footer.colophon img { height: 26px; width: auto }
 </style>
 
 <header class="cover">
   <div class="cover-inner">
     <div>
-      <p class="doc-no">ESC-MAN-01 · House reference</p>
-      <h1>Emory Street Construction <span>Building Manual</span></h1>
+      <div class="brand">
+        <img class="logo-std" src="{{LOGO_FULL}}" alt="Emory Street Construction">
+        <img class="logo-rev" src="{{LOGO_FULL_REV}}" alt="Emory Street Construction">
+      </div>
+      <p class="label">ESC-MAN-01 · House reference</p>
+      <h1>Building Manual</h1>
+      <div class="rule"></div>
       <p class="sub">How we build a house, trade by trade, from demolition and footings through framing, mechanicals, tile and millwork. Each chapter shows the different ways the work can be done, which one we pick, and what has to be true before the next trade walks in.</p>
+      <p class="tag">Plan more. React less.</p>
     </div>
     <dl class="titleblock">
+      <span class="tb-head">Emory Street Construction LLC</span>
       <div><dt>Document</dt><dd>ESC-MAN-01</dd></div>
       <div><dt>Scope</dt><dd>New houses &amp; rowhouse gut renovations</dd></div>
-      <div><dt>Chapters</dt><dd>{{CHAPTER_COUNT}} trades · {{FIG_COUNT}} drawings</dd></div>
+      <div><dt>Contents</dt><dd>{{PART_COUNT}} parts · {{CHAPTER_COUNT}} chapters · {{FIG_COUNT}} drawings</dd></div>
       <div><dt>Issue</dt><dd>{{ISSUE}}</dd></div>
+      <div><dt>Office</dt><dd>73 Cornelison Ave, Jersey City, NJ 07304</dd></div>
     </dl>
   </div>
 </header>
 
 <div class="wrap">
-  <nav class="toc" aria-label="Chapters">
+  <nav class="toc" aria-label="Contents">
     <details open id="toc-details">
-      <summary>Chapters</summary>
-      <ol>
+      <summary><span class="toc-mark"><img class="logo-std" src="{{LOGO_MARK}}" alt="ESC"><img class="logo-rev" src="{{LOGO_MARK_REV}}" alt="ESC"></span><span class="label">Contents</span></summary>
 {{TOC}}
-      </ol>
     </details>
   </nav>
   <main>
     <section class="howto" aria-label="How to use this manual">
       <h2>How to use this manual</h2>
-      <p>Chapters run in build order. Each one opens with what must be finished before the trade starts and ends with the condition the space has to be in when the trade hands off. Methods tables compare the ways to do the work; the <strong>ESC default</strong> line under each says which we normally choose. Amber callouts are inspection holds: no covering work until they pass. Codes cited are model codes (IRC 2021, NEC 2023, TCNA). Local amendments and the building department govern.</p>
+      <p>The manual runs in build order, in five parts. Each chapter opens with what must be finished before the trade starts and ends with the condition the space has to be in when the trade hands off. Methods tables compare the ways to do the work; the green <strong>ESC default</strong> line under each says which we normally choose. Gold callouts are inspection holds: nothing gets covered until they pass. Appendix A lists every hold in the book and Appendix B every ESC default, for quick reference on site.</p>
+      <p>Codes cited are model codes (IRC 2021, NEC 2023, TCNA). Local amendments and the building department govern.</p>
       <div class="legend" aria-label="Drawing legend">
-        <span><i style="background:var(--d-earth)"></i>Soil / gravel</span>
-        <span><i style="background:var(--d-concrete)"></i>Concrete / masonry</span>
-        <span><i style="background:var(--d-wood)"></i>Wood</span>
-        <span><i style="background:var(--d-steel)"></i>Steel</span>
-        <span><i style="background:var(--d-insul)"></i>Insulation</span>
-        <span><i style="background:var(--d-membrane)"></i>Membrane / flashing</span>
-        <span><i style="background:var(--d-finish)"></i>Finish surface</span>
-        <span><i style="background:var(--d-water)"></i>Water / air</span>
-        <span><i style="background:var(--d-accent)"></i>Key element</span>
+        <span><i class="lg-earth"></i>Soil / gravel</span>
+        <span><i class="lg-concrete"></i>Concrete / masonry</span>
+        <span><i class="lg-wood"></i>Wood</span>
+        <span><i class="lg-steel"></i>Steel</span>
+        <span><i class="lg-insul"></i>Insulation</span>
+        <span><i class="lg-membrane"></i>Membrane / flashing</span>
+        <span><i class="lg-finish"></i>Finish surface</span>
+        <span><i class="lg-water"></i>Water / air</span>
+        <span><i class="lg-accent"></i>Key element</span>
       </div>
     </section>
-{{CHAPTERS}}
-    <footer class="colophon">ESC-MAN-01 · Emory Street Construction · Issue {{ISSUE}}. Field reference only; stamped drawings, manufacturer instructions and the authority having jurisdiction take precedence.</footer>
+{{BODY}}
+    <footer class="colophon">
+      <img class="logo-std" src="{{LOGO_MARK}}" alt="ESC"><img class="logo-rev" src="{{LOGO_MARK_REV}}" alt="ESC">
+      <span>Emory Street Construction LLC · Plan more. React less. · ESC-MAN-01, issue {{ISSUE}}</span>
+      <span>Field reference. Stamped drawings, manufacturer instructions and the building department take precedence.</span>
+    </footer>
   </main>
 </div>
 <script>
-  // collapse the chapter list on phones; keep it open on wide screens
-  (function () { try { var d = document.getElementById('toc-details'); if (window.matchMedia('(max-width: 960px)').matches) d.open = false;
-    d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { if (window.matchMedia('(max-width: 960px)').matches) d.open = false; }); }); } catch (e) {} })();
+  (function () { try { var d = document.getElementById('toc-details'); var mq = window.matchMedia('(max-width: 960px)'); if (mq.matches) d.open = false;
+    d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { if (mq.matches) d.open = false; }); }); } catch (e) {} })();
 </script>
