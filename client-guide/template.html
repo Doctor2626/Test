@@ -1,0 +1,287 @@
+<title>ESC Renovation Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: ESC house style (welcome book + pitch book). Green-banded cover with the full logo, a sticky chapter index grouped by part on the left, one reading column on the right; part dividers in deep green; appendices pull every inspection hold and ESC default into one place. */
+:root {
+  --paper: #F8F7F3;       /* ESC paper */
+  --sheet: #FFFFFF;
+  --ink: #111111;
+  --muted: #474747;
+  --rule: #D9D7CF;
+  --green: #206200;       /* ESC green: text, rules, numerals */
+  --green-band: #206200;  /* filled bands */
+  --green-deep: #1F4A17;  /* part dividers */
+  --green-tint: #EEF3EA;
+  --on-green: #F2EFE6;
+  --gold: #8A6A12;        /* ESC gold, darkened for text on paper */
+  --gold-line: #C9A23F;
+  --warn: #A33A2C;
+  --d-earth: #D9CBB3; --d-concrete: #C9CBC6; --d-wood: #E6CF9F; --d-steel: #A3AFB8;
+  --d-insul: #F1D6DA; --d-membrane: #6F8F62; --d-finish: #EFEEE9; --d-water: #BCD6E8;
+  --d-accent: #E6C66A; --d-paper: #F4F3EE;
+  --f-head: Georgia, "Times New Roman", serif;
+  --f-body: Arial, Helvetica, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #121410; --sheet: #1A1D18; --ink: #F2EFE6; --muted: #B4B1A6; --rule: #33382F;
+  --green: #A9C79A; --green-band: #1F4A17; --green-deep: #183A12; --green-tint: #1C2818; --on-green: #F2EFE6;
+  --gold: #D9B65A; --gold-line: #C9A23F; --warn: #EA8A7A;
+  --d-earth: #4A4234; --d-concrete: #40433D; --d-wood: #5C4C2E; --d-steel: #45525C;
+  --d-insul: #5A3E45; --d-membrane: #4F6B45; --d-finish: #2A2E27; --d-water: #2F4D63;
+  --d-accent: #8F7024; --d-paper: #20241E; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #121410; --sheet: #1A1D18; --ink: #F2EFE6; --muted: #B4B1A6; --rule: #33382F;
+  --green: #A9C79A; --green-band: #1F4A17; --green-deep: #183A12; --green-tint: #1C2818; --on-green: #F2EFE6;
+  --gold: #D9B65A; --gold-line: #C9A23F; --warn: #EA8A7A;
+  --d-earth: #4A4234; --d-concrete: #40433D; --d-wood: #5C4C2E; --d-steel: #45525C;
+  --d-insul: #5A3E45; --d-membrane: #4F6B45; --d-finish: #2A2E27; --d-water: #2F4D63;
+  --d-accent: #8F7024; --d-paper: #20241E; color-scheme: dark }
+
+/* logo swaps with the theme */
+.logo-rev { display: none }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-std { display: none } :root:not([data-theme="light"]) .logo-rev { display: block } }
+:root[data-theme="dark"] .logo-std { display: none }
+:root[data-theme="dark"] .logo-rev { display: block }
+
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 1rem }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+body { background: var(--paper); color: var(--ink); font: 400 1rem/1.6 var(--f-body) }
+a { color: var(--green) }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px }
+.label { font: 700 .72rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--green) }
+
+/* cover */
+.cover { background: var(--sheet); border-bottom: 8px solid var(--green-band) }
+.cover-inner { max-width: 84rem; margin: 0 auto; padding-block: 2.5rem 2.5rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 20rem); gap: 2.5rem; align-items: end }
+.cover .brand img { width: min(340px, 70vw); height: auto }
+.cover .label { margin: 2.2rem 0 .6rem }
+.cover h1 { font: 400 clamp(2.6rem, 6vw, 4.4rem)/1.02 var(--f-head); margin: 0; text-wrap: balance }
+.cover .rule { width: 64px; height: 3px; background: var(--green-band); margin: 1.4rem 0 }
+.cover p.sub { max-width: 40rem; margin: 0; color: var(--muted); font-size: 1.05rem }
+.cover .tag { font: italic 400 1.3rem/1.3 var(--f-head); color: var(--green); margin: 1.2rem 0 0 }
+.titleblock { margin: 0; border: 1.5px solid var(--ink); font-size: .78rem; line-height: 1.35; background: var(--sheet) }
+.titleblock div { display: grid; grid-template-columns: 6.2rem minmax(0, 1fr); border-top: 1px solid var(--rule) }
+.titleblock div:first-child { border-top: 0 }
+.titleblock dt, .titleblock dd { margin: 0; padding: .45rem .6rem }
+.titleblock dt { font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .66rem; color: var(--muted); border-right: 1px solid var(--rule) }
+.titleblock .tb-head { display: block; background: var(--green-band); color: var(--on-green); padding: .5rem .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .68rem }
+@media (max-width: 780px) { .cover-inner { grid-template-columns: minmax(0, 1fr) } }
+
+/* frame */
+.wrap { max-width: 84rem; margin: 0 auto; display: grid; grid-template-columns: 16.5rem minmax(0, 1fr); gap: 3rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 2rem 4rem }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1rem); align-self: start; max-height: calc(100vh - 2rem); overflow-y: auto; font-size: .86rem }
+nav.toc .toc-mark img { height: 30px; width: auto }
+nav.toc summary { cursor: pointer; list-style: none; padding: .3rem 0; display: flex; flex-direction: column; align-items: flex-start; gap: .5rem }
+nav.toc summary::-webkit-details-marker { display: none }
+nav.toc .part { margin: 1rem 0 .3rem; font: 700 .66rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted) }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: .05rem }
+nav.toc a { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: .2rem; padding: .3rem .45rem; text-decoration: none; color: var(--ink); border-left: 3px solid transparent }
+nav.toc a:hover { background: var(--green-tint); border-left-color: var(--green-band) }
+nav.toc .n { font: 400 .95rem/1.35 var(--f-head); color: var(--green) }
+@media (max-width: 960px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 1rem }
+  nav.toc { position: static; max-height: none; border: 1px solid var(--rule); background: var(--sheet); padding: .5rem .9rem }
+}
+main { min-width: 0 }
+
+.howto { background: var(--sheet); border: 1px solid var(--rule); border-top: 4px solid var(--green-band); padding: 1.2rem 1.4rem; margin-bottom: 2.5rem; display: grid; gap: .7rem }
+.howto h2 { font: 400 1.4rem/1.2 var(--f-head); margin: 0 }
+.howto p { margin: 0; max-width: 70ch }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-size: .78rem; color: var(--muted) }
+.legend span { display: inline-flex; align-items: center; gap: .4rem }
+.legend i { width: .9rem; height: .9rem; border: 1px solid var(--ink); display: inline-block }
+.lg-earth { background: var(--d-earth) } .lg-concrete { background: var(--d-concrete) } .lg-wood { background: var(--d-wood) }
+.lg-steel { background: var(--d-steel) } .lg-insul { background: var(--d-insul) } .lg-membrane { background: var(--d-membrane) }
+.lg-finish { background: var(--d-finish) } .lg-water { background: var(--d-water) } .lg-accent { background: var(--d-accent) }
+
+/* part dividers */
+.part-divider { background: var(--green-deep); color: var(--on-green); margin: 3.5rem 0 0; padding: 1.8rem 1.6rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.4rem; align-items: end }
+.part-divider:first-of-type { margin-top: 0 }
+.part-divider .pn { font: 400 4rem/.8 var(--f-head); color: var(--gold-line) }
+.part-divider .label { color: #CFE0C4 }
+.part-divider h2 { font: 400 clamp(1.6rem, 3.4vw, 2.2rem)/1.1 var(--f-head); margin: .3rem 0 0; color: var(--on-green) }
+.part-divider p { margin: .5rem 0 0; color: #DCD8CC; max-width: 60ch; font-size: .95rem }
+
+/* chapters */
+section.chapter { padding-top: 2.4rem; margin-top: 2.4rem; border-top: 1.5px solid var(--ink) }
+main > section.chapter:first-of-type { margin-top: 0; border-top: 0; padding-top: 0 }
+main p, main ul, main ol { font-size: 1.05rem }
+.part-divider + section.chapter { border-top: 0; margin-top: 0 }
+.ch-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 1.3rem; align-items: end; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.2rem }
+.ch-head .ch-num { grid-row: span 2; font: 400 clamp(3.6rem, 8vw, 5.4rem)/.78 var(--f-head); color: var(--green) }
+.ch-head .eyebrow { font: 700 .72rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin: 0 0 .4rem }
+.ch-head h2 { font: 400 clamp(1.8rem, 4vw, 2.6rem)/1.08 var(--f-head); margin: 0; text-wrap: balance }
+.ch-head .lede { grid-column: 1 / -1; font: 400 1.12rem/1.5 var(--f-head); color: var(--muted); max-width: 64ch; margin: 1rem 0 0 }
+.in-chapter { background: var(--green-tint); padding: .9rem 1.1rem; margin: 0 0 1.6rem }
+.in-chapter .label { margin: 0 0 .4rem }
+.in-chapter ol { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 1.6rem; font-size: .88rem }
+.in-chapter li { break-inside: avoid; margin: 0 0 .2rem }
+.in-chapter a { color: var(--ink); text-decoration: none }
+.in-chapter a:hover { color: var(--green); text-decoration: underline }
+
+main h3 { font: 400 1.5rem/1.2 var(--f-head); margin: 2.6rem 0 .7rem; padding-top: .8rem; border-top: 3px solid var(--green-band); display: inline-block; text-wrap: balance }
+main h4 { font: 700 1rem/1.3 var(--f-body); margin: 1.6rem 0 .4rem }
+main p, main ul, main ol { max-width: 70ch }
+main li { margin: .25rem 0 }
+main code { font: .88em ui-monospace, Menlo, monospace; background: var(--sheet); padding: .05em .3em; border: 1px solid var(--rule) }
+
+/* numbered steps: badge sits in the left gutter, text flows normally so inline <strong> and text stay on one line */
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 1rem 0 1.4rem; display: grid; gap: .75rem }
+ol.steps > li { counter-increment: s; position: relative; padding-left: 2.6rem; margin: 0; min-height: 1.8rem }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: .05rem; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; background: var(--green-band); color: var(--on-green); font: 700 .82rem/1 var(--f-body) }
+ol.steps > li > strong:first-child { color: var(--ink) }
+ol.steps ul, ol.steps ol, ul.checklist ul { margin: .35rem 0 0; padding-left: 1.2rem }
+ul.checklist { list-style: none; padding: 0; margin: 1rem 0 1.4rem; display: grid; gap: .45rem }
+ul.checklist > li { position: relative; padding-left: 1.8rem; margin: 0 }
+ul.checklist > li::before { content: ""; position: absolute; left: 0; top: .3rem; width: .9rem; height: .9rem; border: 2px solid var(--green) }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0 .5rem; background: var(--sheet); border: 1px solid var(--rule) }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; line-height: 1.45; font-variant-numeric: tabular-nums }
+caption { text-align: left; font: 400 1rem/1.3 var(--f-head); padding: .6rem .7rem; color: var(--ink) }
+th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--rule) }
+thead th { font: 700 .68rem/1.3 var(--f-body); text-transform: uppercase; letter-spacing: .12em; color: var(--green); background: var(--sheet); border-bottom: 2px solid var(--ink); white-space: nowrap }
+tbody tr:last-child td { border-bottom: 0 }
+table.methods td:first-child { font-weight: 700; min-width: 9rem }
+.table-wrap td { min-width: 7rem }
+.table-wrap td:first-child { min-width: 8rem }
+table.methods td { min-width: 10rem }
+table.specs td:first-child { font-weight: 700 }
+p.pick { font-size: .93rem; background: var(--green-tint); border-left: 4px solid var(--green-band); padding: .6rem .9rem; margin: .4rem 0 1.5rem }
+p.pick strong:first-child { color: var(--green); text-transform: uppercase; letter-spacing: .08em; font-size: .78rem }
+
+aside.callout { margin: 1.2rem 0; padding: .85rem 1.1rem; background: var(--sheet); border: 1px solid var(--rule); border-top: 4px solid var(--muted); max-width: 70ch }
+aside.callout p { margin: .2rem 0 }
+aside.callout .callout-label { font: 700 .7rem/1.3 var(--f-body); text-transform: uppercase; letter-spacing: .14em }
+aside.callout.hold { border-top-color: var(--gold-line) } aside.callout.hold .callout-label { color: var(--gold) }
+aside.callout.warn { border-top-color: var(--warn) } aside.callout.warn .callout-label { color: var(--warn) }
+aside.callout.esc { border-top-color: var(--green-band) } aside.callout.esc .callout-label { color: var(--green) }
+
+figure.diagram { margin: 1.8rem 0; background: var(--sheet); border: 1px solid var(--rule); padding: 1rem; overflow-x: auto }
+figure.diagram svg { display: block; width: 100%; height: auto; min-width: 560px; max-width: 960px; margin: 0 auto; font-family: var(--f-body) }
+figure.diagram figcaption { font-size: .86rem; color: var(--muted); margin-top: .8rem; border-top: 1px solid var(--rule); padding-top: .55rem }
+figure.diagram figcaption strong { color: var(--green); font-weight: 700; margin-right: .4rem }
+
+svg .ln { fill: none; stroke: var(--ink); stroke-width: 1.5 }
+svg .ln2 { fill: none; stroke: var(--ink); stroke-width: 2.6 }
+svg .ln-thin { fill: none; stroke: var(--ink); stroke-width: .8; opacity: .75 }
+svg .dim { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 3 }
+svg .hid { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 6 4; opacity: .7 }
+svg .f-earth { fill: var(--d-earth); stroke: var(--ink); stroke-width: 1 }
+svg .f-concrete { fill: var(--d-concrete); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-wood { fill: var(--d-wood); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-steel { fill: var(--d-steel); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-insul { fill: var(--d-insul); stroke: var(--ink); stroke-width: 1 }
+svg .f-membrane { fill: var(--d-membrane); stroke: var(--ink); stroke-width: 1 }
+svg .f-finish { fill: var(--d-finish); stroke: var(--ink); stroke-width: 1 }
+svg .f-water { fill: var(--d-water); stroke: var(--ink); stroke-width: 1 }
+svg .f-accent { fill: var(--d-accent); stroke: var(--ink); stroke-width: 1.2 }
+svg .f-paper { fill: var(--d-paper); stroke: var(--rule); stroke-width: 1 }
+svg .arrowhead { fill: var(--ink); stroke: none }
+svg text { fill: var(--ink); paint-order: stroke; stroke: var(--sheet); stroke-width: 3px; stroke-linejoin: round }
+svg .tx { fill: var(--ink); font-size: 12px }
+svg .tx-sm { fill: var(--muted); font-size: 10px }
+svg .tx-b { fill: var(--ink); font-size: 13px; font-weight: 700 }
+svg .tx-dim { fill: var(--muted); font-size: 11px }
+
+/* appendices */
+section.appendix { padding-top: 2.4rem; margin-top: 2.4rem; border-top: 1.5px solid var(--ink) }
+.appendix table td:first-child { white-space: nowrap; font-weight: 700 }
+.appendix table td:first-child a { color: var(--green); text-decoration: none }
+
+footer.colophon { margin-top: 4rem; border-top: 1px solid var(--rule); padding-top: 1rem; display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; justify-content: space-between; align-items: center; font-size: .8rem; color: var(--muted) }
+footer.colophon img { height: 26px; width: auto }
+
+/* print-only contents, hidden on screen */
+.print-toc { display: none }
+@media print {
+  @page { size: letter; margin: 0.6in 0.6in 0.7in }
+  html { font-size: 12.5px }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact }
+  body { background: #fff }
+  .cover { border-bottom-width: 6px; break-after: page; min-height: 9in; display: flex; align-items: center }
+  .cover-inner { padding: 0; width: 100%; grid-template-columns: minmax(0, 1fr) 17rem }
+  .cover .brand img { width: 300px }
+  nav.toc { display: none }
+  .wrap { display: block; max-width: none; padding: 0 }
+  .print-toc { display: block; break-after: page }
+  .print-toc h2 { font: 400 2rem/1.1 var(--f-head); margin: 0 0 1.2rem }
+  .print-toc .pt-part { font: 700 .72rem/1.3 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin: 1.2rem 0 .3rem }
+  .print-toc ol { list-style: none; margin: 0; padding: 0 }
+  .print-toc li { display: flex; align-items: baseline; gap: .5rem; padding: .28rem 0; border-bottom: 1px dotted var(--rule) }
+  .print-toc .n { font: 400 1.05rem/1 var(--f-head); color: var(--green); width: 2rem; flex: none }
+  .print-toc .t { flex: 1 }
+  .print-toc .pg { font-variant-numeric: tabular-nums; min-width: 2rem; text-align: right }
+  .howto { break-inside: avoid }
+  .part-divider { break-before: page; margin-top: 0 }
+  section.chapter { break-before: page; margin-top: 0; padding-top: 0; border-top: 0 }
+  .part-divider + section.chapter { break-before: avoid; margin-top: 1.6rem }
+  section.appendix { break-before: page; margin-top: 0; padding-top: 0; border-top: 0 }
+  .part-divider + section.appendix { break-before: avoid; margin-top: 1.6rem }
+  figure.diagram, aside.callout, p.pick, tr, ol.steps > li, ul.checklist > li, .ch-head, .in-chapter { break-inside: avoid }
+  h3, h4, caption { break-after: avoid }
+  main h3 { margin-top: 1.8rem }
+  .table-wrap, figure.diagram { overflow: visible }
+  figure.diagram svg { min-width: 0; max-width: 100% }
+  thead { display: table-header-group }
+  a { color: inherit; text-decoration: none }
+  footer.colophon { break-inside: avoid }
+}
+
+@media print {
+  section.chapter { break-before: auto; margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1.5px solid var(--ink) }
+  main > section.chapter:first-of-type { break-before: auto; border-top: 0; padding-top: 0; margin-top: 0 }
+  .ch-head { break-after: avoid }
+  h3 + p, h3 + ul, h3 + ol { break-before: avoid }
+}
+</style>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div>
+      <div class="brand">
+        <img class="logo-std" src="{{LOGO_FULL}}" alt="Emory Street Construction">
+        <img class="logo-rev" src="{{LOGO_FULL_REV}}" alt="Emory Street Construction">
+      </div>
+      <p class="label">A homeowner's guide</p>
+      <h1>Your Renovation</h1>
+      <div class="rule"></div>
+      <p class="sub">How Emory Street Construction renovates a brownstone or rowhouse: the order of the work, the approvals, the choices you'll make and when, what we build with, and how we hand the house back to you.</p>
+      <p class="tag">Plan more. React less.</p>
+    </div>
+    <dl class="titleblock">
+      <span class="tb-head">Emory Street Construction LLC</span>
+      <div><dt>Guide</dt><dd>ESC-GUIDE-01</dd></div>
+      <div><dt>For</dt><dd>Homeowners renovating a brownstone or rowhouse</dd></div>
+      <div><dt>Edition</dt><dd>{{ISSUE}}</dd></div>
+      <div><dt>Office</dt><dd>73 Cornelison Ave, Jersey City, NJ 07304</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Contents">
+    <details open id="toc-details">
+      <summary><span class="toc-mark"><img class="logo-std" src="{{LOGO_MARK}}" alt="ESC"><img class="logo-rev" src="{{LOGO_MARK_REV}}" alt="ESC"></span><span class="label">Contents</span></summary>
+      <ol>
+{{TOC}}
+      </ol>
+    </details>
+  </nav>
+  <main>
+{{PRINT_TOC}}
+{{BODY}}
+    <footer class="colophon">
+      <img class="logo-std" src="{{LOGO_MARK}}" alt="ESC"><img class="logo-rev" src="{{LOGO_MARK_REV}}" alt="ESC">
+      <span>Emory Street Construction LLC · 73 Cornelison Ave, Jersey City, NJ 07304 · Plan more. React less.</span>
+      <span>This guide describes how ESC normally works. Your contract and drawings govern your project.</span>
+    </footer>
+  </main>
+</div>
+<script>
+  (function () { try { var d = document.getElementById('toc-details'); var mq = window.matchMedia('(max-width: 960px)'); if (mq.matches) d.open = false;
+    d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { if (mq.matches) d.open = false; }); }); } catch (e) {} })();
+</script>
