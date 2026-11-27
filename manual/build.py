@@ -5,10 +5,12 @@ Usage: python3 manual/build.py "Issue 1 · Nov 2026"
 Adds part dividers, per-chapter contents, heading anchors, the ESC logo,
 and two appendices collected from the chapters: inspection holds and ESC defaults.
 """
-import base64, html, pathlib, re, sys
+import base64, html, json, pathlib, re, sys
 
 root = pathlib.Path(__file__).parent
 issue = sys.argv[1] if len(sys.argv) > 1 else "Draft"
+# optional page numbers for the printed contents: manual/.pages.json {anchor_id: page}
+pages = json.loads((root / ".pages.json").read_text()) if (root / ".pages.json").exists() else {}
 
 PARTS = [
     ("I", "Before the build", "Contract to mobilization: sequence, permits, site setup and neighbors.", ["01"]),
@@ -67,7 +69,7 @@ for f in sorted((root / "chapters").glob("[0-9][0-9]-*.html")):
                          figs=len(re.findall(r'<figure class="diagram"', text)))
 
 # body, part by part
-body, toc = [], []
+body, toc, ptoc = [], [], []
 for pn, pname, pdesc, nums in PARTS:
     nums = [n for n in nums if n in chapters]
     if not nums:
@@ -75,11 +77,14 @@ for pn, pname, pdesc, nums in PARTS:
     pid = f"part-{pn.lower()}"
     body.append(f'<div class="part-divider" id="{pid}"><span class="pn">{pn}</span><div><p class="label">Part {pn}</p><h2>{pname}</h2><p>{pdesc}</p></div></div>')
     toc.append(f'      <p class="part">Part {pn} · {pname}</p>\n      <ol>')
+    ptoc.append(f'<p class="pt-part">Part {pn} · {pname}</p><ol>')
     for n in nums:
         c = chapters[n]
         body.append(c["text"])
         toc.append(f'        <li><a href="#{c["sid"]}"><span class="n">{n}</span><span>{html.escape(c["title"])}</span></a></li>')
+        ptoc.append(f'<li><span class="n">{n}</span><span class="t">{html.escape(c["title"])}</span><span class="pg">{pages.get(c["sid"], "")}</span></li>')
     toc.append("      </ol>")
+    ptoc.append("</ol>")
 
 
 def appendix(aid, letter, title, intro, key, col):
@@ -104,11 +109,15 @@ toc.append('      <p class="part">Reference</p>\n      <ol>')
 toc.append(f'        <li><a href="#appendix-holds"><span class="n">A</span><span>Inspection holds ({a_n})</span></a></li>')
 toc.append(f'        <li><a href="#appendix-defaults"><span class="n">B</span><span>ESC defaults ({b_n})</span></a></li>')
 toc.append("      </ol>")
+ptoc.append('<p class="pt-part">Reference</p><ol>'
+            f'<li><span class="n">A</span><span class="t">Inspection holds</span><span class="pg">{pages.get("appendix-holds", "")}</span></li>'
+            f'<li><span class="n">B</span><span class="t">ESC defaults</span><span class="pg">{pages.get("appendix-defaults", "")}</span></li></ol>')
+print_toc = '<section class="print-toc" aria-hidden="true"><h2>Contents</h2>' + "".join(ptoc) + '</section>'
 
 figs = sum(c["figs"] for c in chapters.values())
 out = (root / "template.html").read_text(encoding="utf-8")
 for k, v in {
-    "{{TOC}}": "\n".join(toc), "{{BODY}}": "\n".join(body),
+    "{{TOC}}": "\n".join(toc), "{{PRINT_TOC}}": print_toc, "{{BODY}}": "\n".join(body),
     "{{CHAPTER_COUNT}}": str(len(chapters)), "{{PART_COUNT}}": str(len(PARTS)), "{{FIG_COUNT}}": str(figs),
     "{{ISSUE}}": html.escape(issue),
     "{{LOGO_FULL}}": data_uri("esc-logo-full.png"), "{{LOGO_FULL_REV}}": data_uri("esc-logo-full-reverse.png"),

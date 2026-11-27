@@ -7,3 +7,5 @@ House reference for how Emory Street Construction builds: one chapter per trade,
 - `assets/` — ESC logo and mark, standard and reverse (dark-mode) versions
 - `build.py` — assembles `index.html`, groups chapters into five parts, and builds the inspection-hold and ESC-default appendices: `python3 manual/build.py "Issue 1 · Nov 2026"`
 - `index.html` — built manual (open in a browser)
+- `ESC-Building-Manual.pdf` — printable manual (Letter, contents with page numbers, PDF bookmarks): `python3 manual/make_pdf.py "Issue 1 · Nov 2026"` (needs Node with Playwright)
+- `NJ-CODE-BASIS.md` — New Jersey code basis, sources and open questions
