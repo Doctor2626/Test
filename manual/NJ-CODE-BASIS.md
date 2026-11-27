@@ -18,8 +18,8 @@ Sources: [ICC NTA: New Jersey adopts new I-codes](https://www.icc-nta.org/code-u
 
 - Permits are issued by the **Jersey City Division of Construction Code**. The city lists **prior approvals** that must be in hand before a permit issues, including zoning, Historic Preservation where it applies, and a **JCMUA release for footing and foundation work**. ([Jersey City prior approvals](https://jerseycitynj.gov/cityhall/HousingAndDevelopment/constructioncode/prior_approvals))
 - Subcodes are building, plumbing, electrical and fire, each with its own technical section and inspector.
-- NJ UCC requires inspections to be performed within **3 business days** of the request (N.J.A.C. 5:23-2.18). **VERIFY**
-- Completion documents: **Certificate of Occupancy** (new construction, change of use, reconstruction where required), **Temporary CO**, and **Certificate of Approval** (completed work that doesn't need a CO). **VERIFY** the document Jersey City issues for each ESC job type.
+- **Inspections:** requests must be in writing; the inspection is performed within **3 business days**, or another date within 30 days agreed with the enforcing agency (N.J.A.C. 5:23-2.18 as amended 2024; P.L. 2022, c.139 sets the 3-business-day rule). ([DCA Spring 2026 CCC](https://nj.gov/dca/codes/publications/pdf_ccc/Spring_2026_CCC.pdf))
+- Completion documents: **Certificate of Occupancy** (new buildings; issued within 10 business days of written application), **Temporary CO**, and **Certificate of Approval**, issued for all work that needs a permit but not a CO, with no separate application (N.J.A.C. 5:23-2.23(m)). An altered building can't be occupied until its Certificate of Approval issues. ([N.J.A.C. 5:23-2.23](https://regulations.justia.com/states/new-jersey/title-5/chapter-23/subchapter-2/section-5-23-2-23))
 
 ## Jersey City specifics
 
@@ -35,7 +35,7 @@ Sources: [ICC NTA: New Jersey adopts new I-codes](https://www.icc-nta.org/code-u
 ## Excavation
 
 - **NJ One Call (811):** at least **3 full business days** before digging (weekends and NJ holidays excluded), for everyone including homeowners. Digging must start within **10 business days** of the call. Markouts stay valid for **45 business days**. ([N.J.A.C. 14:2-3.1](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-14-2-3-1), [811 NJ](https://811beforeyoudig.com/811-states/state-new-jersey/))
-- **Frost depth:** footings at least **36 in** below finished grade is the usual NJ figure. **VERIFY** with the construction official; Jersey City fill and water table often push footings deeper.
+- **Frost depth:** the NJ edition of IRC Table R301.2 sets **3'-0" for North Jersey** (Hudson County) and 2'-6" for South Jersey. Confirmed from the NJ amendment text; Jersey City fill and water table often push footings deeper. ([NJAC 5:23-3.21](https://regulations.justia.com/states/new-jersey/title-5/chapter-23/subchapter-3/section-5-23-3-21))
 - **Climate zone:** Hudson County is IECC **Zone 4A**. **VERIFY**
 - **Radon:** radon-resistant construction is mandatory in Tier 1 municipalities (N.J.A.C. 5:23-10). **VERIFY** Jersey City's tier; a passive sub-slab stub is cheap insurance either way.
 
@@ -54,9 +54,8 @@ Sources: [ICC NTA: New Jersey adopts new I-codes](https://www.icc-nta.org/code-u
 The chapters mark each of these "confirm". Settle them with DCA, the Jersey City Division of Construction Code or the subcode officials, then update the chapter and remove the item here.
 
 Codes and inspections
-- Jersey City's radon tier (N.J.A.C. 5:23-10), frost depth, IECC climate zone 4A, the 3-business-day inspection rule, and the current text of N.J.S.A. 46:10-1.
+- Jersey City's radon tier (N.J.A.C. 5:23-10; check the NJDEP tier lookup or call the NJDEP Radon Program, 800-648-0394), IECC climate zone 4A, and the current text of N.J.S.A. 46:10-1. Frost depth, inspection timing and the CO / Certificate of Approval split are now settled (see above).
 - Which subcode inspects HVAC equipment and ductwork in one- and two-family work, and what Jersey City calls the posted permit (placard or card).
-- Which document Jersey City issues at completion for each ESC job type: CO, TCO or Certificate of Approval.
 - Special-inspection requirements under the NJ UCC for underpinning and structural steel (Ch 03, 04).
 - How the Rehabilitation Subcode applies energy requirements to replacement windows, re-roofing, interior masonry insulation and blower-door testing on reconstruction jobs (Ch 05, 07).
 
