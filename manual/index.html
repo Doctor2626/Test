@@ -127,12 +127,15 @@ main p, main ul, main ol { max-width: 70ch }
 main li { margin: .25rem 0 }
 main code { font: .88em ui-monospace, Menlo, monospace; background: var(--sheet); padding: .05em .3em; border: 1px solid var(--rule) }
 
-ol.steps { list-style: none; counter-reset: s; padding: 0; display: grid; gap: .6rem }
-ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: .7rem; margin: 0 }
-ol.steps > li::before { content: counter(s); display: grid; place-items: center; width: 1.8rem; height: 1.8rem; background: var(--green-band); color: var(--on-green); font: 700 .82rem/1 var(--f-body) }
-ul.checklist { list-style: none; padding: 0; display: grid; gap: .4rem }
-ul.checklist li { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: .4rem; margin: 0 }
-ul.checklist li::before { content: ""; width: .9rem; height: .9rem; border: 2px solid var(--green); margin-top: .3rem }
+/* numbered steps: badge sits in the left gutter, text flows normally so inline <strong> and text stay on one line */
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 1rem 0 1.4rem; display: grid; gap: .75rem }
+ol.steps > li { counter-increment: s; position: relative; padding-left: 2.6rem; margin: 0; min-height: 1.8rem }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: .05rem; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; background: var(--green-band); color: var(--on-green); font: 700 .82rem/1 var(--f-body) }
+ol.steps > li > strong:first-child { color: var(--ink) }
+ol.steps ul, ol.steps ol, ul.checklist ul { margin: .35rem 0 0; padding-left: 1.2rem }
+ul.checklist { list-style: none; padding: 0; margin: 1rem 0 1.4rem; display: grid; gap: .45rem }
+ul.checklist > li { position: relative; padding-left: 1.8rem; margin: 0 }
+ul.checklist > li::before { content: ""; position: absolute; left: 0; top: .3rem; width: .9rem; height: .9rem; border: 2px solid var(--green) }
 
 .table-wrap { overflow-x: auto; margin: 1rem 0 .5rem; background: var(--sheet); border: 1px solid var(--rule) }
 table { border-collapse: collapse; width: 100%; font-size: .88rem; line-height: 1.45; font-variant-numeric: tabular-nums }
@@ -141,6 +144,8 @@ th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bot
 thead th { font: 700 .68rem/1.3 var(--f-body); text-transform: uppercase; letter-spacing: .12em; color: var(--green); background: var(--sheet); border-bottom: 2px solid var(--ink); white-space: nowrap }
 tbody tr:last-child td { border-bottom: 0 }
 table.methods td:first-child { font-weight: 700; min-width: 9rem }
+.table-wrap td { min-width: 7rem }
+.table-wrap td:first-child { min-width: 8rem }
 table.methods td { min-width: 10rem }
 table.specs td:first-child { font-weight: 700 }
 p.pick { font-size: .93rem; background: var(--green-tint); border-left: 4px solid var(--green-band); padding: .6rem .9rem; margin: .4rem 0 1.5rem }
@@ -174,7 +179,7 @@ svg .f-water { fill: var(--d-water); stroke: var(--ink); stroke-width: 1 }
 svg .f-accent { fill: var(--d-accent); stroke: var(--ink); stroke-width: 1.2 }
 svg .f-paper { fill: var(--d-paper); stroke: var(--rule); stroke-width: 1 }
 svg .arrowhead { fill: var(--ink); stroke: none }
-svg text { fill: var(--ink) }
+svg text { fill: var(--ink); paint-order: stroke; stroke: var(--sheet); stroke-width: 3px; stroke-linejoin: round }
 svg .tx { fill: var(--ink); font-size: 12px }
 svg .tx-sm { fill: var(--muted); font-size: 10px }
 svg .tx-b { fill: var(--ink); font-size: 13px; font-weight: 700 }
@@ -2194,7 +2199,7 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 880 540" role="img" aria-labelledby="framing-fig1-t">
 <title id="framing-fig1-t">Section through a brick party wall showing a wood joist in a masonry pocket with a fire-cut end, bearing plate and air space</title>
-<text class="tx-b" x="40" y="36">JOIST POCKET IN MASONRY PARTY WALL, SECTION</text>
+<text class="tx-b" x="40" y="36">Joist pocket in masonry party wall, section</text>
 <rect class="f-concrete" x="400" y="60" width="96" height="410"/>
 <line class="ln-thin" x1="400" y1="81" x2="496" y2="81"/>
 <line class="ln-thin" x1="400" y1="102" x2="496" y2="102"/>
@@ -2287,7 +2292,7 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 900 640" role="img" aria-labelledby="framing-fig2-t">
 <title id="framing-fig2-t">Floor framing plan between two party walls with a stair opening along one wall, doubled trimmers, header and tail joists in hangers</title>
-<text class="tx-b" x="190" y="40">FLOOR FRAMING PLAN WITH STAIR OPENING (ROWHOUSE)</text>
+<text class="tx-b" x="190" y="40">Floor framing plan with stair opening (rowhouse)</text>
 <rect class="f-concrete" x="190" y="70" width="28.8" height="460.8"/>
 <rect class="f-concrete" x="794.8" y="70" width="28.8" height="460.8"/>
 <rect class="f-paper" x="218.8" y="152.2" width="100.8" height="296.4"/>
@@ -2395,7 +2400,7 @@ footer.colophon img { height: 26px; width: auto }
 <svg viewBox="0 0 880 620" role="img" aria-labelledby="framing-fig3-t">
 <title id="framing-fig3-t">Load path section showing floor load passing through joists, a beam, posts and footings into the soil</title>
 <defs><marker id="framing-fig3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text class="tx-b" x="40" y="36">LOAD PATH, FLOOR TO SOIL (ELEVATION ALONG BEAM)</text>
+<text class="tx-b" x="40" y="36">Load path, floor to soil (elevation along beam)</text>
 <rect class="f-earth" x="40" y="490" width="800" height="110"/>
 <rect class="f-concrete" x="60" y="470" width="760" height="20"/>
 <rect class="f-concrete" x="80" y="490" width="120" height="50"/>
@@ -2484,7 +2489,7 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 880 540" role="img" aria-labelledby="framing-fig4-t">
 <title id="framing-fig4-t">Elevation of a framed 2x4 bearing wall with a window opening showing studs at 16 inches on center, king and jack studs, header, sill, cripples and double top plate</title>
-<text class="tx-b" x="100" y="40">FRAMED WALL ELEVATION, 2x4 BEARING WALL WITH WINDOW</text>
+<text class="tx-b" x="100" y="40">Framed wall elevation, 2x4 bearing wall with window</text>
 <text class="tx-sm" x="100" y="58">Exterior sheathing omitted for clarity</text>
 <rect class="f-wood" x="100" y="90" width="460.8" height="5.4"/>
 <rect class="f-wood" x="100" y="95.4" width="460.8" height="5.4"/>
@@ -2565,7 +2570,7 @@ footer.colophon img { height: 26px; width: auto }
 <svg viewBox="0 0 880 420" role="img" aria-labelledby="framing-fig5-t">
 <title id="framing-fig5-t">Front-to-rear section of a low-slope rowhouse roof with tapered sleepers over existing joists sloping to a rear gutter</title>
 <defs><marker id="framing-fig5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text class="tx-b" x="40" y="32">LOW-SLOPE ROWHOUSE ROOF, TAPERED SLEEPERS (SECTION, FRONT TO REAR)</text>
+<text class="tx-b" x="40" y="32">Low-slope rowhouse roof, tapered sleepers (section, front to rear)</text>
 <text class="tx-sm" x="40" y="48">Vertical scale exaggerated 2x for clarity</text>
 <rect class="f-concrete" x="70" y="140" width="40" height="190"/>
 <rect class="f-concrete" x="750" y="265" width="40" height="65"/>
@@ -3552,8 +3557,8 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 860 560" role="img" aria-labelledby="plumbing-fig3-t">
 <title id="plumbing-fig3-t">Schematic comparing a home-run manifold layout with a trunk-and-branch layout with recirculation</title>
-<text class="tx-b" x="20" y="30">A. HOME-RUN MANIFOLD</text>
-<text class="tx-b" x="490" y="30">B. TRUNK AND BRANCH WITH RECIRCULATION</text>
+<text class="tx-b" x="20" y="30">A. Home-run manifold</text>
+<text class="tx-b" x="490" y="30">B. Trunk and branch with recirculation</text>
 <line class="ln-thin" x1="474" y1="40" x2="474" y2="540"/>
 <text class="tx-sm" x="10" y="134">service</text>
 <path class="ln2" d="M10,150 H180"/>
@@ -3680,7 +3685,7 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 860 600" role="img" aria-labelledby="plumbing-fig4-t">
 <title id="plumbing-fig4-t">Bathroom wet wall rough-in elevation and floor plan with dimensions for toilet, vanity lavatory and shower valve</title>
-<text class="tx-b" x="60" y="30">WET WALL ELEVATION (LOOKING AT BACK WALL)</text>
+<text class="tx-b" x="60" y="30">Wet wall elevation (looking at back wall)</text>
 <rect class="f-wood" x="46" y="120" width="14" height="330"/>
 <rect class="f-paper" x="60" y="120" width="400" height="330"/>
 <rect class="f-wood" x="460" y="120" width="14" height="330"/>
@@ -3744,7 +3749,7 @@ footer.colophon img { height: 26px; width: auto }
 <circle class="f-paper" cx="418" cy="260" r="9"/><text class="tx-sm" x="418" y="264" text-anchor="middle">5</text>
 <circle class="f-paper" cx="414" cy="150" r="9"/><text class="tx-sm" x="414" y="154" text-anchor="middle">6</text>
 <circle class="f-paper" cx="350" cy="350" r="9"/><text class="tx-sm" x="350" y="354" text-anchor="middle">7</text>
-<text class="tx-b" x="60" y="490">PLAN AT FLOOR</text>
+<text class="tx-b" x="60" y="490">Plan at floor</text>
 <rect class="f-wood" x="46" y="498" width="14" height="90"/>
 <rect class="f-wood" x="60" y="498" width="400" height="8"/>
 <line class="hid" x1="123" y1="506" x2="123" y2="580"/>
@@ -3797,8 +3802,8 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 860 400" role="img" aria-labelledby="plumbing-fig5-t">
 <title id="plumbing-fig5-t">Sections through curbless showers comparing a center drain with four-way slope to a linear drain with single-plane slope, both with recessed joists</title>
-<text class="tx-b" x="20" y="28">A. CENTER DRAIN, FOUR-WAY SLOPE</text>
-<text class="tx-b" x="450" y="28">B. LINEAR DRAIN, SINGLE-PLANE SLOPE</text>
+<text class="tx-b" x="20" y="28">A. Center drain, four-way slope</text>
+<text class="tx-b" x="450" y="28">B. Linear drain, single-plane slope</text>
 <line class="ln-thin" x1="430" y1="40" x2="430" y2="300"/>
 <rect class="f-wood" x="28" y="50" width="24" height="146"/>
 <rect class="f-finish" x="52" y="50" width="4" height="122"/>
@@ -5254,11 +5259,11 @@ footer.colophon img { height: 26px; width: auto }
 <figure class="diagram">
 <svg viewBox="0 0 880 300" role="img" aria-labelledby="walls-paint-fig1-t">
 <title id="walls-paint-fig1-t">Sections through a taped joint at finish levels 0 through 5, showing tape, successive coats and the full skim at Level 5</title>
-<line class="ln-thin" x1="150" y1="14" x2="150" y2="286"/>
-<line class="ln-thin" x1="295" y1="14" x2="295" y2="286"/>
-<line class="ln-thin" x1="440" y1="14" x2="440" y2="286"/>
-<line class="ln-thin" x1="585" y1="14" x2="585" y2="286"/>
-<line class="ln-thin" x1="730" y1="14" x2="730" y2="286"/>
+<line class="ln-thin" x1="150" y1="14" x2="150" y2="224"/>
+<line class="ln-thin" x1="295" y1="14" x2="295" y2="224"/>
+<line class="ln-thin" x1="440" y1="14" x2="440" y2="224"/>
+<line class="ln-thin" x1="585" y1="14" x2="585" y2="224"/>
+<line class="ln-thin" x1="730" y1="14" x2="730" y2="224"/>
 <!-- Level 0 -->
 <text class="tx-b" x="78" y="34" text-anchor="middle">Level 0</text>
 <text class="tx-sm" x="78" y="52" text-anchor="middle">No taping</text>
@@ -6543,7 +6548,7 @@ footer.colophon img { height: 26px; width: auto }
 </ol>
 <figure class="diagram"><svg viewBox="0 0 820 440" role="img" aria-labelledby="millwork-fig1-t"><title id="millwork-fig1-t">Plan section through a latch jamb showing studs, shim space, jamb, stop, door slab and casing set back from the jamb edge by a reveal</title>
 <defs><marker id="millwork-fig1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text class="tx-b" x="30" y="30">PLAN SECTION AT LATCH JAMB</text>
+<text class="tx-b" x="30" y="30">Plan section at latch jamb</text>
 <rect class="f-finish" x="60" y="150" width="270" height="15"/>
 <rect class="f-finish" x="60" y="270" width="270" height="15"/>
 <rect class="f-wood" x="60" y="165" width="45" height="105"/>
@@ -6602,8 +6607,8 @@ footer.colophon img { height: 26px; width: auto }
 <p>A miter splits a corner into two 45 degree cuts. It looks right on day one, but walls are rarely square, and as wood dries an inside miter opens at the heel. A cope runs one piece square into the corner and cuts the second piece to the profile of the first, like a puzzle piece. When the wood shrinks, the coped piece slides along the face and the joint stays closed.</p>
 <figure class="diagram"><svg viewBox="0 0 820 420" role="img" aria-labelledby="millwork-fig2-t"><title id="millwork-fig2-t">Plan views comparing a mitered inside corner and a coped inside corner of baseboard</title>
 <defs><marker id="millwork-fig2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text class="tx-b" x="40" y="40">MITERED INSIDE CORNER (PLAN)</text>
-<text class="tx-b" x="440" y="40">COPED INSIDE CORNER (PLAN)</text>
+<text class="tx-b" x="40" y="40">Mitered inside corner (plan)</text>
+<text class="tx-b" x="440" y="40">Coped inside corner (plan)</text>
 <path class="f-finish" d="M40,60 H360 V360 H330 V90 H40 Z"/>
 <polygon class="f-wood" points="40,90 330,90 306,114 40,114"/>
 <polygon class="f-wood" points="330,90 330,360 306,360 306,114"/>
@@ -6774,7 +6779,7 @@ footer.colophon img { height: 26px; width: auto }
 </tbody></table></div>
 <figure class="diagram"><svg viewBox="0 0 880 700" role="img" aria-labelledby="millwork-fig4-t"><title id="millwork-fig4-t">Stair section with 14 risers and 13 treads showing nosing line, headroom at the floor opening header, handrail height, guard and an enlarged step detail</title>
 <defs><marker id="millwork-fig4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text class="tx-b" x="40" y="40">14 RISERS @ 7-1/2 in = 105 in TOTAL RISE</text>
+<text class="tx-b" x="40" y="40">14 risers @ 7-1/2 in = 105 in total rise</text>
 <text class="tx" x="40" y="60">13 treads @ 10 in = 130 in total run</text>
 <text class="tx" x="40" y="78">2R + T = 15 + 10 = 25 in (comfort 24-25)</text>
 <text class="tx" x="40" y="96">IRC: 7-3/4 in max riser, 10 in min tread</text>
@@ -6904,7 +6909,7 @@ footer.colophon img { height: 26px; width: auto }
 </tbody></table></div>
 <figure class="diagram"><svg viewBox="0 0 820 410" role="img" aria-labelledby="millwork-fig5-t"><title id="millwork-fig5-t">Stepped section of a nail-down solid strip floor over a wood subfloor and joists, showing felt, blind nails, expansion gap, baseboard and shoe</title>
 <defs><marker id="millwork-fig5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text class="tx-b" x="20" y="22">SECTION: SOLID STRIP OVER WOOD SUBFLOOR</text>
+<text class="tx-b" x="20" y="22">Section: solid strip over wood subfloor</text>
 <rect class="f-wood" x="100" y="260" width="45" height="110"/>
 <rect class="f-wood" x="580" y="260" width="45" height="110"/>
 <path class="ln" d="M95,370 L110,364 L130,376 L150,370"/>
