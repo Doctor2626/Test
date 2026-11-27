@@ -48,3 +48,31 @@ Sources: [ICC NTA: New Jersey adopts new I-codes](https://www.icc-nta.org/code-u
 
 - **Asbestos:** removal from a residence must be done by a contractor licensed by the **NJ Department of Labor** (N.J.A.C. 12:120, with DOH rules at N.J.A.C. 8:60). The DCA Asbestos Hazard Abatement Subcode (N.J.A.C. 5:23-8) also applies to permits and clearance. ([DCA asbestos guidance](https://www.nj.gov/dca/codes/alerts/pdfs/asbestos_guidance.pdf))
 - **Lead:** EPA RRP applies to pre-1978 work. In NJ, rental one- and two-family and multiple dwellings built before 1978 also need a **lead-safe certificate** under P.L.2021, c.182 (amended by P.L.2024, c.74), inspected at tenant turnover. Relevant when an ESC client rents a unit. Lead abatement (as opposed to renovation) needs NJ-certified abatement firms. ([DCA lead guide](https://www.nj.gov/dca/codes/resources/leadpaint.shtml))
+
+## Open questions to confirm (from the NJ pass, Nov 2026)
+
+The chapters mark each of these "confirm". Settle them with DCA, the Jersey City Division of Construction Code or the subcode officials, then update the chapter and remove the item here.
+
+Codes and inspections
+- Jersey City's radon tier (N.J.A.C. 5:23-10), frost depth, IECC climate zone 4A, the 3-business-day inspection rule, and the current text of N.J.S.A. 46:10-1.
+- Which subcode inspects HVAC equipment and ductwork in one- and two-family work, and what Jersey City calls the posted permit (placard or card).
+- Which document Jersey City issues at completion for each ESC job type: CO, TCO or Certificate of Approval.
+- Special-inspection requirements under the NJ UCC for underpinning and structural steel (Ch 03, 04).
+- How the Rehabilitation Subcode applies energy requirements to replacement windows, re-roofing, interior masonry insulation and blower-door testing on reconstruction jobs (Ch 05, 07).
+
+2024 IECC values not yet entered (Ch 03, 05, 07)
+- Slab insulation R-value (ESC uses R-10), wall assembly R-values in Fig. 5.4, window U-factors, the air-leakage limit (3.0 ACH50 is the 2021 value), duct leakage and duct R-values, mechanical ventilation trigger, bath and kitchen exhaust rates, makeup-air trigger.
+
+NSPC 2024 (NJ edition) values (Ch 06, 10)
+- Kept as "typical; confirm": drain slopes, trap-arm fall, vent rise above flood rim, trap seal and outlet-to-weir limits, cleanout clearances, hanger spacing, PRV trigger, minimum service size, shield plates, DWV air test, toilet clearances, shower size and slope, T&P discharge height, shower pan liner turn-up, flood-test depth.
+- Removed and pointed to the NSPC tables: trap-to-vent distances, cleanout spacing, DWV water-test head, water supply test pressure, vent terminal height and separation from openings, standpipe height, backwater valve trigger, water/sewer separation, AAV acceptance, wet-vent sizing.
+
+Electrical and other
+- Whether low-voltage work needs its own permit in Jersey City; whether EV-ready requirements apply; NJ amendments to NEC 210.8; whether NM cable is limited for three-plus-unit or mixed-use buildings.
+- STC 50 between units applies to IBC buildings (three or more units); confirm the requirement for two-family houses (Ch 09).
+- Whether Jersey City inspects fastening of fire-rated gypsum assemblies, sheathing nailing or WRB, and whether it requires ice barrier at eaves.
+- JCMUA rules for sump and footing-drain discharge (Ch 03).
+- Hudson County / NJ disposal rules for lead-containing debris (Ch 02); add the NJ lead-safe certificate note at sash stripping in Ch 05 for rental pre-1978 houses.
+
+ESC policy statements to approve (written as practice, not law)
+- Contract and cancellation handling, HIC status checks on the contract form, bringing in a certified lead abatement firm as a sub (Ch 01, 02); passive radon stub on every slab (Ch 03); rooftop condenser setback from the front cornice to stay out of HPC view (Ch 07).
